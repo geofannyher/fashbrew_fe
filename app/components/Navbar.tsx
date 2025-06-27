@@ -42,12 +42,18 @@ export default function Navbar() {
             >
               Lookbook
             </Link>
-            <button className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+            <Link
+              href="/shop"
+              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+            >
               Shop
-            </button>
-            {/* <button className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              Reviews
-            </button> */}
+            </Link>
+            <Link
+              href="/portofolio"
+              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+            >
+              Portofolio
+            </Link>
             {/* Uncomment if needed
             <button className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
               Sign In
@@ -97,18 +103,20 @@ export default function Navbar() {
                 >
                   Lookbook
                 </Link>
-                <button
+                <Link
+                  href="/shop"
                   onClick={closeMenu}
                   className="block w-full text-left px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md font-medium transition-colors"
                 >
                   Shop
-                </button>
-                <button
+                </Link>
+                <Link
+                  href="/portofolio"
                   onClick={closeMenu}
                   className="block w-full text-left px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md font-medium transition-colors"
                 >
-                  Reviews
-                </button>
+                  Portofolio
+                </Link>
               </div>
             </div>
           </div>
