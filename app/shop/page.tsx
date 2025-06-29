@@ -15,6 +15,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import CoffeeFooter from "../footer/page";
 
 interface Product {
   id: number;
@@ -47,85 +48,211 @@ export default function ProductCatalog() {
   const products: Product[] = [
     {
       id: 1,
-      name: "Coffee Grinder Premium",
+      name: "Wireless Earbuds X10",
       description:
-        "Professional coffee grinder with ceramic burr for perfect grinding consistency",
-      price: 299000,
-      originalPrice: 399000,
-      rating: 4.8,
-      reviewCount: 156,
-      category: "Coffee Equipment",
-      tags: ["premium", "grinder", "coffee"],
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 499000,
+      originalPrice: 699000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Electronics",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/grinder",
-      commission: 15,
-      clicks: 245,
-      conversions: 23,
-      lastUpdated: "2025-06-25",
+        "https://images.unsplash.com/photo-1585386959984-a415522ad75e?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
       featured: true,
     },
     {
       id: 2,
-      name: "Espresso Machine Deluxe",
-      description: "Semi-automatic espresso machine perfect for home baristas",
-      price: 1599000,
-      originalPrice: 2100000,
-      rating: 4.9,
-      reviewCount: 89,
-      category: "Coffee Equipment",
-      tags: ["espresso", "machine", "barista"],
+      name: "Smart LED Bulb",
+      description: "Lampu pintar yang bisa diatur lewat aplikasi dan suara",
+      price: 99000,
+      originalPrice: 129000,
+      rating: 4.7,
+      reviewCount: 198,
+      category: "Home & Living",
+      tags: ["smart home", "lighting"],
       image:
-        "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/espresso",
-      commission: 12,
-      clicks: 189,
-      conversions: 18,
-      lastUpdated: "2025-06-24",
-      featured: true,
+        "https://images.unsplash.com/photo-1599417075305-6c066b8e0b7e?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/smart-bulb",
+      commission: 8,
+      clicks: 312,
+      conversions: 62,
+      lastUpdated: "2025-06-28",
+      featured: false,
     },
     {
       id: 3,
-      name: "Premium Coffee Beans Set",
-      description:
-        "Curated selection of single origin coffee beans from around the world",
-      price: 189000,
-      rating: 4.7,
-      reviewCount: 234,
-      category: "Coffee Beans",
-      tags: ["beans", "premium", "single-origin"],
+      name: "Minimalist Analog Watch",
+      description: "Jam tangan bergaya minimalis unisex",
+      price: 299000,
+      originalPrice: 399000,
+      rating: 4.2,
+      reviewCount: 89,
+      category: "Fashion",
+      tags: ["watch", "style"],
       image:
-        "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/beans",
-      commission: 20,
-      clicks: 312,
-      conversions: 45,
-      lastUpdated: "2025-06-26",
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/minimalist-watch",
+      commission: 12,
+      clicks: 180,
+      conversions: 24,
+      lastUpdated: "2025-06-27",
       featured: false,
     },
     {
       id: 4,
-      name: "Smart Coffee Scale",
-      description:
-        "Bluetooth-enabled precision scale for perfect coffee brewing",
-      price: 459000,
-      originalPrice: 599000,
-      rating: 4.6,
-      reviewCount: 67,
-      category: "Accessories",
-      tags: ["scale", "smart", "precision"],
+      name: "Portable Blender",
+      description: "Blender mini USB untuk jus dan smoothies",
+      price: 189000,
+      originalPrice: 249000,
+      rating: 4.4,
+      reviewCount: 210,
+      category: "Home & Living",
+      tags: ["blender", "kitchen", "portable"],
       image:
-        "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/scale",
-      commission: 18,
-      clicks: 156,
-      conversions: 12,
+        "https://images.unsplash.com/photo-1601041371190-5c0087f29dfc?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/portable-blender",
+      commission: 10,
+      clicks: 220,
+      conversions: 38,
+      lastUpdated: "2025-06-25",
+      featured: false,
+    },
+    {
+      id: 5,
+      name: "Gaming Mouse RGB",
+      description:
+        "Mouse gaming ergonomis dengan lampu RGB dan DPI hingga 7200",
+      price: 199000,
+      originalPrice: 249000,
+      rating: 4.6,
+      reviewCount: 540,
+      category: "Electronics",
+      tags: ["gaming", "mouse", "RGB"],
+      image:
+        "https://images.unsplash.com/photo-1593642632559-0c8e6676f5c5?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/gaming-mouse",
+      commission: 15,
+      clicks: 355,
+      conversions: 52,
+      lastUpdated: "2025-06-26",
+      featured: true,
+    },
+    {
+      id: 6,
+      name: "Yoga Mat Premium",
+      description:
+        "Matras yoga anti slip, tebal dan empuk untuk olahraga di rumah",
+      price: 149000,
+      originalPrice: 179000,
+      rating: 4.3,
+      reviewCount: 112,
+      category: "Sports",
+      tags: ["yoga", "fitness", "mat"],
+      image:
+        "https://images.unsplash.com/photo-1583454110558-ccb9444a8a0e?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/yoga-mat",
+      commission: 9,
+      clicks: 130,
+      conversions: 22,
+      lastUpdated: "2025-06-24",
+      featured: false,
+    },
+    {
+      id: 7,
+      name: "Face Serum Vitamin C",
+      description: "Serum wajah untuk mencerahkan dan menghaluskan kulit",
+      price: 89000,
+      originalPrice: 109000,
+      rating: 4.8,
+      reviewCount: 620,
+      category: "Beauty",
+      tags: ["skincare", "serum", "vitamin C"],
+      image:
+        "https://images.unsplash.com/photo-1612392061783-b8f3aefc8e18?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/vitamin-c-serum",
+      commission: 11,
+      clicks: 430,
+      conversions: 74,
+      lastUpdated: "2025-06-26",
+      featured: true,
+    },
+    {
+      id: 8,
+      name: "RC Toy Car Off-Road",
+      description: "Mobil remote control off-road untuk anak dan dewasa",
+      price: 259000,
+      originalPrice: 299000,
+      rating: 4.5,
+      reviewCount: 143,
+      category: "Toys",
+      tags: ["remote control", "toy car"],
+      image:
+        "https://images.unsplash.com/photo-1616627980124-181d49e3656b?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/rc-toy-car",
+      commission: 13,
+      clicks: 160,
+      conversions: 28,
       lastUpdated: "2025-06-23",
       featured: false,
     },
+    {
+      id: 9,
+      name: "Magnetic Phone Holder Mobil",
+      description: "Holder HP mobil kuat dengan magnet dan rotasi 360°",
+      price: 69000,
+      originalPrice: 89000,
+      rating: 4.1,
+      reviewCount: 76,
+      category: "Automotive",
+      tags: ["car accessories", "holder", "magnet"],
+      image:
+        "https://images.unsplash.com/photo-1619851456320-d2cfbe164a1e?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/magnetic-holder",
+      commission: 7,
+      clicks: 90,
+      conversions: 14,
+      lastUpdated: "2025-06-20",
+      featured: false,
+    },
+    {
+      id: 10,
+      name: "Slim Laptop Backpack",
+      description:
+        "Tas ransel laptop slim dengan banyak kompartemen dan bahan waterproof",
+      price: 179000,
+      originalPrice: 229000,
+      rating: 4.4,
+      reviewCount: 197,
+      category: "Fashion",
+      tags: ["backpack", "laptop", "anti air"],
+      image:
+        "https://images.unsplash.com/photo-1523475496153-3d6ccdb021b2?w=400&h=300&fit=crop",
+      affiliateLink: "https://example.com/affiliate/laptop-backpack",
+      commission: 10,
+      clicks: 210,
+      conversions: 31,
+      lastUpdated: "2025-06-22",
+      featured: true,
+    },
   ];
 
-  const categories = ["All", "Coffee Equipment", "Coffee Beans", "Accessories"];
+  const categories = [
+    "All",
+    "Electronics",
+    "Fashion",
+    "Home & Living",
+    "Beauty",
+    "Sports",
+    "Toys",
+    "Automotive",
+  ];
+
   const priceRanges = [
     "All",
     "Under 200k",
@@ -146,8 +273,8 @@ export default function ProductCatalog() {
 
   const handleShare = (product: Product) => {
     const shareData = {
-      title: `${product.name} - Coffee Product`,
-      text: `Check out this amazing coffee product: ${product.description}`,
+      title: `${product.name} - Recommended Product`,
+      text: `Check out this amazing product: ${product.description}`,
       url: product.affiliateLink,
     };
 
@@ -222,14 +349,14 @@ export default function ProductCatalog() {
       <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Coffee Products
+            Affiliate Products
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent block">
               Curated for You
             </span>
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Discover premium coffee equipment, beans, and accessories. Carefully
-            selected products with affiliate benefits.
+            Explore the best affiliate products across all categories –
+            electronics, fashion, home, and more.
           </p>
 
           {/* Enhanced Search Bar */}
@@ -484,23 +611,9 @@ export default function ProductCatalog() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 py-8 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-2 rounded-xl">
-                <Tag className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-gray-900">
-                Coffee Products
-              </span>
-            </div>
-            <p className="text-gray-600 text-sm">
-              © 2025 Coffee Products. Premium affiliate selections.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <div className="mt-12">
+        <CoffeeFooter />
+      </div>
     </div>
   );
 }

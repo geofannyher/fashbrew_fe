@@ -2,6 +2,7 @@
 import { useState } from "react";
 import MoodFilter from "./components/MoodFilter";
 import OOTDCard from "./components/OOTDCard";
+import CoffeeFooter from "../footer/page";
 
 const ootdData = [
   {
@@ -13,8 +14,8 @@ const ootdData = [
       "The perfect blend of comfort and style for those leisurely Saturday mornings. A cozy oversized blazer paired with tailored trousers creates an elevated casual look.",
     mood: ["weekend", "all"],
     influencer: {
-      name: "Emma Chen",
-      handle: "@emmastyle",
+      name: "rere amalia",
+      handle: "@_rereamalia_",
     },
     products: [
       {
@@ -75,7 +76,10 @@ const ootdData = [
     description:
       "Layered hoodie and cargo pants for an effortless, edgy city look.",
     mood: ["casual", "urban"],
-    influencer: { name: "Liam Hart", handle: "@liamwears" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Oversized Hoodie",
@@ -102,7 +106,10 @@ const ootdData = [
     title: "Clean Office Look",
     description: "Sleek and minimal for professional elegance.",
     mood: ["office", "weekday"],
-    influencer: { name: "Sarah Lim", handle: "@slimstyle" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "White Button-Up Shirt",
@@ -128,7 +135,10 @@ const ootdData = [
     description:
       "Breezy fabrics and pastel tones perfect for seaside getaways.",
     mood: ["vacation", "beach"],
-    influencer: { name: "Rina Aluna", handle: "@rinastyle" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Floral Summer Dress",
@@ -153,7 +163,10 @@ const ootdData = [
     title: "Monochrome Power",
     description: "All-black outfit for maximum impact and elegance.",
     mood: ["edgy", "night"],
-    influencer: { name: "Zara Moon", handle: "@zaralux" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Black Blazer Dress",
@@ -179,7 +192,10 @@ const ootdData = [
     description:
       "Loose-fit sweater, skirt combo and sneakers for laid-back cuteness.",
     mood: ["korean", "cute"],
-    influencer: { name: "Minji Yoo", handle: "@minji.outfits" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Striped Knit Sweater",
@@ -204,7 +220,10 @@ const ootdData = [
     title: "Sporty On-the-Go",
     description: "Athleisure outfit for moving in style.",
     mood: ["sporty", "daily"],
-    influencer: { name: "Jordan Lee", handle: "@jordanfit" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Athletic Crop Top",
@@ -229,7 +248,10 @@ const ootdData = [
     title: "Fall Neutrals",
     description: "Muted tones and cozy layers for autumn vibes.",
     mood: ["autumn", "neutral"],
-    influencer: { name: "Lana Rivera", handle: "@lanacozy" },
+    influencer: {
+      name: "rere amalia",
+      handle: "@_rereamalia_",
+    },
     products: [
       {
         name: "Beige Trench Coat",
@@ -300,35 +322,7 @@ export default function LookbookPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-neutral-100 mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center">
-            <p className="text-xs text-neutral-500 mb-4">
-              Style inspiration delivered daily
-            </p>
-            <div className="flex justify-center space-x-6">
-              <a
-                href="#"
-                className="text-xs text-neutral-600 hover:text-neutral-900 transition-colors"
-              >
-                ABOUT
-              </a>
-              <a
-                href="#"
-                className="text-xs text-neutral-600 hover:text-neutral-900 transition-colors"
-              >
-                CONTACT
-              </a>
-              <a
-                href="#"
-                className="text-xs text-neutral-600 hover:text-neutral-900 transition-colors"
-              >
-                PRIVACY
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <CoffeeFooter />
     </div>
   );
 }

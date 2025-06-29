@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductList from "../../lookbook/components/ProductList";
 import ProductModal from "../../lookbook/components/ProductModal";
+import CoffeeFooter from "@/app/footer/page";
 
 interface ProductPlatform {
   platform: "shopee" | "tokopedia" | "tiktok";
@@ -472,6 +473,9 @@ export default function OotdDetail({
               />
             </div>
           </div>
+        </div>
+        <div className="mt-12">
+          <CoffeeFooter />
         </div>
       </main>
 

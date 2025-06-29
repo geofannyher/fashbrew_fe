@@ -124,28 +124,28 @@ const SignatureMenu = () => {
   const deliveryPlatforms = [
     {
       name: "GoFood",
-      url: "https://gofood.link/example",
+      url: "https://gofood.link/a/LBBtsfC",
       bgColor: "bg-gradient-to-r from-green-500 to-green-600",
       hoverColor: "hover:from-green-600 hover:to-green-700",
       icon: "🛵",
       description: "Pesan langsung via GoFood",
     },
-    // {
-    //   name: "GrabFood",
-    //   url: "https://food.grab.com/id/en/restaurant/example",
-    //   bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
-    //   hoverColor: "hover:from-emerald-600 hover:to-emerald-700",
-    //   icon: "🏍️",
-    //   description: "Order mudah di GrabFood",
-    // },
     {
-      name: "ShopeeFood",
-      url: "https://shopee.co.id/m/shopeefood-resto/example",
-      bgColor: "bg-gradient-to-r from-orange-500 to-red-500",
-      hoverColor: "hover:from-orange-600 hover:to-red-600",
-      icon: "🍜",
-      description: "Tersedia di ShopeeFood",
+      name: "GrabFood",
+      url: "https://r.grab.com/g/6-20250629_184712_da5851df37fb4a41a2dbcbba9517b924_MEXMPS-6-C6LEA3MAVGM2LA",
+      bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
+      hoverColor: "hover:from-emerald-600 hover:to-emerald-700",
+      icon: "🏍️",
+      description: "Order mudah di GrabFood",
     },
+    // {
+    //   name: "ShopeeFood",
+    //   url: "https://shopee.co.id/m/shopeefood-resto/example",
+    //   bgColor: "bg-gradient-to-r from-orange-500 to-red-500",
+    //   hoverColor: "hover:from-orange-600 hover:to-red-600",
+    //   icon: "🍜",
+    //   description: "Tersedia di ShopeeFood",
+    // },
   ];
 
   return (
@@ -251,10 +251,10 @@ const SignatureMenu = () => {
                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
                 <span>Rating 4.8/5</span>
               </div>
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                 <Truck className="w-4 h-4 text-cafe-600" />
                 <span>Gratis ongkir min. 50k</span>
-              </div>
+              </div> */}
             </div>
           </div>
 

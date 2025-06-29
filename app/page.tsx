@@ -14,6 +14,7 @@ import {
   Share2,
   Star,
 } from "lucide-react";
+import CoffeeFooter from "./footer/page";
 
 export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -319,26 +320,8 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 py-8 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <button
-              onClick={() => (window.location.href = "/")}
-              className="flex items-center space-x-3 mb-4 md:mb-0 hover:opacity-80 transition-opacity cursor-pointer group"
-            >
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-2 rounded-xl group-hover:shadow-lg transition-shadow">
-                <Coffee className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
-                CafeFinder
-              </span>
-            </button>
-            <p className="text-gray-600 text-sm">
-              © 2025 CafeFinder. Find your perfect coffee spot.
-            </p>
-          </div>
-        </div>
-      </footer>
+
+      <CoffeeFooter />
     </div>
   );
 }

@@ -91,24 +91,34 @@ const Footer = () => {
                   </Button>
                 </a>
 
-                <Button
+                {/* <Button
                   variant="ghost"
                   className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
                 >
                   📱 Order via WhatsApp
-                </Button>
+                </Button> */}
                 <Button
                   variant="ghost"
                   className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   📖 Menu Lengkap
                 </Button>
-                <Button
-                  variant="ghost"
-                  className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
+
+                <a
+                  href="https://maps.app.goo.gl/FQe3Enq8QFQ5Jz3s8" // Ganti dengan link lokasi sebenarnya
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  ⭐ Lihat Review Lainnya
-                </Button>
+                  <Button
+                    variant="ghost"
+                    className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
+                  >
+                    ⭐ Lihat Review Lainnya
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -118,9 +128,20 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 font-inter text-sm">
-              © 2024 Senja Coffee. All rights reserved. Made with ❤️ in Jember.
+              © 2025 Kattapa Coffee. All rights reserved. Made with ❤️ in
+              Jember. <br />
+              Website by{" "}
+              <a
+                href="https://www.instagram.com/jumptech.studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cafe-600 hover:underline font-medium"
+              >
+                Jumptech Studio
+              </a>
+              .
             </p>
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               <a
                 href="#"
                 className="text-gray-400 hover:text-white font-inter text-sm transition-colors"
@@ -139,7 +160,7 @@ const Footer = () => {
               >
                 Contact Us
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

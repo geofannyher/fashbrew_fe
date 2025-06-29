@@ -181,7 +181,7 @@ const HeroSection = ({
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
                 onClick={handleOpenMenuGallery}
               >
-                Cek Menu
+                📔 Cek Menu
               </Button>
               <Button
                 variant="outline"
@@ -194,6 +194,19 @@ const HeroSection = ({
                   rel="noopener noreferrer"
                 >
                   📍 Lokasi
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
+              >
+                <a
+                  href="https://wa.me/6285179835825?text=Halo%20saya%20mau%20tanya%20terkait%20reservasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📩 Reservasi
                 </a>
               </Button>
             </div>

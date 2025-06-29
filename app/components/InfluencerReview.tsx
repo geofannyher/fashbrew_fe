@@ -55,11 +55,10 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Review Selebgram
+            Review Rere
           </h2>
           <p className="text-lg text-gray-600 font-inter max-w-2xl mx-auto">
-            Lihat apa kata para influencer tentang pengalaman mereka di Senja
-            Coffee
+            Lihat apa kata rere tentang pengalaman di Kattapa Coffee
           </p>
         </div>
 

@@ -19,6 +19,9 @@ import {
   MapPin,
   InstagramIcon,
   TicketCheckIcon,
+  Music2,
+  ExternalLink,
+  Play,
 } from "lucide-react";
 import { ElementType, ReactElement, ReactNode, useState } from "react";
 
@@ -31,54 +34,63 @@ export default function RereAmaliaLanding() {
   });
 
   // Dummy data for Instagram posts
-  const instagramPosts = [
+  const socialPosts = [
     {
       id: 1,
+      type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
-      likes: 2341,
-      comments: 89,
-      type: "fashion",
+        "https://images.unsplash.com/photo-1494790108755-2616c90f9ad3?w=400&h=400&fit=crop",
+      likes: "2.4k",
+      comments: "89",
+      url: "https://instagram.com/p/example1",
     },
     {
       id: 2,
+      type: "tiktok",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
-      likes: 1987,
-      comments: 156,
-      type: "food",
+        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
+      likes: "15.2k",
+      views: "125k",
+      shares: "234",
+      url: "https://tiktok.com/@user/video/example2",
     },
     {
       id: 3,
+      type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
-      likes: 3456,
-      comments: 234,
-      type: "lifestyle",
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop",
+      likes: "1.8k",
+      comments: "67",
+      url: "https://instagram.com/p/example3",
     },
     {
       id: 4,
+      type: "tiktok",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
-      likes: 2789,
-      comments: 178,
-      type: "dj",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      likes: "8.7k",
+      views: "89k",
+      shares: "156",
+      url: "https://tiktok.com/@user/video/example4",
     },
     {
       id: 5,
+      type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
-      likes: 2134,
-      comments: 123,
-      type: "fashion",
+        "https://images.unsplash.com/photo-1488161628813-04466f872be2?w=400&h=400&fit=crop",
+      likes: "3.2k",
+      comments: "145",
+      url: "https://instagram.com/p/example5",
     },
     {
       id: 6,
+      type: "tiktok",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
-      likes: 1876,
-      comments: 98,
-      type: "lifestyle",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      likes: "22.1k",
+      views: "287k",
+      shares: "445",
+      url: "https://tiktok.com/@user/video/example6",
     },
   ];
 
@@ -316,6 +328,17 @@ export default function RereAmaliaLanding() {
     });
   };
 
+  const handlePostClick = (url: any) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+  const handleSocialClick = (platform: "instagram" | "tiktok") => {
+    const urls = {
+      instagram: "https://instagram.com/yourusername",
+      tiktok: "https://tiktok.com/@yourusername",
+    };
+    window.open(urls[platform], "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
       {/* Hero Section */}
@@ -361,14 +384,22 @@ export default function RereAmaliaLanding() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-full font-semibold text-base sm:text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                <Phone className="h-5 w-5" />
-                WhatsApp
-              </button>
-              <button className="bg-white/80 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full font-semibold text-base sm:text-lg border border-orange-200 hover:bg-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                <Mail className="h-5 w-5" />
-                Email Rere
-              </button>
+              <a
+                href="https://wa.me/6285748578429?text=Hallo%20Rere%2C%20mau%20endorse%20dong"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-full font-semibold text-base sm:text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  WhatsApp
+                </button>
+              </a>
+              <a href="mailto:rere@example.com?subject=Endorsement&body=Hallo%20Rere%2C%20mau%20endorse%20dong%20😊">
+                <button className="bg-white/80 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full font-semibold text-base sm:text-lg border border-orange-200 hover:bg-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                  <Mail className="h-5 w-5" />
+                  Email Rere
+                </button>
+              </a>
             </div>
           </div>
 
@@ -388,7 +419,16 @@ export default function RereAmaliaLanding() {
                     <Instagram className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900">125K</p>
+                    <p className="font-bold text-gray-900">45K +</p>
+                    <p className="text-sm text-gray-600">Followers</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 mt-5">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
+                    <Music2 className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">63K +</p>
                     <p className="text-sm text-gray-600">Followers</p>
                   </div>
                 </div>
@@ -426,7 +466,7 @@ export default function RereAmaliaLanding() {
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                With over <strong>125,000 engaged followers</strong> on
+                With over <strong>45,000 engaged followers</strong> on
                 Instagram, I collaborate with brands to deliver authentic
                 stories that connect with real people.
               </p>
@@ -465,7 +505,7 @@ export default function RereAmaliaLanding() {
               </h3>
               <div className="grid grid-cols-3 gap-4 text-center mt-6">
                 <div>
-                  <p className="text-3xl font-bold text-gray-900">125K+</p>
+                  <p className="text-3xl font-bold text-gray-900">45K+</p>
                   <p className="text-gray-600 text-sm">Followers</p>
                 </div>
                 <div>
@@ -482,12 +522,12 @@ export default function RereAmaliaLanding() {
             {/* TikTok Card */}
             <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl">
               <div className="flex justify-center mb-4">
-                <TicketCheckIcon className="w-10 h-10 text-black" />
+                <Music2 className="w-10 h-10 text-black" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">TikTok</h3>
               <div className="grid grid-cols-3 gap-4 text-center mt-6">
                 <div>
-                  <p className="text-3xl font-bold text-gray-900">40K+</p>
+                  <p className="text-3xl font-bold text-gray-900">63K+</p>
                   <p className="text-gray-600 text-sm">Followers</p>
                 </div>
                 <div>
@@ -505,43 +545,142 @@ export default function RereAmaliaLanding() {
       </section>
 
       {/* Live Instagram Feed */}
-      <section className="py-24 bg-gradient-to-br from-white/60 to-orange-50 backdrop-blur-sm">
+      <section className="py-24 bg-gradient-to-br from-white/60 to-purple-50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-serif font-bold text-gray-900 mb-3">
-              Latest from Instagram
+              Latest Social Content
             </h2>
             <p className="text-lg text-gray-700">
-              Stay updated with my latest content and stories ✨
+              Follow my journey across Instagram & TikTok ✨
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {instagramPosts.map((post) => (
+            {socialPosts.map((post) => (
               <div
                 key={post.id}
-                className="relative group overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.03]"
+                className="relative group overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-[1.03] cursor-pointer"
+                onClick={() => handlePostClick(post.url)}
               >
                 <img
                   src={post.image}
-                  alt={`Instagram post ${post.id}`}
-                  className="w-full h-72 object-cover"
+                  alt={`${post.type} post ${post.id}`}
+                  className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-2xl">
-                  <div className="flex items-center gap-6 text-white text-sm sm:text-base font-medium">
-                    <div className="flex items-center gap-1">
-                      <Heart className="h-5 w-5 text-pink-400" />
-                      <span>{post.likes}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <MessageCircle className="h-5 w-5 text-amber-300" />
-                      <span>{post.comments}</span>
+
+                {/* Platform Icon Badge */}
+                <div
+                  className={`absolute top-4 right-4 p-2 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${
+                    post.type === "instagram"
+                      ? "bg-gradient-to-r from-pink-500 to-orange-500"
+                      : "bg-gradient-to-r from-purple-500 to-pink-500"
+                  }`}
+                >
+                  {post.type === "instagram" ? (
+                    <Instagram className="h-4 w-4 text-white" />
+                  ) : (
+                    <Music2 className="h-4 w-4 text-white" />
+                  )}
+                </div>
+
+                {/* TikTok Play Button Overlay */}
+                {post.type === "tiktok" && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="bg-black/50 rounded-full p-4 group-hover:bg-black/70 transition-all duration-300">
+                      <Play className="h-8 w-8 text-white fill-white" />
                     </div>
                   </div>
+                )}
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center rounded-2xl">
+                  {/* Stats */}
+                  <div className="flex items-center gap-4 text-white text-sm sm:text-base font-medium mb-4">
+                    <div className="flex items-center gap-1">
+                      <Heart className="h-5 w-5 text-red-400" />
+                      <span>{post.likes}</span>
+                    </div>
+
+                    {post.type === "instagram" ? (
+                      <div className="flex items-center gap-1">
+                        <MessageCircle className="h-5 w-5 text-blue-400" />
+                        <span>{post.comments}</span>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex items-center gap-1">
+                          <Play className="h-4 w-4 text-green-400" />
+                          <span>{post.views}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Share2 className="h-4 w-4 text-yellow-400" />
+                          <span>{post.shares}</span>
+                        </div>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Action Button */}
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handlePostClick(post.url);
+                      }}
+                      className={`text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all duration-200 transform hover:scale-105 ${
+                        post.type === "instagram"
+                          ? "bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600"
+                          : "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+                      }`}
+                    >
+                      {post.type === "instagram" ? (
+                        <>
+                          <Instagram className="h-4 w-4" />
+                          View Post
+                        </>
+                      ) : (
+                        <>
+                          <Music2 className="h-4 w-4" />
+                          Watch Video
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
+
+                {/* Bottom Gradient Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
+          </div>
+
+          {/* Social Media Buttons */}
+          <div className="text-center mt-12">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <button
+                onClick={() => handleSocialClick("instagram")}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <Instagram className="h-6 w-6" />
+                Follow on Instagram
+                <ExternalLink className="h-5 w-5" />
+              </button>
+
+              <button
+                onClick={() => handleSocialClick("tiktok")}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <Music2 className="h-6 w-6" />
+                Follow on TikTok
+                <ExternalLink className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Additional CTA */}
+            <p className="text-gray-600 mt-6 text-sm">
+              Join thousands of followers for daily inspiration and updates! 🌟
+            </p>
           </div>
         </div>
       </section>

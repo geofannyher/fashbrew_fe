@@ -28,7 +28,7 @@ export default function Navbar() {
             </div>
             <div className="text-left">
               <h1 className="text-xl font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
-                CafeFinder
+                Fashbrew
               </h1>
               <p className="text-xs text-gray-500">Discover great cafes</p>
             </div>
