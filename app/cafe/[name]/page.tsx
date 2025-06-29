@@ -76,18 +76,19 @@ export default function CafeDetail({
 
   const dummyCafeData: Caffe = {
     id: 1,
-    name_caffe: "Kopi Kenangan Surabaya",
+    name_caffe: "Kattapa Coffee",
     url_map: "https://maps.google.com/?q=kopi+kenangan+surabaya",
     istagram: "@kopikenangan.sby",
     tagline: "Kopi Terbaik di Surabaya dengan Cita Rasa Autentik",
     day_operational: "Senin - Minggu",
-    time_operational: "07:00 - 22:00 WIB",
+    time_operational: "10:00 - 23:00 WIB",
     url_img_hero:
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751112911/fashbrew/IMG_6780_c1sxoe.jpg",
     url_img_parking:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     rekomendation: true,
-    url_review: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    url_review:
+      "https://www.instagram.com/reel/DKcMNLvzRIf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     lokasi_lengkap:
       "Jl. Raya Darmo No. 123, Wonokromo, Surabaya, Jawa Timur 60241",
     biaya_parking_mobil: "Rp 5.000/jam",

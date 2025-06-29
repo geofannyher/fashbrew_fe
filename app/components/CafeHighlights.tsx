@@ -8,9 +8,9 @@ const CafeHighlights = () => {
 
   const facilities = [
     { icon: Wifi, label: "Free WiFi", description: "High-speed internet" },
-    { icon: Zap, label: "Power Outlets", description: "Di setiap meja" },
+    { icon: Zap, label: "Power Outlets", description: "Di beberapa meja" },
     { icon: Car, label: "Parking", description: "Parkir mudah & aman" },
-    { icon: CreditCard, label: "Cashless", description: "QRIS, OVO, GoPay" },
+    { icon: CreditCard, label: "Cashless", description: "QRIS" },
   ];
 
   return (
@@ -21,18 +21,18 @@ const CafeHighlights = () => {
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80"
+                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751117008/fashbrew/IMG_6811_hzqgew.jpg"
                 alt="Interior aesthetic"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
               <img
-                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=500&q=80"
+                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751116766/fashbrew/Hilight_Kattapa_ri8l2b.jpg"
                 alt="Coffee and pastries"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <img
-              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+              src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751116772/fashbrew/Hilight_Kattapa_2_e3yszj.jpg"
               alt="Outdoor seating"
               className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             />
@@ -63,7 +63,7 @@ const CafeHighlights = () => {
                   </span>
                 </div>
                 <p className="text-sm text-gray-600 font-inter">
-                  Jl. Gajah Mada No. 123
+                  Lingkungan Krajan Timur
                   <br />
                   Sumbersari, Jember
                 </p>
@@ -79,7 +79,7 @@ const CafeHighlights = () => {
                 <p className="text-sm text-gray-600 font-inter">
                   Senin - Minggu
                   <br />
-                  08:00 - 22:00 WIB
+                  10:00 - 23:00 WIB
                 </p>
               </Card>
             </div>
@@ -122,14 +122,14 @@ const CafeHighlights = () => {
                   Range Harga
                 </h4>
                 <p className="text-gray-700 font-inter">
-                  Rp 15.000 - Rp 45.000
+                  Rp 15.000 - Rp 35.000
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 font-inter mb-2">
                   Waktu Ramai
                 </h4>
-                <p className="text-gray-700 font-inter">Sore hari & Weekend</p>
+                <p className="text-gray-700 font-inter">Malam Hari</p>
               </div>
             </div>
           </div>

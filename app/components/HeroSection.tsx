@@ -26,10 +26,21 @@ interface HeroSectionProps {
 
 // Sample menu images - ganti dengan URL gambar menu kamu yang sebenarnya
 const menuImages = [
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750762026/Tangkapan_Layar_2025-06-24_pukul_17.46.07_udnfqh.png", // Coffee menu
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750762027/Tangkapan_Layar_2025-06-24_pukul_17.43.33_hd5lfl.png", // Food menu
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750762031/Tangkapan_Layar_2025-06-24_pukul_17.46.30_m8cpaj.png", // Dessert menu
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750762033/Tangkapan_Layar_2025-06-24_pukul_17.43.46_f7n5ag.png", // Beverage menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134406/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.09.46_tm2ili.png", // Coffee menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134404/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.11_btlkwx.png", // Food menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134399/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.19_zikaop.png", // Dessert menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134406/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.28_mwuhuh.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134410/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.38_etjsnl.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134417/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.47_ndmbto.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134419/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.55_y2rndo.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134410/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.02_kdj5gi.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134416/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.10_tbvjlw.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134424/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.18_ajinjd.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134422/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.26_gsu8ga.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134423/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.37_q1hgb2.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134398/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.46_hdnsbx.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134403/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.54_uhqufa.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134403/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.12.02_cyjznr.png", // Beverage menu
 ];
 
 const HeroSection = ({
@@ -74,7 +85,7 @@ const HeroSection = ({
               {rekomendation === true ? (
                 <>
                   <span className="text-sm font-medium text-gray-800">
-                    Favorit Selebgram
+                    Favorit
                   </span>
                 </>
               ) : (
@@ -104,10 +115,10 @@ const HeroSection = ({
                 Cocok untuk:
               </h3>
               <div className="flex flex-wrap gap-3">
-                <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30">
+                {/* <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30">
                   <BookOpen className="w-4 h-4 text-blue-300" />
                   <span className="text-white text-sm font-medium">Nugas</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
                   <Users className="w-4 h-4 text-green-300" />
                   <span className="text-white text-sm font-medium">
@@ -120,10 +131,10 @@ const HeroSection = ({
                     Foto-foto
                   </span>
                 </div>
-                <div className="flex items-center gap-2 bg-gradient-to-r from-pink-500/20 to-pink-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-pink-400/30">
+                {/* <div className="flex items-center gap-2 bg-gradient-to-r from-pink-500/20 to-pink-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-pink-400/30">
                   <Heart className="w-4 h-4 text-pink-300" />
                   <span className="text-white text-sm font-medium">Date</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-amber-400/30">
                   <Coffee className="w-4 h-4 text-amber-300" />
                   <span className="text-white text-sm font-medium">
@@ -178,7 +189,7 @@ const HeroSection = ({
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
               >
                 <a
-                  href="https://maps.app.goo.gl/kDs2AWzqDWfsgeBK7"
+                  href="https://maps.app.goo.gl/CNf6bqi7YvM8A3CF7"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

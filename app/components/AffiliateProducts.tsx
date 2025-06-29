@@ -60,11 +60,11 @@ const AffiliateProducts = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Barang-barang yang Dipakai Selebgram
+            Barang-barang yang Dipakai Rere
           </h2>
           <p className="text-lg text-gray-600 font-inter max-w-3xl mx-auto">
-            Dapatkan look aesthetic seperti influencer favorit Anda dengan
-            produk-produk yang mereka gunakan saat berkunjung ke Senja Coffee
+            Dapatkan look aesthetic seperti Rere dengan produk-produk yang rere
+            gunakan saat berkunjung ke Kattapa Coffee
           </p>
         </div>
 
@@ -137,8 +137,7 @@ const AffiliateProducts = () => {
         <div className="mt-12 bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-4xl mx-auto">
           <p className="text-sm text-amber-700 font-inter text-center">
             <strong>Disclaimer:</strong> Produk-produk di atas adalah
-            rekomendasi affiliate. Harga dapat berubah sewaktu-waktu. Kami
-            mendapat komisi dari pembelian melalui link ini.
+            rekomendasi affiliate. Harga dapat berubah sewaktu-waktu.
           </p>
         </div>
       </div>

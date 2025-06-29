@@ -2,7 +2,7 @@
 
 import React, { use, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductList from "../../lookbook/components/ProductList";
 import ProductModal from "../../lookbook/components/ProductModal";
 
@@ -22,7 +22,7 @@ interface Product {
 
 interface OOTDDetail {
   id: string;
-  image: string;
+  images: string[]; // Changed from single image to array of images
   title: string;
   description: string;
   influencer: {
@@ -35,8 +35,11 @@ interface OOTDDetail {
 const ootdDetailData: Record<string, OOTDDetail> = {
   "1": {
     id: "1",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
+      "https://images.unsplash.com/photo-1521577352947-9bb58764b69b?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1550966871-3ed3f4f10784?auto=format&fit=crop&w=1000&q=80",
+    ],
     title: "Effortless Weekend Layers",
     description:
       "Blazer oversized dan celana tailored untuk tampilan kasual elegan.",
@@ -70,8 +73,10 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "2": {
     id: "2",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+      "https://images.unsplash.com/photo-1602810317009-d76527da3d46?auto=format&fit=crop&w=500&q=80",
+    ],
     title: "Urban Monochrome",
     description: "Tampilan abu-abu modern untuk city vibes.",
     influencer: { name: "Liam Park", handle: "@liamstreet" },
@@ -98,8 +103,11 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "3": {
     id: "3",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+      "https://images.unsplash.com/photo-1614289826380-3018be4e9d6c?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1600185365483-26d625f38526?auto=format&fit=crop&w=500&q=80",
+    ],
     title: "Vintage Parisian",
     description: "Gaya vintage ala Paris tahun 60-an.",
     influencer: { name: "Chloe Moret", handle: "@vintageparis" },
@@ -127,10 +135,12 @@ const ootdDetailData: Record<string, OOTDDetail> = {
       },
     ],
   },
+  // Continue with other items, converting single image to images array...
   "4": {
     id: "4",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+    ],
     title: "Sporty Street",
     description: "Kombinasi athleisure dan streetwear yang santai.",
     influencer: { name: "Rio Santoso", handle: "@riodripp" },
@@ -148,8 +158,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "5": {
     id: "5",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+    ],
     title: "Summer Breeze",
     description: "Pakaian musim panas yang ringan dan menyegarkan.",
     influencer: { name: "Ayu Wulandari", handle: "@ayuwstyle" },
@@ -167,8 +178,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "6": {
     id: "6",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+    ],
     title: "Bold and Black",
     description: "Semua serba hitam untuk gaya edgy dan tegas.",
     influencer: { name: "Nathan Lie", handle: "@darkbydefault" },
@@ -186,8 +198,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "7": {
     id: "7",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+    ],
     title: "Minimal Tan",
     description: "Warna nude dan earth tone untuk nuansa bersih.",
     influencer: { name: "Dina Zhafira", handle: "@dinanudes" },
@@ -208,8 +221,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "8": {
     id: "8",
-    image:
+    images: [
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
+    ],
     title: "Weekend Denim",
     description: "Casual denim for everyday weekend fun.",
     influencer: { name: "Kevin Lau", handle: "@kevindress" },
@@ -227,8 +241,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "9": {
     id: "9",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1521577352947-9bb58764b69b?auto=format&fit=crop&w=1000&q=80",
+    ],
     title: "Layered Neutrals",
     description: "Layering ringan dengan palet warna netral.",
     influencer: { name: "Rara Kamila", handle: "@raralayers" },
@@ -246,8 +261,9 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   },
   "10": {
     id: "10",
-    image:
+    images: [
       "https://images.unsplash.com/photo-1550966871-3ed3f4f10784?auto=format&fit=crop&w=1000&q=80",
+    ],
     title: "Office Smart Casual",
     description: "Tampilan semi-formal untuk ke kantor.",
     influencer: { name: "Rico Hartanto", handle: "@ricoformal" },
@@ -270,6 +286,106 @@ interface Props {
     id: string;
   };
 }
+
+// Image Carousel Component
+interface ImageCarouselProps {
+  images: string[];
+  title: string;
+}
+
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
+  return (
+    <div className="relative">
+      {/* Main Image Container */}
+      <div className="aspect-[3/4] bg-neutral-100 rounded-lg overflow-hidden mb-4 relative group">
+        <img
+          src={images[currentImageIndex]}
+          alt={`${title} - Image ${currentImageIndex + 1}`}
+          className="w-full h-full object-cover transition-opacity duration-300"
+        />
+
+        {/* Navigation Arrows - Only show if more than 1 image */}
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-neutral-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-neutral-800 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </>
+        )}
+
+        {/* Image Counter */}
+        {images.length > 1 && (
+          <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded">
+            {currentImageIndex + 1} / {images.length}
+          </div>
+        )}
+      </div>
+
+      {/* Thumbnail Navigation - Only show if more than 1 image */}
+      {images.length > 1 && (
+        <div className="flex gap-2 overflow-x-auto pb-2">
+          {images.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => goToImage(index)}
+              className={`flex-shrink-0 w-16 h-16 rounded-md overflow-hidden border-2 transition-all duration-200 ${
+                currentImageIndex === index
+                  ? "border-neutral-800 opacity-100"
+                  : "border-transparent opacity-60 hover:opacity-80"
+              }`}
+            >
+              <img
+                src={image}
+                alt={`${title} thumbnail ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Dot Indicators - Alternative to thumbnails for minimal design */}
+      {images.length > 1 && (
+        <div className="flex justify-center gap-1 mt-4">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToImage(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                currentImageIndex === index
+                  ? "bg-neutral-800"
+                  : "bg-neutral-300 hover:bg-neutral-500"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default function OotdDetail({
   params,
@@ -322,13 +438,8 @@ export default function OotdDetail({
       <main className="container max-w-7xl mx-auto px-4 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <div className="aspect-[3/4] bg-neutral-100 rounded-lg overflow-hidden mb-6">
-              <img
-                src={ootd.image}
-                alt={ootd.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Image Carousel */}
+            <ImageCarousel images={ootd.images} title={ootd.title} />
 
             <h1 className="text-2xl font-light text-neutral-900 leading-relaxed">
               {ootd.title}

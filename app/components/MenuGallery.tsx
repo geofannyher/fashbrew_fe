@@ -119,7 +119,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
       <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-4">
         <div className="flex justify-between items-center">
           <div className="text-white">
-            <h3 className="text-lg font-semibold">Menu Senja Coffee</h3>
+            <h3 className="text-lg font-semibold">Menu Kattapa Coffee</h3>
             <p className="text-sm text-gray-300">
               {currentIndex + 1} dari {images.length}
             </p>
@@ -146,7 +146,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
         <img
           src={images[currentIndex]}
           alt={`Menu ${currentIndex + 1}`}
-          className="max-w-full max-h-full object-contain select-none transition-transform duration-200"
+          className="max-w-full max-h-[calc(100vh-200px)] object-contain select-none transition-transform duration-200"
           style={{
             transform: `scale(${scale}) translate(${position.x / scale}px, ${
               position.y / scale
@@ -221,7 +221,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
 
         {/* Thumbnail Navigation */}
         {images.length > 1 && (
-          <div className="flex justify-center gap-2 mt-4 overflow-x-auto pb-2">
+          <div className="flex justify-start sm:justify-center gap-2 mt-4 overflow-x-auto pb-2">
             {images.map((image, index) => (
               <button
                 key={index}

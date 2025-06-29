@@ -9,12 +9,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-playfair text-3xl font-bold text-white mb-4">
-              Senja Coffee
+              Kattapa Coffee
             </h3>
             <p className="text-gray-300 font-inter leading-relaxed mb-6">
-              Cafe instagramable terpopuler di Jember. Tempat favorit para
-              influencer untuk nongkrong, kerja, dan menciptakan konten
-              aesthetic.
+              Cafe instagramable terpopuler di Jember. Tempat favorit rere untuk
+              nongkrong, kerja, dan menciptakan konten aesthetic.
             </p>
             <div className="flex items-center gap-4">
               <Button
@@ -22,11 +21,14 @@ const Footer = () => {
                 size="sm"
                 className="border-cafe-400 text-cafe-400 hover:bg-cafe-400 hover:text-white"
                 onClick={() =>
-                  window.open("https://instagram.com/senjacoffee", "_blank")
+                  window.open(
+                    "https://www.instagram.com/kattapacoffee",
+                    "_blank"
+                  )
                 }
               >
                 <Instagram className="w-4 h-4 mr-2" />
-                Follow @senjacoffee
+                Follow @kattapacoffee
               </Button>
             </div>
           </div>
@@ -41,9 +43,9 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-cafe-400 mt-0.5" />
                 <div>
                   <p className="text-gray-300 font-inter text-sm">
-                    Jl. Gajah Mada No. 123
+                    Lingkungan Krajan Timur
                     <br />
-                    Sumbersari, Jember 68121
+                    Sumbersari, Jember 68124
                   </p>
                 </div>
               </div>
@@ -53,7 +55,7 @@ const Footer = () => {
                   <p className="text-gray-300 font-inter text-sm">
                     Senin - Minggu
                     <br />
-                    08:00 - 22:00 WIB
+                    10:00 - 23:00 WIB
                   </p>
                 </div>
               </div>
@@ -61,8 +63,8 @@ const Footer = () => {
                 <Star className="w-5 h-5 text-cafe-400 mt-0.5" />
                 <div>
                   <p className="text-gray-300 font-inter text-sm">
-                    Rating 4.8/5 ⭐<br />
-                    2,500+ Google Reviews
+                    Rating 4.7 ⭐<br />
+                    650+ Google Reviews
                   </p>
                 </div>
               </div>
@@ -76,12 +78,19 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <div className="flex flex-col gap-3">
-                <Button
-                  variant="ghost"
-                  className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
+                <a
+                  href="https://maps.app.goo.gl/FQe3Enq8QFQ5Jz3s8" // Ganti dengan link lokasi sebenarnya
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  📍 Lihat di Google Maps
-                </Button>
+                  <Button
+                    variant="ghost"
+                    className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"
+                  >
+                    📍 Lihat di Google Maps
+                  </Button>
+                </a>
+
                 <Button
                   variant="ghost"
                   className="text-gray-300 hover:text-white hover:bg-gray-800 justify-start p-0 h-auto font-inter"

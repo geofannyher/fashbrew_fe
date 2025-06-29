@@ -13,6 +13,24 @@ import {
   Star,
   X,
   ChevronRight,
+  Plug,
+  Cable,
+  Snowflake,
+  Toilet,
+  Music2,
+  FileText,
+  Video,
+  Cigarette,
+  Gamepad2,
+  Presentation,
+  Droplet,
+  Accessibility,
+  SprayCan,
+  Baby,
+  Moon,
+  Lock,
+  Box,
+  Clipboard,
 } from "lucide-react";
 
 const CafeFacilitiesModal = ({
@@ -35,57 +53,173 @@ const CafeFacilitiesModal = ({
       available: true,
     },
     {
+      icon: Plug,
+      label: "Stop Kontak",
+      description:
+        "Stop kontak tersedia di berbagai sudut ruangan untuk kemudahan mengisi daya perangkat.",
+      category: "connectivity",
+      rating: 4.8,
+      available: true,
+    },
+    {
+      icon: Cable,
+      label: "Kabel Olor",
+      description: "Kabel perpanjangan saat ini sedang tidak tersedia.",
+      category: "connectivity",
+      rating: 4.8,
+      available: false,
+    },
+    {
+      icon: Snowflake, // Ganti dengan ikon AC yang paling cocok dari lucide-react
+      label: "AC",
+      description:
+        "Ruangan dilengkapi dengan pendingin udara (AC) untuk kenyamanan maksimal.",
+      category: "comfort",
+      rating: 4.9,
+      available: true,
+    },
+    {
+      icon: Toilet, // Gunakan ikon paling relevan dari lucide-react, misalnya 'Toilet', 'Droplet', atau 'ShowerHead' jika tersedia
+      label: "Toilet Bersih",
+      description:
+        "Toilet bersih dan terawat tersedia di area strategis untuk kenyamanan penghuni.",
+      category: "facility",
+      rating: 4.7,
+      available: true,
+    },
+    {
+      icon: Music2, // Ikon 'Music2' dari lucide-react cocok untuk live music
+      label: "Live Musik",
+      description:
+        "Nikmati live musik akustik di waktu-waktu tertentu meski tanpa jadwal tetap.",
+      category: "entertainment",
+      rating: 4.3,
+      available: true,
+    },
+    {
+      icon: Music, // Ikon 'Music' dari lucide-react cocok untuk pemutaran musik biasa
+      label: "Playlist Musik",
+      description:
+        "Musik santai dari playlist pilihan diputar sepanjang hari untuk menemani suasana.",
+      category: "entertainment",
+      rating: 4.2,
+      available: true,
+    },
+    {
+      icon: Box, // Ikon 'FileText' dari lucide-react paling mendekati visual tisu
+      label: "Tisu Tersedia",
+      description:
+        "Tisu disediakan di area umum seperti toilet dan ruang makan untuk kenyamanan bersama.",
+      category: "facility",
+      rating: 4.6,
+      available: true,
+    },
+    {
+      icon: Video, // Ikon 'Video' dari lucide-react dapat mewakili CCTV
+      label: "CCTV 24 Jam",
+      description:
+        "Area diawasi dengan CCTV aktif 24 jam untuk meningkatkan keamanan pengunjung.",
+      category: "security",
+      rating: 4.8,
+      available: true,
+    },
+    {
+      icon: Cigarette, // Ikon 'Cigarette' dari lucide-react cocok untuk smoking area
+      label: "Smoking Area",
+      description:
+        "Area khusus merokok tersedia di dalam ruangan lantai 2 agar tidak mengganggu kenyamanan pengunjung lain.",
+      category: "facility",
+      rating: 4.4,
+      available: true,
+    },
+    {
+      icon: Gamepad2, // Masih relevan karena ikon ini menggambarkan hiburan
+      label: "Game Tongkrongan",
+      description:
+        "Tersedia permainan seperti kartu, UNO, catur, dan board games lainnya untuk seru-seruan bareng.",
+      category: "entertainment",
+      rating: 4.5,
+      available: false,
+    },
+    {
+      icon: Presentation, // Ikon 'Presentation' cocok untuk ruang rapat
+      label: "Ruang Rapat",
+      description:
+        "Ruang khusus tersedia untuk keperluan rapat, diskusi kelompok, atau meeting pekerjaan dengan suasana nyaman.",
+      category: "facility",
+      rating: 4.6,
+      available: false,
+    },
+    {
+      icon: Camera, // Ikon 'Camera' dari lucide-react cocok untuk photobooth
+      label: "Photobooth",
+      description:
+        "Spot photobooth estetik tersedia untuk mengabadikan momen seru bareng teman atau penghuni lainnya.",
+      category: "entertainment",
+      rating: 4.4,
+      available: false,
+    },
+    {
+      icon: Droplet, // Ikon 'Droplet' dari lucide-react paling mendekati fungsi wastafel
+      label: "Wastafel",
+      description:
+        "Wastafel tersedia di area umum untuk cuci tangan dan menjaga kebersihan sebelum dan sesudah makan.",
+      category: "facility",
+      rating: 4.5,
+      available: true,
+    },
+    {
+      icon: Accessibility, // Ikon 'Accessibility' dari lucide-react cocok untuk jalur difabel
+      label: "Akses Difabel",
+      description:
+        "Tersedia jalur khusus dan akses ramah difabel agar semua penghuni dapat beraktivitas dengan nyaman dan aman.",
+      category: "facility",
+      rating: 4.6,
+      available: false,
+    },
+    {
+      icon: SprayCan, // Ikon 'SprayCan' dari lucide-react paling cocok untuk mewakili parfum ruangan
+      label: "Parfum Ruangan",
+      description:
+        "Aroma ruangan dijaga tetap segar dengan parfum ruangan yang rutin disemprotkan di area umum.",
+      category: "facility",
+      rating: 4.5,
+      available: true,
+    },
+    {
+      icon: Lock, // Ikon 'Lock' dari lucide-react merepresentasikan keamanan loker
+      label: "Loker Penitipan",
+      description:
+        "Loker penitipan tersedia untuk menyimpan barang bawaan Anda dengan aman selama berkunjung.",
+      category: "facility",
+      rating: 4.6,
+      available: false,
+    },
+    {
+      icon: Baby, // Ikon 'Baby' dari lucide-react paling relevan untuk baby chair
+      label: "Baby Chair",
+      description:
+        "Tersedia kursi bayi di area makan untuk kenyamanan keluarga yang membawa anak kecil.",
+      category: "facility",
+      rating: 4.4,
+      available: true,
+    },
+    {
+      icon: Moon, // Jika tidak tersedia, bisa pakai 'Home' atau 'TentTree' sebagai alternatif
+      label: "Mushola",
+      description:
+        "Disediakan mushola yang bersih dan nyaman untuk memenuhi kebutuhan ibadah para penghuni.",
+      category: "facility",
+      rating: 4.7,
+      available: true,
+    },
+    {
       icon: Car,
       label: "Parkir Luas",
       description:
         "Area parkir yang memadai untuk mobil dan motor dengan sistem keamanan 24 jam",
       category: "parking",
       rating: 4.5,
-      available: true,
-    },
-    {
-      icon: Utensils,
-      label: "Menu Beragam",
-      description:
-        "Pilihan makanan dan minuman lengkap dari kopi specialty hingga hidangan berat",
-      category: "food",
-      rating: 4.7,
-      available: true,
-    },
-    {
-      icon: Coffee,
-      label: "Kopi Premium",
-      description:
-        "Biji kopi pilihan dari berbagai daerah dengan teknik brewing profesional",
-      category: "food",
-      rating: 4.9,
-      available: true,
-    },
-    {
-      icon: Users,
-      label: "Meeting Room",
-      description:
-        "Ruang privat untuk meeting bisnis dengan kapasitas 6-8 orang",
-      category: "workspace",
-      rating: 4.6,
-      available: false,
-    },
-    {
-      icon: Music,
-      label: "Live Music",
-      description:
-        "Pertunjukan musik akustik setiap weekend dengan artis lokal",
-      category: "entertainment",
-      rating: 4.4,
-      available: true,
-    },
-    {
-      icon: Camera,
-      label: "Instagram Spot",
-      description:
-        "Area foto menarik dengan dekorasi aesthetic untuk konten media sosial",
-      category: "entertainment",
-      rating: 4.8,
       available: true,
     },
     {
@@ -107,24 +241,29 @@ const CafeFacilitiesModal = ({
       count: facilities.filter((f) => f.category === "connectivity").length,
     },
     {
-      id: "food",
-      label: "Makanan & Minuman",
-      count: facilities.filter((f) => f.category === "food").length,
+      id: "comfort",
+      label: "Kenyamanan",
+      count: facilities.filter((f) => f.category === "comfort").length,
     },
     {
-      id: "workspace",
-      label: "Ruang Kerja",
-      count: facilities.filter((f) => f.category === "workspace").length,
-    },
-    {
-      id: "parking",
-      label: "Parkir",
-      count: facilities.filter((f) => f.category === "parking").length,
+      id: "facility",
+      label: "Fasilitas Umum",
+      count: facilities.filter((f) => f.category === "facility").length,
     },
     {
       id: "entertainment",
       label: "Hiburan",
       count: facilities.filter((f) => f.category === "entertainment").length,
+    },
+    {
+      id: "security",
+      label: "Keamanan",
+      count: facilities.filter((f) => f.category === "security").length,
+    },
+    {
+      id: "parking",
+      label: "Parkir",
+      count: facilities.filter((f) => f.category === "parking").length,
     },
   ];
 
@@ -133,11 +272,11 @@ const CafeFacilitiesModal = ({
       ? facilities
       : facilities.filter((f) => f.category === selectedCategory);
 
-  const getRatingColor = (rating: any) => {
-    if (rating >= 4.7) return "text-green-600 bg-green-50";
-    if (rating >= 4.4) return "text-blue-600 bg-blue-50";
-    return "text-yellow-600 bg-yellow-50";
-  };
+  // const getRatingColor = (rating: any) => {
+  //   if (rating >= 4.7) return "text-green-600 bg-green-50";
+  //   if (rating >= 4.4) return "text-blue-600 bg-blue-50";
+  //   return "text-yellow-600 bg-yellow-50";
+  // };
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
@@ -251,7 +390,7 @@ const CafeFacilitiesModal = ({
                           </h4>
 
                           {/* Rating */}
-                          <div
+                          {/* <div
                             className={`flex items-center gap-1 px-2 py-1 rounded-full ${getRatingColor(
                               facility.rating
                             )}`}
@@ -260,7 +399,7 @@ const CafeFacilitiesModal = ({
                             <span className="text-xs font-medium">
                               {facility.rating}
                             </span>
-                          </div>
+                          </div> */}
                         </div>
 
                         <p
@@ -297,7 +436,7 @@ const CafeFacilitiesModal = ({
 
             {/* Modal Footer */}
             <div className="px-8 py-6 bg-gray-50 border-t border-gray-100">
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <MapPin className="w-4 h-4" />
                   <span>Jl. Raya Darmo No. 123, Surabaya</span>
@@ -306,7 +445,7 @@ const CafeFacilitiesModal = ({
                   <Clock className="w-4 h-4" />
                   <span>Buka: 07:00 - 22:00 WIB</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <button

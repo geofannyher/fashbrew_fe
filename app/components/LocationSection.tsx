@@ -7,7 +7,7 @@ const LocationSection = () => {
     {
       icon: Car,
       title: "Mobil/Motor",
-      description: "Dari Alun-alun Jember: 10 menit ke arah Gajah Mada",
+      description: "Dari Alun-alun Jember: 10 menit ke arah JL.Jawa",
       time: "~10 menit",
     },
     {
@@ -38,7 +38,7 @@ const LocationSection = () => {
               {/* Google Maps Embed */}
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.2591273374!2d113.72352647603897!3d-8.17662948196266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695003f11c1d7%3A0x8537662adc483319!2sCuscuss%20cafe%20jember!5e0!3m2!1sid!2sid!4v1750912838381!5m2!1sid!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.390180423381!2d113.72612807603892!3d-8.163386381799286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695004d44ec7f%3A0xc4bb1933c4e6da3f!2sKattapa%20Coffee!5e0!3m2!1sid!2sid!4v1751182547148!5m2!1sid!2sid"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -92,11 +92,11 @@ const LocationSection = () => {
                     Alamat Lengkap
                   </h3>
                   <p className="text-gray-700 font-inter leading-relaxed">
-                    Jl. Gajah Mada No. 123
+                    Lingkungan Krajan Timur
                     <br />
-                    Sumbersari, Kec. Sumbersari
+                    Tegalgede, Kec. Sumbersari
                     <br />
-                    Kabupaten Jember, Jawa Timur 68121
+                    Kabupaten Jember, Jawa Timur 68124
                   </p>
                 </div>
               </div>
@@ -115,23 +115,23 @@ const LocationSection = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-gray-700 font-inter">
-                        Senin - Jumat
+                        Senin - Minggu
                       </span>
                       <span className="font-medium text-gray-900 font-inter">
-                        08:00 - 22:00
+                        10:00 - 23:00
                       </span>
                     </div>
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                       <span className="text-gray-700 font-inter">
                         Sabtu - Minggu
                       </span>
                       <span className="font-medium text-gray-900 font-inter">
                         07:00 - 23:00
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                   <p className="text-sm text-cafe-600 font-inter mt-3">
-                    ⏰ Waktu ramai: 15:00 - 19:00 & Weekend
+                    ⏰ Waktu ramai: 19:00 - 22:00 & Weekend
                   </p>
                 </div>
               </div>

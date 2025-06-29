@@ -8,32 +8,32 @@ interface ReviewSection {
 
 const InfluencerReview = ({ url_review }: ReviewSection) => {
   const influencers = [
+    // {
+    //   name: "Jessica Tanoesoedibjo",
+    //   username: "@jessicatanoe",
+    //   quote:
+    //     "Coklat matcha-nya beneran bikin balik lagi 😍 Interior nya juga super aesthetic buat foto OOTD!",
+    //   avatar:
+    //     "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
+    //   isSpecialCollaboration: true,
+    //   videoThumbnail:
+    //     "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=400&q=80",
+    //   instagramUrl:
+    //     "https://www.instagram.com/reel/DJTpXEFTV25/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    //   hasEmbeddableVideo: true,
+    //   videoId: "example1",
+    // },
     {
-      name: "Jessica Tanoesoedibjo",
-      username: "@jessicatanoe",
-      quote:
-        "Coklat matcha-nya beneran bikin balik lagi 😍 Interior nya juga super aesthetic buat foto OOTD!",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
-      isSpecialCollaboration: true,
-      videoThumbnail:
-        "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=400&q=80",
-      instagramUrl:
-        "https://www.instagram.com/reel/DJTpXEFTV25/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      hasEmbeddableVideo: true,
-      videoId: "example1",
-    },
-    {
-      name: "Raditya Dika",
-      username: "@radityadika",
+      name: "Rere Amalia",
+      username: "@_rereamalia_",
       quote:
         "Tempatnya cozy banget, perfect buat kerja sambil ngopi. Pelayanannya juga ramah!",
       avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
       isSpecialCollaboration: false,
       videoThumbnail:
         "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=400&q=80",
-      instagramUrl: "https://www.instagram.com/p/example2/",
+      instagramUrl: "https://www.instagram.com/_rereamalia_",
       hasEmbeddableVideo: false,
       videoId: "example2",
     },
@@ -63,7 +63,13 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div
+          className={`${
+            influencers.length === 1
+              ? "flex justify-center"
+              : "grid md:grid-cols-2"
+          } gap-8 max-w-6xl mx-auto`}
+        >
           {influencers.map((influencer, index) => (
             <Card
               key={index}
@@ -136,7 +142,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div>
               <div className="text-3xl font-bold text-cafe-600 font-playfair">
-                50K+
+                90+
               </div>
               <div className="text-sm text-gray-600 font-inter">
                 Instagram Posts
@@ -144,7 +150,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
             </div>
             <div>
               <div className="text-3xl font-bold text-cafe-600 font-playfair">
-                4.8★
+                4.7★
               </div>
               <div className="text-sm text-gray-600 font-inter">
                 Google Rating
@@ -152,10 +158,10 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
             </div>
             <div>
               <div className="text-3xl font-bold text-cafe-600 font-playfair">
-                15+
+                650+
               </div>
               <div className="text-sm text-gray-600 font-inter">
-                Influencer Reviews
+                Customer Reviews
               </div>
             </div>
           </div>

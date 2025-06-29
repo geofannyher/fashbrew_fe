@@ -850,6 +850,89 @@ export default function RereAmaliaLanding() {
           </div>
         </div>
       </section>
+      <footer className=" text-gray-800 pt-10 pb-6 mt-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            {/* Brand Info */}
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-serif font-bold text-orange-600 mb-2">
+                Rere Amalia
+              </h3>
+              <p className="text-sm text-gray-600 max-w-xs">
+                Fashion | Food | Lifestyle | DJ <br />
+                Let’s create something beautiful together 🌟
+              </p>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex gap-8 text-sm">
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-2">Explore</h4>
+                <ul className="space-y-1">
+                  <li>
+                    <a
+                      href="#portfolio"
+                      className="hover:text-orange-500 transition"
+                    >
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      className="hover:text-orange-500 transition"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      className="hover:text-orange-500 transition"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-2">Social</h4>
+                <ul className="space-y-1">
+                  <li>
+                    <a
+                      href="https://instagram.com"
+                      className="hover:text-orange-500 transition"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:rere@email.com"
+                      className="hover:text-orange-500 transition"
+                    >
+                      Email
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/6281234567890"
+                      className="hover:text-orange-500 transition"
+                    >
+                      WhatsApp
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-orange-200 mt-8 pt-4 text-center text-sm text-gray-500">
+            © {new Date().getFullYear()} Rere Amalia. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

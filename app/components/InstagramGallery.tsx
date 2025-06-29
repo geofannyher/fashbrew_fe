@@ -312,11 +312,11 @@ const InstagramGallery = () => {
         <div className="mt-16 bg-gradient-to-br from-cafe-50 to-cafe-100 rounded-3xl p-6 sm:p-8 lg:p-12 max-w-7xl mx-auto shadow-lg">
           <div className="text-center mb-8">
             <h3 className="font-playfair text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Katalog OOTD di Senja Coffee
+              Katalog OOTD di Kattapa Coffee
             </h3>
             <p className="text-gray-600 font-inter max-w-2xl mx-auto">
-              Inspirasi outfit aesthetic untuk foto-foto Instagramable di cafe
-              kami
+              Inspirasi outfit aesthetic untuk foto-foto Instagramable di
+              Kattapa Coffee
             </p>
           </div>
 

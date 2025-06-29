@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Star, Info } from "lucide-react";
+import { Star, Info, ExternalLink, Truck } from "lucide-react";
 import MenuImageModal from "./MenuImageModal";
 import MenuCategoryModal from "./MenuCategoryModal";
 
@@ -121,6 +121,33 @@ const SignatureMenu = () => {
       }));
   };
 
+  const deliveryPlatforms = [
+    {
+      name: "GoFood",
+      url: "https://gofood.link/example",
+      bgColor: "bg-gradient-to-r from-green-500 to-green-600",
+      hoverColor: "hover:from-green-600 hover:to-green-700",
+      icon: "🛵",
+      description: "Pesan langsung via GoFood",
+    },
+    // {
+    //   name: "GrabFood",
+    //   url: "https://food.grab.com/id/en/restaurant/example",
+    //   bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
+    //   hoverColor: "hover:from-emerald-600 hover:to-emerald-700",
+    //   icon: "🏍️",
+    //   description: "Order mudah di GrabFood",
+    // },
+    {
+      name: "ShopeeFood",
+      url: "https://shopee.co.id/m/shopeefood-resto/example",
+      bgColor: "bg-gradient-to-r from-orange-500 to-red-500",
+      hoverColor: "hover:from-orange-600 hover:to-red-600",
+      icon: "🍜",
+      description: "Tersedia di ShopeeFood",
+    },
+  ];
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -129,8 +156,7 @@ const SignatureMenu = () => {
             Menu Unggulan
           </h2>
           <p className="text-lg text-gray-600 font-inter max-w-2xl mx-auto">
-            Cicipi menu signature kami yang sudah direkomendasikan oleh para
-            influencer
+            Rere udah coba dan rekomen banget menu ini—wajib kamu cobain juga!
           </p>
         </div>
 
@@ -192,26 +218,48 @@ const SignatureMenu = () => {
           ))}
         </div>
 
-        {/* Menu Categories */}
+        {/* Minimalist Delivery Section */}
         <div className="mt-16 text-center">
-          <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-8">
-            Kategori Menu
-          </h3>
-          <div className="inline-flex flex-wrap gap-4 justify-center">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedCategory(category.name)}
-                className="px-6 py-3 bg-white border border-cafe-200 rounded-full text-sm font-medium text-gray-700 hover:bg-cafe-50 hover:border-cafe-300 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md flex items-center gap-2"
-              >
-                <span className="text-lg">{category.emoji}</span>
-                {category.name}
-              </button>
-            ))}
+          <div className="bg-cafe-50 rounded-2xl p-8 border border-cafe-100">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-6 text-center">
+              <Truck className="w-5 h-5 text-cafe-600" />
+              <h3 className="font-playfair text-xl font-bold text-gray-900">
+                Tersedia juga di platform delivery
+              </h3>
+            </div>
+
+            <div className="flex justify-center items-center gap-4 flex-wrap mb-6">
+              {deliveryPlatforms.map((platform, index) => (
+                <a
+                  key={index}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 bg-white hover:bg-gray-50 px-4 py-3 rounded-full border border-gray-200 hover:border-gray-300 transition-all duration-200 shadow-sm hover:shadow-md"
+                >
+                  <span className="text-lg">{platform.icon}</span>
+                  <span className="font-medium text-gray-700 font-inter text-sm">
+                    {platform.name}
+                  </span>
+                  <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-gray-600 transition-colors duration-200" />
+                </a>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-center gap-6 text-sm text-gray-600 font-inter flex-wrap">
+              <div className="flex items-center gap-1">
+                <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                <span>Rating 4.8/5</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Truck className="w-4 h-4 text-cafe-600" />
+                <span>Gratis ongkir min. 50k</span>
+              </div>
+            </div>
           </div>
-          <p className="mt-6 text-gray-600 font-inter">
-            *Harga dapat berubah sewaktu-waktu. Klik kategori untuk melihat
-            galeri menu.
+
+          <p className="mt-4 text-gray-600 font-inter text-sm">
+            *Harga dapat berubah sewaktu-waktu. Syarat dan ketentuan berlaku.
           </p>
         </div>
       </div>

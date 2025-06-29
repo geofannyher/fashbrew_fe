@@ -323,7 +323,7 @@ export default function ProductCatalog() {
           </div>
 
           <select
-            className="px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-500"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
           >
