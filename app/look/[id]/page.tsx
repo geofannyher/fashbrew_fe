@@ -474,10 +474,10 @@ export default function OotdDetail({
             </div>
           </div>
         </div>
-        <div className="mt-12">
-          <CoffeeFooter />
-        </div>
       </main>
+      <div className="mt-12">
+        <CoffeeFooter />
+      </div>
 
       {selectedProduct && (
         <ProductModal product={selectedProduct} onClose={handleCloseModal} />

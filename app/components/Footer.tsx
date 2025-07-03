@@ -132,12 +132,12 @@ const Footer = () => {
               Jember. <br />
               Website by{" "}
               <a
-                href="https://www.instagram.com/jumptech.studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/otixx.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cafe-600 hover:underline font-medium"
               >
-                Jumptech Studio
+                Otakutixx
               </a>
               .
             </p>

@@ -8,10 +8,11 @@ export default function CoffeeFooter() {
 
   const handleSubmit = () => {
     if (message.trim()) {
-      // Simulasi pengiriman data saran/kritik
-      console.log("Saran & Kritik Dikirim:");
-      console.log("Email:", email);
-      console.log("Pesan:", message);
+      const subject = encodeURIComponent("Saran & Kritik dari Pengguna");
+      const body = encodeURIComponent(`Email: ${email}\n\nPesan:\n${message}`);
+      const mailtoLink = `mailto:otatixx@gmail.com?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoLink;
 
       setIsSubmitted(true);
       setEmail("");
@@ -126,7 +127,7 @@ export default function CoffeeFooter() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email kamu (opsional)"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm transition-all duration-200"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm transition-all duration-200 text-black"
                 />
               </div>
 
@@ -134,7 +135,7 @@ export default function CoffeeFooter() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Tulis saran atau kritikmu di sini..."
-                className="w-full h-28 p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm transition-all duration-200 resize-none"
+                className="w-full h-28 p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm transition-all duration-200 resize-none text-black"
               />
 
               <button
@@ -166,8 +167,8 @@ export default function CoffeeFooter() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-500 text-sm flex items-center justify-center md:justify-start space-x-1">
-                <span>© 2025 Fashbrew. Dibuat dengan</span>
-                <span className="text-orange-500 animate-pulse">☕</span>
+                <span>© 2025 Fashbrew. Dibuat</span>
+                {/* <span className="text-orange-500 animate-pulse">☕</span> */}
                 <span>oleh</span>
                 <a
                   href="https://www.instagram.com/jumptech.studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -175,7 +176,7 @@ export default function CoffeeFooter() {
                   rel="noopener noreferrer"
                   className="font-medium text-orange-600 hover:underline"
                 >
-                  Jumptech.Studio
+                  Otakutixx
                 </a>
               </p>
             </div>

@@ -376,8 +376,8 @@ const InstagramGallery = () => {
               </CarouselContent>
 
               {/* Navigation Arrows */}
-              <CarouselPrevious className="hidden md:flex -left-6 w-12 h-12 bg-white shadow-lg hover:bg-cafe-50 border-cafe-200" />
-              <CarouselNext className="hidden md:flex -right-6 w-12 h-12 bg-white shadow-lg hover:bg-cafe-50 border-cafe-200" />
+              <CarouselPrevious className="hidden md:flex -left-6 w-12 h-12 bg-white shadow-lg hover:bg-cafe-50 border-cafe-200 text-black hover:text-white" />
+              <CarouselNext className="hidden md:flex -right-6 w-12 h-12 bg-white shadow-lg hover:bg-cafe-50 border-cafe-200 text-black hover:text-white" />
             </Carousel>
           </div>
 

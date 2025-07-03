@@ -283,46 +283,46 @@ export default function LookbookPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50">
-      {/* Hero Section */}
-      <section className="px-4 py-8 text-center bg-white">
-        <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-4 leading-tight">
-          Today's Style
-          <span className="block text-lg font-light text-neutral-600 mt-2">
-            Curated looks from fashion's most inspiring voices
-          </span>
-        </h2>
-      </section>
+    <>
+      <div className="min-h-screen bg-neutral-50">
+        {/* Hero Section */}
+        <section className="px-4 py-8 text-center bg-white">
+          <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-4 leading-tight">
+            Today's Style
+            <span className="block text-lg font-light text-neutral-600 mt-2">
+              Curated looks from fashion's most inspiring voices
+            </span>
+          </h2>
+        </section>
 
-      <MoodFilter onFilterChange={handleFilterChange} />
+        <MoodFilter onFilterChange={handleFilterChange} />
 
-      {/* OOTD Grid */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {filteredOOTDs.map((ootd) => (
-            <OOTDCard
-              key={ootd.id}
-              mood={ootd.mood}
-              id={ootd.id}
-              image={ootd.image}
-              title={ootd.title}
-              description={ootd.description}
-              products={ootd.products}
-              influencer={ootd.influencer}
-            />
-          ))}
-        </div>
+        {/* OOTD Grid */}
+        <main className="max-w-7xl mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredOOTDs.map((ootd) => (
+              <OOTDCard
+                key={ootd.id}
+                mood={ootd.mood}
+                id={ootd.id}
+                image={ootd.image}
+                title={ootd.title}
+                description={ootd.description}
+                products={ootd.products}
+                influencer={ootd.influencer}
+              />
+            ))}
+          </div>
 
-        {/* Load More */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-neutral-900 text-white text-sm font-light rounded-full hover:bg-neutral-800 transition-colors">
-            Discover More Looks
-          </button>
-        </div>
-      </main>
-
-      {/* Footer */}
+          {/* Load More */}
+          <div className="text-center mt-12">
+            <button className="px-8 py-3 bg-neutral-900 text-white text-sm font-light rounded-full hover:bg-neutral-800 transition-colors">
+              Discover More Looks
+            </button>
+          </div>
+        </main>
+      </div>
       <CoffeeFooter />
-    </div>
+    </>
   );
 }

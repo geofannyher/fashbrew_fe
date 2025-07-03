@@ -22,8 +22,20 @@ import {
   Music2,
   ExternalLink,
   Play,
+  Briefcase,
+  Mic,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
-import { ElementType, ReactElement, ReactNode, useState } from "react";
+import {
+  ElementType,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useState,
+} from "react";
+import Footer from "../components/Footer";
+import CoffeeFooter from "../footer/page";
 
 export default function RereAmaliaLanding() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -32,6 +44,32 @@ export default function RereAmaliaLanding() {
     email: "",
     message: "",
   });
+  const [imageIndex1, setImageIndex1] = useState(0);
+  const [imageIndex2, setImageIndex2] = useState(0);
+  const [bioIndex, setBioIndex] = useState(0);
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const nextImage1 = () =>
+    setImageIndex1((prev) => (prev + 1) % images1.length);
+  const prevImage1 = () =>
+    setImageIndex1((prev) => (prev - 1 + images1.length) % images1.length);
+  const nextImage2 = () =>
+    setImageIndex2((prev) => (prev + 1) % images2.length);
+  const prevImage2 = () =>
+    setImageIndex2((prev) => (prev - 1 + images2.length) % images2.length);
+
+  const nextBio = () => setBioIndex((prev) => (prev + 1) % bios.length);
+  const prevBio = () =>
+    setBioIndex((prev) => (prev - 1 + bios.length) % bios.length);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval); // clear saat unmount
+  }, []);
 
   // Dummy data for Instagram posts
   const socialPosts = [
@@ -39,10 +77,10 @@ export default function RereAmaliaLanding() {
       id: 1,
       type: "instagram",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616c90f9ad3?w=400&h=400&fit=crop",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751279411/fashbrew/Tangkapan_Layar_2025-06-30_pukul_17.24.24_ya9esq.png",
       likes: "2.4k",
       comments: "89",
-      url: "https://instagram.com/p/example1",
+      url: "https://www.instagram.com/reel/C6s7UjwSoIN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       id: 2,
@@ -94,30 +132,135 @@ export default function RereAmaliaLanding() {
     },
   ];
 
+  const skills = [
+    {
+      icon: <Camera className="w-6 h-6" />,
+      title: "Content Creator",
+      description:
+        "I create compelling fashion and lifestyle content that tells authentic stories and connects with audiences on a deeper level. My approach combines creative visuals with genuine storytelling to produce content that not only looks beautiful but also drives meaningful engagement.",
+      image:
+        "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-orange-400 to-amber-500",
+      rating: 5,
+      offers: [
+        "High-quality photo and video content creation",
+        "Brand storytelling through authentic visual narratives",
+        "Fashion and lifestyle photography sessions",
+        "Social media content planning and execution",
+        "Creative direction for brand campaigns",
+      ],
+    },
+    {
+      icon: <Mic className="w-6 h-6" />,
+      title: "DJ & Performer",
+      description:
+        "As a professional DJ, I bring energy and excitement to exclusive events with my expertise in music curation and crowd engagement. I specialize in creating the perfect atmosphere for various occasions, from intimate gatherings to large-scale celebrations.",
+      image:
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-amber-400 to-orange-500",
+      rating: 4,
+      offers: [
+        "Professional DJ services for events and parties",
+        "Music curation and playlist creation",
+        "Live performance and crowd engagement",
+        "Sound system setup and technical support",
+        "Event atmosphere creation and management",
+      ],
+    },
+    {
+      icon: <Play className="w-6 h-6" />,
+      title: "Talent Vidio",
+      description:
+        "I work as a digital talent for Vidio, Indonesia's leading streaming platform, creating engaging video content that entertains and informs audiences. My experience includes hosting, presenting, and participating in various digital productions.",
+      image:
+        "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-orange-500 to-red-500",
+      rating: 5,
+      offers: [
+        "Digital content hosting and presenting",
+        "Live streaming and interactive content",
+        "Video production and post-production collaboration",
+        "Platform-specific content optimization",
+        "Audience engagement through digital platforms",
+      ],
+    },
+    {
+      icon: <Briefcase className="w-6 h-6" />,
+      title: "Brand Ambassador",
+      description:
+        "I partner with brands to create authentic connections between products and consumers. My approach focuses on building long-term relationships with brands that align with my values, ensuring genuine endorsements that resonate with my audience.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-amber-500 to-yellow-500",
+      rating: 5,
+      offers: [
+        "Long-term brand partnership development",
+        "Product integration in lifestyle content",
+        "Brand awareness campaigns and activations",
+        "Authentic product reviews and testimonials",
+        "Cross-platform brand promotion strategies",
+      ],
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Food Reviewer",
+      description:
+        "I explore and review culinary experiences across Jember and beyond, sharing honest opinions about restaurants, cafes, and food trends. My reviews combine visual appeal with detailed descriptions to help followers discover great dining experiences.",
+      image:
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-red-400 to-pink-500",
+      rating: 4,
+      offers: [
+        "Comprehensive restaurant and cafe reviews",
+        "Food photography and styling",
+        "Culinary trend analysis and reporting",
+        "Local food scene documentation",
+        "Dining experience storytelling",
+      ],
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Influencer Marketing",
+      description:
+        "I leverage my social media presence to create impactful marketing campaigns that drive real results. With deep understanding of audience behavior and platform algorithms, I help brands reach their target demographics effectively.",
+      image:
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      color: "from-pink-400 to-rose-500",
+      rating: 5,
+      offers: [
+        "Social media campaign strategy and execution",
+        "Audience analysis and targeting",
+        "Performance tracking and optimization",
+        "Multi-platform content distribution",
+        "Influencer collaboration and networking",
+      ],
+    },
+  ];
+
   // Portfolio items
   const portfolioItems = [
     {
       category: "Fashion",
       image:
-        "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=400&fit=crop",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751277788/fashbrew/enjoy_ztwusb.jpg",
       title: "Summer Collection 2024",
     },
     {
       category: "Food",
       image:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=400&fit=crop",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364353/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.05.22_ijadv3.png",
       title: "Local Coffee Review",
     },
     {
       category: "DJ",
       image:
-        "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&h=400&fit=crop",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364573/fashbrew/pi_newyear_thank_u_luminorhotel.sidoarjo_qqjfn5.jpg",
       title: "Weekend Vibes Set",
     },
     {
       category: "Lifestyle",
       image:
-        "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=400&fit=crop",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364720/fashbrew/Do_whatever_makes_you_happiest_._cd7aod.jpg",
       title: "Morning Routine",
     },
   ];
@@ -125,78 +268,214 @@ export default function RereAmaliaLanding() {
   // Testimonials
   const testimonials = [
     {
-      brand: "Beauty Brand Co.",
-      logo: "BB",
-      text: "Rere's authentic content style perfectly aligned with our brand values. Amazing engagement!",
+      brand: "Scarlett",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365729/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.30.00_gjabxz.png",
+      text: "Gaya konten autentik Rere sangat selaras dengan nilai-nilai brand kami. Hasilnya luar biasa, engagement-nya benar-benar mengesankan! Kami sangat puas dengan kolaborasi ini.",
       rating: 5,
     },
     {
-      brand: "Cafe Nusantara",
-      logo: "CN",
-      text: "Professional collaboration and beautiful food photography. Highly recommended!",
+      brand: "3Second",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365933/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.33.19_bbtpqx.png",
+      text: "Kolaborasi yang sangat profesional! Konten yang dihasilkan menampilkan produk kami dengan cara yang stylish dan autentik. Visualnya clean, estetik, dan benar-benar mencerminkan karakter brand 3Second. Sangat puas dengan hasilnya – recommended untuk campaign fashion!",
       rating: 5,
     },
     {
-      brand: "Fashion Forward",
-      logo: "FF",
-      text: "Creative content that drove real results for our summer campaign.",
+      brand: "Colorbox",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751385123/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_ropzwu.png",
+      text: "Rere berhasil menangkap semangat Colorbox yang fun, youthful, dan penuh warna lewat konten yang kreatif dan autentik. Visual yang ditampilkan benar-benar menggambarkan karakter brand kami. Engagement-nya juga tinggi banget! Senang bisa berkolaborasi dengan Rere.Creative content that drove real results for our summer campaign.",
+      rating: 5,
+    },
+    {
+      brand: "Universitas Terbuka",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751431866/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo.png",
+      text: "Terima kasih banyak untuk Rere yang telah membantu memperkenalkan Universitas Terbuka kepada lebih banyak orang. Kami sangat mengapresiasi cara Rere menyampaikan nilai-nilai fleksibilitas, keterbukaan akses, dan kualitas pendidikan yang kami usung.",
+      rating: 5,
+    },
+    {
+      brand: "Bank Jatim",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432213/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_onqxnf.png",
+      text: "Kami dari Bank Jatim menyampaikan apresiasi yang sebesar-besarnya kepada Rere atas dukungan dan promosi positif yang diberikan. Terima kasih telah membantu memperkenalkan layanan dan komitmen kami kepada masyarakat luas dengan cara yang menarik dan informatif.",
+      rating: 5,
+    },
+    {
+      brand: "Djarum",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432694/fashbrew/Tangkapan_Layar_2025-07-02_pukul_12.06.12_v4uzxo.png",
+      text: "Terima kasih kepada Rere atas dukungan dan dedikasinya dalam memperkenalkan brand Djarum dengan cara yang elegan dan penuh integritas. Kami sangat mengapresiasi bagaimana Rere mampu menyampaikan nilai dan citra Djarum secara positif kepada publik.",
       rating: 5,
     },
   ];
 
   // Rate card data
   const rateCard = {
-    umkm: [
-      {
-        service: "Story Only",
-        price: "150.000",
-        features: ["1x Instagram Story", "Tag akun brand", "Call to action"],
-      },
-      {
-        service: "Story + Feed",
-        price: "350.000",
-        popular: true,
-        features: [
-          "1x Feed Post",
-          "1x Instagram Story",
-          "CTA & Hashtag support",
-        ],
-      },
-    ],
-    menengah: [
-      {
-        service: "Premium Feed",
-        price: "750.000",
-        popular: true,
-        features: [
-          "High-res photo & caption",
-          "Brand mention & hashtag",
-          "7-day story highlight",
-        ],
-      },
-      {
-        service: "Reel + Story",
-        price: "1.200.000",
-        features: ["Engaging 15-30s Reel", "CTA in caption", "Brand-tagged"],
-      },
-    ],
     custom: [
       {
-        service: "Campaign Series",
-        price: "Custom",
+        title: "Starter Package",
+        description:
+          "Paket kolaborasi ringan untuk pengenalan brand secara cepat.",
         features: [
-          "Multiple post series",
-          "Cross-platform campaign",
-          "Full creative support",
+          "1x Instagram Story",
+          "Mention & Tag Akun Brand",
+          "Postingan dalam 24 jam setelah briefing",
         ],
       },
       {
-        service: "Event Collaboration",
-        price: "By Request",
-        features: ["Live Coverage", "Booth visit", "IG Live optional"],
+        title: "Engagement Package",
+        description: "Fokus pada interaksi dan jangkauan yang lebih luas.",
+        features: [
+          "1x Instagram Story",
+          "1x TikTok Video",
+          "CTA untuk interaksi (poll, Q&A)",
+          "Live reply komentar pertama",
+        ],
+      },
+      {
+        title: "Visual Branding Package",
+        description:
+          "Paket profesional untuk visual branding yang kuat dan estetik.",
+        features: [
+          "1x Instagram Feed Post",
+          "1x TikTok Reels",
+          "Full photo & video rights usage",
+          "Custom caption & hashtag sesuai brand",
+        ],
+      },
+      {
+        title: "Ultimate Collaboration",
+        description:
+          "Paket lengkap untuk kampanye maksimal dengan storytelling.",
+        features: [
+          "2x IG Story + 1 Highlight",
+          "1x TikTok Video + 1 Live",
+          "1x Instagram Feed Post",
+          "Briefing & konsep kreatif bersama",
+          "Support review & feedback produk",
+        ],
       },
     ],
   };
+
+  const images1 = [
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+  ];
+  const images2 = [
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+  ];
+
+  const bios = [
+    {
+      role: "Content Creator",
+      desc: `Hello! I’m Rere Amalia — a content creator based in Jember, Indonesia. I specialize in fashion, lifestyle, food reviews.`,
+    },
+    {
+      role: "DJ Performer",
+      desc: `I occasionally perform as a DJ at exclusive events, bringing energy and great vibes to the crowd.`,
+    },
+    {
+      role: "Brand Ambassador",
+      desc: `I work with brands as a BA to tell real, human stories that connect and convert audiences.`,
+    },
+  ];
+
+  const quotes = [
+    "Confidence is the best outfit.",
+    "Beauty begins the moment you decide to be yourself.",
+    "Style is a way to say who you are without speaking.",
+  ];
+
+  const brandLogos = [
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365933/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.33.19_bbtpqx.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365729/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.30.00_gjabxz.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751385123/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_ropzwu.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751431866/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432213/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_onqxnf.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432694/fashbrew/Tangkapan_Layar_2025-07-02_pukul_12.06.12_v4uzxo.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436306/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.04.02_f0hnea.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436424/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.08.24_tnj0hs.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436540/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.10.14_zstbpm.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436627/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.11.47_l3zona.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436751/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.13.47_l0ucbb.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436907/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.16.24_myphi2.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436988/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.17.47_po7eor.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437082/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.18.54_eomouw.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437082/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.19.16_htd6lw.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437190/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.59_omcomk.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437190/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.40_treojz.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437309/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.23.03_ewadwq.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437391/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.24.12_mu0y5v.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437463/fashbrew/LOGO-ORIGINAL-Elizabeth-PNG-_suixbv.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437562/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.27.03_fyphwh.png",
+      instagram: "#",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437619/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.28.19_kx3znz.png",
+      instagram: "#",
+    },
+  ];
 
   interface ContactItemProps {
     icon: ElementType;
@@ -316,9 +595,15 @@ export default function RereAmaliaLanding() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Terima kasih! Pesan Anda telah terkirim.");
-    setFormData({ name: "", email: "", message: "" });
+    const user = name;
+    const pesan = message;
+    const waMessage = `Halo rere, saya ${user}. \n\n${pesan}`;
+    const waLink = `https://wa.me/6285748578429?text=${encodeURIComponent(
+      waMessage
+    )}`;
+
+    // Redirect ke WhatsApp
+    window.open(waLink, "_blank");
   };
 
   const handleInputChange = (e: any) => {
@@ -333,8 +618,10 @@ export default function RereAmaliaLanding() {
   };
   const handleSocialClick = (platform: "instagram" | "tiktok") => {
     const urls = {
-      instagram: "https://instagram.com/yourusername",
-      tiktok: "https://tiktok.com/@yourusername",
+      instagram:
+        "https://www.instagram.com/_rereamalia_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw",
+      tiktok:
+        "https://www.tiktok.com/@rere_feliysia?is_from_webapp=1&sender_device=pc  ",
     };
     window.open(urls[platform], "_blank", "noopener,noreferrer");
   };
@@ -442,46 +729,147 @@ export default function RereAmaliaLanding() {
       <section className="py-24 bg-gradient-to-br from-white via-white/70 to-pink-50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image Section */}
+            {/* Image Slider + Enhancements */}
             <div className="relative">
-              <img
-                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg"
-                alt="Rere Amalia smiling outdoor"
-                className="w-full h-[500px] object-cover rounded-3xl shadow-2xl border-4 border-white"
-              />
+              {/* Polaroid style */}
+              <div className="bg-white p-4 rounded-3xl border border-pink-100 shadow-2xl relative">
+                <img
+                  src={images1[imageIndex1]}
+                  alt={`Slide ${imageIndex1}`}
+                  className="w-full h-[500px] object-cover rounded-2xl"
+                />
+
+                {/* Quote overlay */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/70 px-4 py-2 rounded-full text-sm text-pink-700 font-semibold shadow-md">
+                  {quotes[imageIndex1]}
+                </div>
+
+                {/* Navigasi */}
+                <div className="absolute inset-0 flex items-center justify-between px-4">
+                  <button
+                    onClick={prevImage1}
+                    className="bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                  >
+                    <ArrowLeft className="w-5 h-5 text-pink-600" />
+                  </button>
+                  <button
+                    onClick={nextImage1}
+                    className="bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                  >
+                    <ArrowRight className="w-5 h-5 text-pink-600" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Caption bawah */}
+              <p className="mt-4 text-center text-sm text-gray-500 italic">
+                “Fashion Night Out · Luminor Hotel · 2024”
+              </p>
             </div>
 
-            {/* Text Section */}
-            <div className="space-y-6">
+            {/* Bio Section */}
+            <div className="space-y-6 relative">
               <h2 className="text-5xl font-serif font-bold text-gray-900">
                 Meet <span className="text-pink-600">Rere Amalia</span>
               </h2>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Hello! I’m Rere Amalia — a content creator based in Jember,
-                Indonesia. I specialize in{" "}
-                <strong>fashion, lifestyle, food reviews</strong>, and
-                occasionally perform as a <strong>DJ</strong> at exclusive
-                events.
+                Rere Amalia adalah seorang influencer yang aktif di bidang{" "}
+                <strong>beauty dan fashion</strong>, dengan pendekatan konten
+                yang natural, aspiratif, dan engaging. Memiliki lebih dari{" "}
+                <strong>45.000+ followers</strong> di Instagram dan{" "}
+                <strong>63.000+ followers</strong> TikTok, Rere dikenal karena
+                kemampuannya membangun koneksi emosional dengan audiens, serta
+                menghasilkan konten visual yang konsisten dan estetik.
               </p>
 
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With over <strong>45,000 engaged followers</strong> on
-                Instagram, I collaborate with brands to deliver authentic
-                stories that connect with real people.
-              </p>
+              <div className="relative bg-white/60 p-4 rounded-xl border border-pink-100 shadow transition-all duration-300">
+                <h3 className="text-xl font-semibold text-pink-600 mb-2">
+                  Brand Ambassador
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Saat ini aktif sebagai{" "}
+                  <strong>Brand Ambassador untuk Rikas Aesthetic</strong>, dan
+                  telah menjadi wajah dari berbagai kampanye kecantikan yang
+                  mendorong awareness dan kepercayaan terhadap brand. Komitmen
+                  terhadap kualitas dan orisinalitas membuat Rere dipercaya
+                  sebagai representasi brand yang relevan dan autentik.
+                </p>
+              </div>
+            </div>
 
-              <p className="text-lg text-gray-700 leading-relaxed">
-                My passion lies in discovering new trends, spotlighting brands I
-                believe in, and creating beautiful, purposeful content that
-                resonates with audiences.
-              </p>
+            <div className="space-y-6 relative">
+              <div className="relative bg-white/60 p-4 rounded-xl border border-pink-100 shadow transition-all duration-300">
+                <h3 className="text-xl font-semibold text-pink-600 mb-2">
+                  Talent
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Berpengalaman sebagai <strong>Talent live streaming</strong>{" "}
+                  untuk berbagai brand fashion dan beauty, serta aktif melakukan{" "}
+                  <strong>Live game streaming</strong>. Rere mampu membawakan
+                  siaran langsung dengan profesional namun tetap hangat,
+                  sehingga audiens merasa terlibat dan nyaman berinteraksi
+                  secara real-time.
+                </p>
+              </div>
 
-              {/* Location */}
+              <div className="relative bg-white/60 p-4 rounded-xl border border-pink-100 shadow transition-all duration-300">
+                <h3 className="text-xl font-semibold text-pink-600 mb-2">
+                  Content Creator
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Aktif sebagai content creator dengan fokus pada{" "}
+                  <strong>konten kecantikan, fashion, dan lifestyle</strong>.
+                  Rere juga memiliki pengalaman sebagai{" "}
+                  <strong>
+                    DJ di venue ternama seperti Aston Hotel dan Luminor Hotel
+                  </strong>
+                  , memperluas daya tarik kontennya di berbagai skena hiburan.
+                  Karya-karyanya merepresentasikan gaya hidup modern yang tetap
+                  membumi.
+                </p>
+              </div>
               <div className="flex items-center gap-3 pt-6 text-pink-600 font-medium">
                 <MapPin className="w-5 h-5" />
                 <span>Based in Jember, Indonesia</span>
               </div>
+            </div>
+
+            <div className="relative hidden md:block">
+              {/* Polaroid style */}
+              <div className="bg-white p-4 rounded-3xl border border-pink-100 shadow-2xl relative">
+                <img
+                  src={images2[imageIndex2]}
+                  alt={`Slide ${imageIndex2}`}
+                  className="w-full h-[500px] object-cover rounded-2xl"
+                />
+
+                {/* Quote overlay */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/70 px-4 py-2 rounded-full text-sm text-pink-700 font-semibold shadow-md">
+                  {quotes[imageIndex2]}
+                </div>
+
+                {/* Navigasi */}
+                <div className="absolute inset-0 flex items-center justify-between px-4">
+                  <button
+                    onClick={prevImage2}
+                    className="bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                  >
+                    <ArrowLeft className="w-5 h-5 text-pink-600" />
+                  </button>
+                  <button
+                    onClick={nextImage2}
+                    className="bg-white/80 hover:bg-white rounded-full p-2 shadow"
+                  >
+                    <ArrowRight className="w-5 h-5 text-pink-600" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Caption bawah */}
+              <p className="mt-4 text-center text-sm text-gray-500 italic">
+                “Fashion Night Out · Luminor Hotel · 2024”
+              </p>
             </div>
           </div>
         </div>
@@ -734,59 +1122,300 @@ export default function RereAmaliaLanding() {
               Collaboration Packages
             </h2>
             <p className="text-lg text-gray-600">
-              Professional rates for authentic brand partnerships
+              Pilih paket kolaborasi yang paling sesuai untuk brand Anda
             </p>
           </div>
 
-          {/* === Section: UMKM === */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-              Untuk UMKM
-            </h3>
-            <p className="text-center text-gray-600 mb-8">
-              Paket terjangkau yang dirancang khusus untuk membantu bisnis kecil
-              berkembang dengan promosi yang efektif.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rateCard.umkm.map((item, index) => (
-                <Card item={item} key={`umkm-${index}`} />
-              ))}
-            </div>
-          </div>
-
-          {/* === Section: Menengah ke Atas === */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-              Untuk Bisnis Menengah ke Atas
-            </h3>
-            <p className="text-center text-gray-600 mb-8">
-              Paket lengkap dengan value tinggi yang cocok untuk brand yang
-              ingin meningkatkan exposure secara maksimal.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rateCard.menengah.map((item, index) => (
-                <Card item={item} key={`menengah-${index}`} />
-              ))}
-            </div>
-          </div>
-
-          {/* === Section: Custom === */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-              Custom Collaboration
-            </h3>
-            <p className="text-center text-gray-600 mb-8">
-              Ingin sesuatu yang lebih spesifik? Diskusikan kebutuhan brand Anda
-              dan kami akan sesuaikan penawarannya.
-            </p>
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
-              {rateCard.custom.map((item, index) => (
-                <Card item={item} key={`custom-${index}`} />
-              ))}
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {rateCard.custom.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white border border-pink-100 rounded-2xl shadow-lg p-6 flex flex-col justify-between transition hover:shadow-pink-200"
+              >
+                <div>
+                  <h3 className="text-xl font-bold text-pink-600 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-600 text-sm">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+                <a
+                  href={`https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(
+                    item.title
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center justify-center gap-2 bg-pink-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-pink-700 hover:scale-105 transition-all duration-200"
+                >
+                  💬 Tanya Sekarang
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Brand Collaborations Section */}
+      <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4">
+              Brand Collaborations
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
+              Trusted by leading brands worldwide to create authentic, engaging
+              content that resonates with audiences
+            </p>
+          </div>
+
+          {/* Infinite Scrolling Brand Logos */}
+          <div className="relative">
+            {/* Main scrolling container */}
+            <div className="overflow-hidden mask-gradient h-24 sm:h-32 lg:h-40">
+              <div className="flex items-center h-full animate-scroll-left min-w-max">
+                {/* First set of logos */}
+                {brandLogos.map((logo, index) => (
+                  <div
+                    key={`first-${index}`}
+                    className="flex-shrink-0 mx-3 sm:mx-6 lg:mx-8 group"
+                  >
+                    <a
+                      href={logo.instagram} // GANTI dengan link Instagram dinamis atau statis
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 group-hover:scale-105 hover:bg-white/90">
+                        {/* Gradient border effect */}
+                        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm"></div>
+
+                        {/* Logo container - responsive sizing */}
+                        <div className="relative flex justify-center items-center h-8 w-16 sm:h-12 sm:w-24 lg:h-16 lg:w-32">
+                          <img
+                            src={logo.src}
+                            alt={`Brand partner ${index + 1}`}
+                            className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                            loading="lazy"
+                          />
+                        </div>
+
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden">
+                          <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+
+                {/* Duplicate set for seamless loop */}
+                {brandLogos.map((logo, index) => (
+                  <div
+                    key={`second-${index}`}
+                    className="flex-shrink-0 mx-3 sm:mx-6 lg:mx-8 group"
+                  >
+                    <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 group-hover:scale-105 hover:bg-white/90">
+                      {/* Gradient border effect */}
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm"></div>
+
+                      {/* Logo container */}
+                      <div className="relative flex justify-center items-center h-8 w-16 sm:h-12 sm:w-24 lg:h-16 lg:w-32">
+                        <img
+                          src={logo.src}
+                          alt={`Brand partner ${index + 1}`}
+                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden">
+                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Second row - reverse direction */}
+            <div className="overflow-hidden mask-gradient mt-4 sm:mt-6 lg:mt-8 h-24 sm:h-32 lg:h-40">
+              <div className="flex animate-scroll-right items-center h-full min-w-max">
+                {/* First set of logos (reverse) */}
+                {[...brandLogos].reverse().map((logo, index) => (
+                  <div
+                    key={`reverse-first-${index}`}
+                    className="flex-shrink-0 mx-3 sm:mx-6 lg:mx-8 group"
+                  >
+                    <a
+                      href={logo.instagram} // GANTI dengan link Instagram dinamis atau statis
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 group-hover:scale-105 hover:bg-white/90">
+                        {/* Gradient border effect */}
+                        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm"></div>
+
+                        {/* Logo container */}
+                        <div className="relative flex justify-center items-center h-8 w-16 sm:h-12 sm:w-24 lg:h-16 lg:w-32">
+                          <img
+                            src={logo.src}
+                            alt={`Brand partner reverse ${index + 1}`}
+                            className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                            loading="lazy"
+                          />
+                        </div>
+
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden">
+                          <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+
+                {/* Duplicate set for seamless loop (reverse) */}
+                {[...brandLogos].reverse().map((logo, index) => (
+                  <div
+                    key={`reverse-second-${index}`}
+                    className="flex-shrink-0 mx-3 sm:mx-6 lg:mx-8 group"
+                  >
+                    <div className="relative bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 group-hover:scale-105 hover:bg-white/90">
+                      {/* Gradient border effect */}
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm"></div>
+
+                      {/* Logo container */}
+                      <div className="relative flex justify-center items-center h-8 w-16 sm:h-12 sm:w-24 lg:h-16 lg:w-32">
+                        <img
+                          src={logo.src}
+                          alt={`Brand partner reverse ${index + 1}`}
+                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      {/* Shine effect */}
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden">
+                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-12 sm:mt-16">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer group text-sm sm:text-base"
+            >
+              <span>Ready to collaborate?</span>
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .mask-gradient {
+          mask: linear-gradient(
+            90deg,
+            transparent,
+            white 10%,
+            white 90%,
+            transparent
+          );
+          -webkit-mask: linear-gradient(
+            90deg,
+            transparent,
+            white 10%,
+            white 90%,
+            transparent
+          );
+        }
+
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 60s linear infinite;
+        }
+
+        .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+
+        .animate-scroll-right {
+          animation: scroll-right 50s linear infinite;
+        }
+
+        .animate-scroll-right:hover {
+          animation-play-state: paused;
+        }
+
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+
+        /* Mobile specific optimizations */
+        @media (max-width: 640px) {
+          .animate-scroll-left {
+            animation: scroll-left 40s linear infinite;
+          }
+
+          .animate-scroll-right {
+            animation: scroll-right 35s linear infinite;
+          }
+        }
+      `}</style>
 
       {/* Brand Testimonials */}
       <section className="py-20 bg-gradient-to-r from-orange-100 via-amber-50 to-yellow-50">
@@ -801,12 +1430,14 @@ export default function RereAmaliaLanding() {
           </div>
 
           <div className="relative">
-            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl transition-all duration-500 max-w-md mx-auto sm:max-w-full">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl transition-all duration-500 max-w-md mx-auto sm:max-w-full h-96">
               <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-5 sm:mb-6 shadow-md">
-                  <span className="text-white font-bold text-xl sm:text-2xl">
-                    {testimonials[currentTestimonial].logo}
-                  </span>
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden mx-auto mb-5 sm:mb-6 shadow-md bg-white p-2">
+                  <img
+                    src={testimonials[currentTestimonial].logo}
+                    alt="Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 <div className="flex justify-center mb-3 sm:mb-4">
@@ -868,7 +1499,7 @@ export default function RereAmaliaLanding() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="contact">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-serif text-gray-900 mb-4">
@@ -890,24 +1521,10 @@ export default function RereAmaliaLanding() {
                   <input
                     type="text"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-black"
                     placeholder="Your name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-black"
-                    placeholder="you@example.com"
                     required
                   />
                 </div>
@@ -917,8 +1534,8 @@ export default function RereAmaliaLanding() {
                   </label>
                   <textarea
                     name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transition resize-none text-black"
                     placeholder="Tell us about your project..."
@@ -926,6 +1543,7 @@ export default function RereAmaliaLanding() {
                   ></textarea>
                 </div>
                 <button
+                  onClick={handleSubmit}
                   type="submit"
                   className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition"
                 >
@@ -989,89 +1607,9 @@ export default function RereAmaliaLanding() {
           </div>
         </div>
       </section>
-      <footer className=" text-gray-800 pt-10 pb-6 mt-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-            {/* Brand Info */}
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl font-serif font-bold text-orange-600 mb-2">
-                Rere Amalia
-              </h3>
-              <p className="text-sm text-gray-600 max-w-xs">
-                Fashion | Food | Lifestyle | DJ <br />
-                Let’s create something beautiful together 🌟
-              </p>
-            </div>
 
-            {/* Navigation */}
-            <div className="flex gap-8 text-sm">
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-2">Explore</h4>
-                <ul className="space-y-1">
-                  <li>
-                    <a
-                      href="#portfolio"
-                      className="hover:text-orange-500 transition"
-                    >
-                      Portfolio
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      className="hover:text-orange-500 transition"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      className="hover:text-orange-500 transition"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-2">Social</h4>
-                <ul className="space-y-1">
-                  <li>
-                    <a
-                      href="https://instagram.com"
-                      className="hover:text-orange-500 transition"
-                    >
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="mailto:rere@email.com"
-                      className="hover:text-orange-500 transition"
-                    >
-                      Email
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://wa.me/6281234567890"
-                      className="hover:text-orange-500 transition"
-                    >
-                      WhatsApp
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="border-t border-orange-200 mt-8 pt-4 text-center text-sm text-gray-500">
-            © {new Date().getFullYear()} Rere Amalia. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}
+      <CoffeeFooter />
     </div>
   );
 }

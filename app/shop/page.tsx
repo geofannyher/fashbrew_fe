@@ -366,7 +366,7 @@ export default function ProductCatalog() {
               <input
                 type="text"
                 placeholder="Search products, brands, or categories..."
-                className="w-full pl-12 pr-16 py-4 rounded-2xl border-0 shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-lg bg-white"
+                className="w-full pl-12 pr-16 py-4 text-black rounded-2xl border-0 shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-lg bg-white"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />

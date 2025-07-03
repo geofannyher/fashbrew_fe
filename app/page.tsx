@@ -26,15 +26,15 @@ export default function HomePage() {
   const dummyCafes = [
     {
       id: 1,
-      name: "Kopi Nako",
-      location: "Jakarta Selatan",
+      name: "Kattapa Coffee",
+      location: "Jember",
       rating: 4.5,
-      category: ["nugas", "nongkrong"],
+      category: ["Foto-Foto", "Nongkrong", "Me Time"],
       image:
-        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=300&fit=crop",
-      openHour: "08:00 - 22:00",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751275238/fashbrew/Tangkapan_Layar_2025-06-30_pukul_16.20.13_bkunod.png",
+      openHour: "10:00 - 23:00",
       reviews: 142,
-      price: "20.000 - 30.000",
+      price: "15.000 - 35.000",
     },
   ];
 
@@ -262,12 +262,12 @@ export default function HomePage() {
 
                       <div className="flex items-center text-gray-600 mb-3">
                         <MapPin className="h-4 w-4 mr-1" />
-                        <span className="text-sm">Jember</span>
+                        <span className="text-sm">{cafe.location}</span>
                       </div>
 
                       <div className="flex items-center text-gray-600 mb-4">
                         <Clock className="h-4 w-4 mr-1" />
-                        <span className="text-sm">09:00 - 18:00</span>
+                        <span className="text-sm">{cafe.openHour}</span>
                       </div>
 
                       {/* Categories */}
