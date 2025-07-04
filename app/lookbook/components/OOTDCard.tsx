@@ -198,14 +198,16 @@ const OOTDCard = ({
         </div>
 
         {/* Product Tags */}
-        {products.map((product, index) => (
-          <ProductTag
-            key={index}
-            product={product}
-            position={product.position}
-            isVisible={showTags}
-          />
-        ))}
+        <div className="hidden md:block pointer-events-none md:pointer-events-auto">
+          {products.map((product, index) => (
+            <ProductTag
+              key={index}
+              product={product}
+              position={product.position}
+              isVisible={showTags}
+            />
+          ))}
+        </div>
 
         {/* Fallback product tags dengan smart positioning */}
         {products.map((product, index) => {
@@ -216,7 +218,7 @@ const OOTDCard = ({
               key={`fallback-${index}`}
               className={`absolute z-10 transition-all duration-300 ${
                 showTags ? "opacity-100 scale-100" : "opacity-0 scale-90"
-              }`}
+              } hidden md:block pointer-events-none md:pointer-events-auto`}
               style={{
                 top: product.position.top,
                 left: product.position.left,

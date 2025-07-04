@@ -27,12 +27,12 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
       name: "Rere Amalia",
       username: "@_rereamalia_",
       quote:
-        "Tempatnya cozy banget, perfect buat kerja sambil ngopi. Pelayanannya juga ramah!",
+        "Kattapa tuh tempatnya nyaman banget, bikin betah berlama-lama. Cocok buat nugas, kerja, atau sekadar healing. Plus, stafnya super ramah dan helpful!",
       avatar:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
       isSpecialCollaboration: false,
       videoThumbnail:
-        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=400&q=80",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569044/fashbrew/unnamed_wbpmbk.jpg",
       instagramUrl: "https://www.instagram.com/_rereamalia_",
       hasEmbeddableVideo: false,
       videoId: "example2",
@@ -128,7 +128,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
                   </button>
                 </div>
 
-                <blockquote className="text-gray-700 font-inter leading-relaxed">
+                <blockquote className="text-gray-700 font-inter leading-relaxed max-w-[600px]">
                   "{influencer.quote}"
                 </blockquote>
               </div>

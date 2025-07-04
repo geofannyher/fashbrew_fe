@@ -176,7 +176,7 @@ const LocationSection = () => {
                     Parkir Tersedia
                   </h4>
                   <p className="text-sm text-gray-600 font-inter">
-                    Area parkir luas untuk mobil dan motor. Gratis & aman.
+                    Area parkir luas untuk mobil dan motor.
                   </p>
                 </div>
               </div>

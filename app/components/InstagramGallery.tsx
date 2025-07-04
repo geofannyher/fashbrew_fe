@@ -15,32 +15,32 @@ const InstagramGallery = () => {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569044/fashbrew/unnamed_3_eqmxry.jpg",
       caption: "Spot Favorit untuk OOTD",
       category: "Interior",
     },
     {
-      src: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=500&q=80",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569695/fashbrew/unnamed_5_yyb63u.jpg",
       caption: "Coffee Art Aesthetic",
-      category: "Menu",
+      category: "Interior",
     },
     {
-      src: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=500&q=80",
-      caption: "Outdoor Vibes",
-      category: "Outdoor",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751600811/fashbrew/469524322_17885217813163877_1328757443699079086_n_egg4cj.jpg",
+      caption: "Cozy Indoor Ambience",
+      category: "Indoor",
     },
     {
-      src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524107/fashbrew/Tezza-0933_gof9na.jpg",
       caption: "Signature Drinks",
       category: "Menu",
     },
     {
-      src: "https://images.unsplash.com/photo-1559058922-94dc0956862c?auto=format&fit=crop&w=500&q=80",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569043/fashbrew/unnamed_4_kfj30v.jpg",
       caption: "Cozy Corner",
       category: "Interior",
     },
     {
-      src: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569044/fashbrew/unnamed_1_pjtcxk.jpg",
       caption: "Perfect Lighting",
       category: "Interior",
     },
@@ -50,7 +50,7 @@ const InstagramGallery = () => {
     {
       id: 1,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
       style: "Casual Chic",
       description: "Perfect untuk ngopi santai",
       products: [
@@ -77,7 +77,7 @@ const InstagramGallery = () => {
     {
       id: 2,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
       style: "Date Night",
       description: "Romantic dan elegant",
       products: [
@@ -104,7 +104,7 @@ const InstagramGallery = () => {
     {
       id: 3,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
       style: "Vintage Vibes",
       description: "Retro aesthetic look",
       products: [
@@ -131,7 +131,7 @@ const InstagramGallery = () => {
     {
       id: 4,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
       style: "Boho Style",
       description: "Free spirited dan comfortable",
       products: [
@@ -158,7 +158,7 @@ const InstagramGallery = () => {
     {
       id: 5,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
       style: "Minimalist",
       description: "Simple tapi tetap stylish",
       products: [
@@ -185,7 +185,7 @@ const InstagramGallery = () => {
     {
       id: 6,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
       style: "Sporty Chic",
       description: "Active lifestyle yang trendy",
       products: [
@@ -212,7 +212,7 @@ const InstagramGallery = () => {
     {
       id: 7,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
       style: "Korean Style",
       description: "K-fashion inspired look",
       products: [
@@ -239,7 +239,7 @@ const InstagramGallery = () => {
     {
       id: 8,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
       style: "Elegant Casual",
       description: "Sophisticated yet relaxed",
       products: [

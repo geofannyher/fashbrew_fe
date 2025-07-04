@@ -8,7 +8,7 @@ const ootdData = [
   {
     id: "1",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
     title: "Effortless Weekend Layers",
     description:
       "The perfect blend of comfort and style for those leisurely Saturday mornings. A cozy oversized blazer paired with tailored trousers creates an elevated casual look.",
@@ -102,7 +102,7 @@ const ootdData = [
   {
     id: "3",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
     title: "Clean Office Look",
     description: "Sleek and minimal for professional elegance.",
     mood: ["office", "weekday"],
@@ -130,7 +130,7 @@ const ootdData = [
   {
     id: "4",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
     title: "Beach Day Lightness",
     description:
       "Breezy fabrics and pastel tones perfect for seaside getaways.",
@@ -159,7 +159,7 @@ const ootdData = [
   {
     id: "5",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
     title: "Monochrome Power",
     description: "All-black outfit for maximum impact and elegance.",
     mood: ["edgy", "night"],
@@ -187,7 +187,7 @@ const ootdData = [
   {
     id: "6",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
     title: "Korean-Inspired Chill",
     description:
       "Loose-fit sweater, skirt combo and sneakers for laid-back cuteness.",
@@ -216,7 +216,7 @@ const ootdData = [
   {
     id: "7",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
     title: "Sporty On-the-Go",
     description: "Athleisure outfit for moving in style.",
     mood: ["sporty", "daily"],
@@ -244,7 +244,7 @@ const ootdData = [
   {
     id: "8",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
     title: "Fall Neutrals",
     description: "Muted tones and cozy layers for autumn vibes.",
     mood: ["autumn", "neutral"],
@@ -315,11 +315,11 @@ export default function LookbookPage() {
           </div>
 
           {/* Load More */}
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="px-8 py-3 bg-neutral-900 text-white text-sm font-light rounded-full hover:bg-neutral-800 transition-colors">
               Discover More Looks
             </button>
-          </div>
+          </div> */}
         </main>
       </div>
       <CoffeeFooter />

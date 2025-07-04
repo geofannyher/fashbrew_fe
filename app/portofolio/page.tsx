@@ -242,25 +242,25 @@ export default function RereAmaliaLanding() {
     {
       category: "Fashion",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751277788/fashbrew/enjoy_ztwusb.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751277788/fashbrew/enjoy_ztwusb.jpg",
       title: "Summer Collection 2024",
     },
     {
       category: "Food",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364353/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.05.22_ijadv3.png",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751364353/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.05.22_ijadv3.png",
       title: "Local Coffee Review",
     },
     {
       category: "DJ",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364573/fashbrew/pi_newyear_thank_u_luminorhotel.sidoarjo_qqjfn5.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751364573/fashbrew/pi_newyear_thank_u_luminorhotel.sidoarjo_qqjfn5.jpg",
       title: "Weekend Vibes Set",
     },
     {
       category: "Lifestyle",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364720/fashbrew/Do_whatever_makes_you_happiest_._cd7aod.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751364720/fashbrew/Do_whatever_makes_you_happiest_._cd7aod.jpg",
       title: "Morning Routine",
     },
   ];
@@ -269,37 +269,37 @@ export default function RereAmaliaLanding() {
   const testimonials = [
     {
       brand: "Scarlett",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365729/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.30.00_gjabxz.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751365729/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.30.00_gjabxz.png",
       text: "Gaya konten autentik Rere sangat selaras dengan nilai-nilai brand kami. Hasilnya luar biasa, engagement-nya benar-benar mengesankan! Kami sangat puas dengan kolaborasi ini.",
       rating: 5,
     },
     {
       brand: "3Second",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365933/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.33.19_bbtpqx.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751365933/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.33.19_bbtpqx.png",
       text: "Kolaborasi yang sangat profesional! Konten yang dihasilkan menampilkan produk kami dengan cara yang stylish dan autentik. Visualnya clean, estetik, dan benar-benar mencerminkan karakter brand 3Second. Sangat puas dengan hasilnya – recommended untuk campaign fashion!",
       rating: 5,
     },
     {
       brand: "Colorbox",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751385123/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_ropzwu.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751385123/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_ropzwu.png",
       text: "Rere berhasil menangkap semangat Colorbox yang fun, youthful, dan penuh warna lewat konten yang kreatif dan autentik. Visual yang ditampilkan benar-benar menggambarkan karakter brand kami. Engagement-nya juga tinggi banget! Senang bisa berkolaborasi dengan Rere.Creative content that drove real results for our summer campaign.",
       rating: 5,
     },
     {
       brand: "Universitas Terbuka",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751431866/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751431866/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo.png",
       text: "Terima kasih banyak untuk Rere yang telah membantu memperkenalkan Universitas Terbuka kepada lebih banyak orang. Kami sangat mengapresiasi cara Rere menyampaikan nilai-nilai fleksibilitas, keterbukaan akses, dan kualitas pendidikan yang kami usung.",
       rating: 5,
     },
     {
       brand: "Bank Jatim",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432213/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_onqxnf.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751432213/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_onqxnf.png",
       text: "Kami dari Bank Jatim menyampaikan apresiasi yang sebesar-besarnya kepada Rere atas dukungan dan promosi positif yang diberikan. Terima kasih telah membantu memperkenalkan layanan dan komitmen kami kepada masyarakat luas dengan cara yang menarik dan informatif.",
       rating: 5,
     },
     {
       brand: "Djarum",
-      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432694/fashbrew/Tangkapan_Layar_2025-07-02_pukul_12.06.12_v4uzxo.png",
+      logo: "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751432694/fashbrew/Tangkapan_Layar_2025-07-02_pukul_12.06.12_v4uzxo.png",
       text: "Terima kasih kepada Rere atas dukungan dan dedikasinya dalam memperkenalkan brand Djarum dengan cara yang elegan dan penuh integritas. Kami sangat mengapresiasi bagaimana Rere mampu menyampaikan nilai dan citra Djarum secara positif kepada publik.",
       rating: 5,
     },
@@ -355,14 +355,14 @@ export default function RereAmaliaLanding() {
   };
 
   const images1 = [
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
   ];
   const images2 = [
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
   ];
 
   const bios = [

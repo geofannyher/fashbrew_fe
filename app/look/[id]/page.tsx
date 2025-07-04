@@ -37,7 +37,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "1": {
     id: "1",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
       "https://images.unsplash.com/photo-1521577352947-9bb58764b69b?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1550966871-3ed3f4f10784?auto=format&fit=crop&w=1000&q=80",
     ],
@@ -75,7 +75,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "2": {
     id: "2",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
       "https://images.unsplash.com/photo-1602810317009-d76527da3d46?auto=format&fit=crop&w=500&q=80",
     ],
     title: "Urban Monochrome",
@@ -105,7 +105,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "3": {
     id: "3",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
       "https://images.unsplash.com/photo-1614289826380-3018be4e9d6c?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1600185365483-26d625f38526?auto=format&fit=crop&w=500&q=80",
     ],
@@ -140,7 +140,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "4": {
     id: "4",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
     ],
     title: "Sporty Street",
     description: "Kombinasi athleisure dan streetwear yang santai.",
@@ -160,7 +160,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "5": {
     id: "5",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
     ],
     title: "Summer Breeze",
     description: "Pakaian musim panas yang ringan dan menyegarkan.",
@@ -180,7 +180,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "6": {
     id: "6",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
     ],
     title: "Bold and Black",
     description: "Semua serba hitam untuk gaya edgy dan tegas.",
@@ -200,7 +200,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "7": {
     id: "7",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_uafra2.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
     ],
     title: "Minimal Tan",
     description: "Warna nude dan earth tone untuk nuansa bersih.",
@@ -223,7 +223,7 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "8": {
     id: "8",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
     ],
     title: "Weekend Denim",
     description: "Casual denim for everyday weekend fun.",

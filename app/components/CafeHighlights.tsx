@@ -21,18 +21,18 @@ const CafeHighlights = () => {
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751117008/fashbrew/IMG_6811_hzqgew.jpg"
+                src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751117008/fashbrew/IMG_6811_hzqgew.jpg"
                 alt="Interior aesthetic"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
               <img
-                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751116766/fashbrew/Hilight_Kattapa_ri8l2b.jpg"
+                src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751116766/fashbrew/Hilight_Kattapa_ri8l2b.jpg"
                 alt="Coffee and pastries"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <img
-              src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751116772/fashbrew/Hilight_Kattapa_2_e3yszj.jpg"
+              src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751116772/fashbrew/Hilight_Kattapa_2_e3yszj.jpg"
               alt="Outdoor seating"
               className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             />
@@ -45,11 +45,14 @@ const CafeHighlights = () => {
                 Highlight Cafe
               </h2>
               <p className="text-lg text-gray-700 font-inter leading-relaxed mb-6">
-                Senja Coffee hadir sebagai destinasi ngopi terpopuler di Jember
-                dengan konsep modern minimalis. Cafe yang buka sejak 2020 ini
-                menjadi favorit anak muda, mahasiswa, pekerja remote, dan para
-                content creator karena suasananya yang instagramable dan menu
-                signature yang unik.
+                Kattapa hadir sebagai ruang kopi dan produktivitas yang nyaman
+                di tengah kota, dengan konsep hangat dan homey. Sejak pertama
+                kali dibuka, Kattapa telah menjadi pilihan favorit para
+                mahasiswa, freelancer, dan pekerja kreatif untuk bekerja,
+                berdiskusi, atau sekadar menikmati waktu santai. Dikenal dengan
+                atmosfernya yang tenang dan pelayanan yang ramah, Kattapa juga
+                menjadi tempat ideal untuk menciptakan ide-ide baru sambil
+                menyeruput kopi andalan.
               </p>
             </div>
 

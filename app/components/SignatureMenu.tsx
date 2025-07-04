@@ -14,92 +14,80 @@ const SignatureMenu = () => {
 
   const menuItems = [
     {
-      name: "Matcha Chocolate Fusion",
-      price: "Rp 32.000",
-      image:
-        "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=400&q=80",
-      description: "Perpaduan unik matcha premium dengan coklat belgia",
-      isSignature: true,
-      rating: 4.9,
-      influencerQuote: "Coklat matcha-nya beneran bikin balik lagi 😍",
-      category: "Coffee",
-    },
-    {
-      name: "Senja Signature Coffee",
-      price: "Rp 28.000",
-      image:
-        "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80",
-      description: "House blend spesial dengan aroma khas Senja Coffee",
-      isSignature: true,
-      rating: 4.8,
-      influencerQuote: "Coffee lover wajib coba ini!",
-      category: "Coffee",
-    },
-    {
-      name: "Aesthetic Latte Art",
+      name: "Cromboloni Coklat",
       price: "Rp 25.000",
       image:
-        "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=400&q=80",
-      description: "Latte dengan latte art custom untuk foto Instagram",
-      isSignature: false,
-      rating: 4.7,
-      influencerQuote: "Latte art nya selalu perfect buat foto!",
-      category: "Coffee",
-    },
-    {
-      name: "Croffle Premium",
-      price: "Rp 35.000",
-      image:
-        "https://images.unsplash.com/photo-1559058922-94dc0956862c?auto=format&fit=crop&w=400&q=80",
-      description: "Croissant waffle dengan berbagai topping menarik",
-      isSignature: false,
-      rating: 4.6,
-      influencerQuote: "Enak dan instagramable banget!",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524084/fashbrew/Tezza-1713_rh9emr.jpg",
+      description:
+        "Cromboloni lembut dengan isian coklat meleleh yang lumer di mulut",
+      isSignature: true,
+      rating: 4.9,
+      influencerQuote: "Enak parah! Coklatnya tuh lumer banget, bikin nagih 😍",
       category: "Dessert",
     },
     {
-      name: "Sunset Smoothie Bowl",
-      price: "Rp 38.000",
+      name: "Lychee Tea Ice",
+      price: "Rp 22.000",
       image:
-        "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=400&q=80",
-      description: "Smoothie bowl dengan garnish cantik layaknya sunset",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524105/fashbrew/Tezza-6782_ejuwjm.jpg",
+      description: "Minuman segar perpaduan teh dan leci yang manis alami",
       isSignature: true,
       rating: 4.8,
-      influencerQuote: "Healthy dan cantik, perfect!",
-      category: "Smoothies",
+      influencerQuote:
+        "Rasanya seger banget! Pas banget buat nemenin ngobrol santai 🍹",
+      category: "Tea",
     },
     {
-      name: "Avocado Toast Deluxe",
-      price: "Rp 42.000",
+      name: "Chiken Honey Lemon",
+      price: "Rp 25.000",
       image:
-        "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=400&q=80",
-      description: "Avocado toast dengan sourdough bread dan garnish premium",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524106/fashbrew/Tezza-5145_mavpls.jpg",
+      description:
+        "Daging ayam empuk dengan saus madu lemon yang gurih dan manis segar",
+      isSignature: false,
+      rating: 4.7,
+      influencerQuote:
+        "Ayamnya juicy banget, manis asamnya pas, aku suka banget!",
+      category: "Main Course",
+    },
+    {
+      name: "Katta Plater",
+      price: "Rp 28.000",
+      image:
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524108/fashbrew/Tezza-9817_pyljkd.jpg",
+      description:
+        "Paket cemilan gurih berisi kentang goreng, nugget, dan sosis lengkap dengan saus spesial",
+      isSignature: false,
+      rating: 4.6,
+      influencerQuote:
+        "Cemilan komplit buat sharing! Kentangnya renyah, nugget & sosisnya juga enak banget 🍟🔥",
+      category: "Snack",
+    },
+    {
+      name: "Thai Tea Ice",
+      price: "Rp 18.000",
+      image:
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524107/fashbrew/Tezza-0933_gof9na.jpg",
+      description:
+        "Thai tea otentik dengan rasa creamy dan aroma khas teh Thailand",
+      isSignature: true,
+      rating: 4.8,
+      influencerQuote:
+        "Thai tea-nya strong dan creamy banget! Wajib coba pokoknya 🧋",
+      category: "Tea",
+    },
+    {
+      name: "Ice Tea",
+      price: "Rp 18.000",
+      image:
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524111/fashbrew/Tezza-2975_h7vnyv.jpg",
+      description:
+        "Teh dingin klasik dengan kesegaran maksimal untuk hari panas",
       isSignature: false,
       rating: 4.5,
-      influencerQuote: "Sehat dan mengenyangkan!",
-      category: "Light Meals",
-    },
-    {
-      name: "Iced Chocolate Delight",
-      price: "Rp 30.000",
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&q=80",
-      description: "Minuman coklat dingin dengan whipped cream",
-      isSignature: false,
-      rating: 4.4,
-      influencerQuote: "Perfect untuk cuaca panas!",
-      category: "Non-Coffee",
-    },
-    {
-      name: "Caesar Salad Fresh",
-      price: "Rp 40.000",
-      image:
-        "https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=400&q=80",
-      description: "Salad segar dengan dressing caesar homemade",
-      isSignature: false,
-      rating: 4.3,
-      influencerQuote: "Segar dan sehat!",
-      category: "Light Meals",
+      influencerQuote:
+        "Simple tapi nyegerin banget, cocok buat semua suasana 🌿",
+      category: "Tea",
     },
   ];
 

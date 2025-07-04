@@ -31,7 +31,7 @@ export default function HomePage() {
       rating: 4.5,
       category: ["Foto-Foto", "Nongkrong", "Me Time"],
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751275238/fashbrew/Tangkapan_Layar_2025-06-30_pukul_16.20.13_bkunod.png",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751275238/fashbrew/Tangkapan_Layar_2025-06-30_pukul_16.20.13_bkunod.png",
       openHour: "10:00 - 23:00",
       reviews: 142,
       price: "15.000 - 35.000",

@@ -79,11 +79,13 @@ export default function CafeDetail({
     name_caffe: "Kattapa Coffee",
     url_map: "https://maps.google.com/?q=kopi+kenangan+surabaya",
     istagram: "@kopikenangan.sby",
-    tagline: "Kopi Terbaik di Surabaya dengan Cita Rasa Autentik",
+    tagline: "ForYouKattapista – Karena Kamu Spesial di Hati Kattapa",
     day_operational: "Senin - Minggu",
     time_operational: "10:00 - 23:00 WIB",
     url_img_hero:
+      // "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751112911/fashbrew/IMG_6780_c1sxoe.jpg",
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751112911/fashbrew/IMG_6780_c1sxoe.jpg",
+
     url_img_parking:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     rekomendation: true,

@@ -67,12 +67,12 @@ const HeroSection = ({
     <>
       <section className="relative min-h-screen bg-gradient-to-br from-cafe-50 to-cafe-100 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src={image}
-            alt={name_caffe}
-            className="w-full h-full object-cover"
-          />
+        <div
+          className="absolute inset-0 bg-cover bg-center select-none pointer-events-none"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        >
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
