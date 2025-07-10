@@ -2,55 +2,59 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Star } from "lucide-react";
+import { link } from "fs";
 
 const AffiliateProducts = () => {
   const products = [
     {
-      name: "Aesthetic Tote Bag",
-      price: "Rp 89.000",
-      originalPrice: "Rp 120.000",
+      name: "Gow Pants",
+      price: "Rp 118.012",
+      originalPrice: "Rp 215.000",
       image:
-        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80",
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/8249051c53a0419e9f56b0226e308470~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
       description: "Canvas tote bag minimalis perfect untuk OOTD cafe",
-      influencer: "@jessicatanoe",
-      rating: 4.8,
-      affiliate: "shopee.co.id",
-      discount: "26%",
-    },
-    {
-      name: "Vintage Film Camera",
-      price: "Rp 450.000",
-      originalPrice: "Rp 580.000",
-      image:
-        "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&fit=crop&w=400&q=80",
-      description: "Kamera analog untuk foto aesthetic seperti selebgram",
-      influencer: "@radityadika",
+      influencer: "@rere_amalia",
       rating: 4.9,
-      affiliate: "tokopedia.com",
-      discount: "22%",
+      affiliate: "Tiktok",
+      discount: "26%",
+      link: "https://vt.tokopedia.com/t/ZSBkefKT6/",
     },
     {
-      name: "Aesthetic Phone Case",
-      price: "Rp 45.000",
-      originalPrice: "Rp 65.000",
+      name: "Tube Buttons Tanktop",
+      price: "Rp 127.000",
+      originalPrice: "Rp 129.000",
       image:
-        "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=400&q=80",
-      description: "Phone case aesthetic cocok untuk flat lay foto",
-      influencer: "@jessicatanoe",
-      rating: 4.7,
-      affiliate: "shopee.co.id",
-      discount: "31%",
-    },
-    {
-      name: "Minimalist Watch",
-      price: "Rp 285.000",
-      originalPrice: "Rp 380.000",
-      image:
-        "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=400&q=80",
-      description: "Jam tangan minimalis yang sering dipakai influencer",
-      influencer: "@radityadika",
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/7a75566bd8214b4cbf7326e399445630~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
+      description: "Kamera analog untuk foto aesthetic seperti selebgram",
+      influencer: "@rere_amalia",
       rating: 4.8,
-      affiliate: "tokopedia.com",
+      affiliate: "Tiktok",
+      discount: "22%",
+      link: "https://vt.tokopedia.com/t/ZSBkdjKe5/",
+    },
+    {
+      name: "KIT Blazer",
+      price: "Rp 96.644",
+      originalPrice: "Rp 215.000",
+      image:
+        "https://down-id.img.susercontent.com/file/sg-11134201-7rbnc-lqq7wwkjfsx8e3.webp",
+      description: "Phone case aesthetic cocok untuk flat lay foto",
+      influencer: "@rere_amalia",
+      rating: 4.9,
+      affiliate: "Shopee",
+      discount: "31%",
+      link: "https://s.shopee.co.id/9pT41M4522",
+    },
+    {
+      name: "Vast Turtleneck Rajut",
+      price: "Rp 70.000",
+      originalPrice: "Rp 90.000",
+      image:
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/c1c7ae27a3a04590a1e12dbd9f7a5d81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      description: "Jam tangan minimalis yang sering dipakai influencer",
+      influencer: "@rere_amalia",
+      rating: 4.9,
+      affiliate: "Tiktok",
       discount: "25%",
     },
   ];
@@ -80,12 +84,14 @@ const AffiliateProducts = () => {
                   alt={product.name}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <Badge className="absolute top-3 left-3 bg-red-500 text-white">
+                {/* <Badge className="absolute top-3 left-3 bg-red-500 text-white">
                   -{product.discount}
-                </Badge>
+                </Badge> */}
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
                   <Star className="w-3 h-3 text-yellow-500 fill-current" />
-                  <span className="text-xs font-medium">{product.rating}</span>
+                  <span className="text-xs font-medium text-black">
+                    {product.rating}
+                  </span>
                 </div>
               </div>
 
@@ -94,9 +100,9 @@ const AffiliateProducts = () => {
                   {product.name}
                 </h3>
 
-                <p className="text-gray-600 font-inter text-sm mb-3 leading-relaxed">
+                {/* <p className="text-gray-600 font-inter text-sm mb-3 leading-relaxed">
                   {product.description}
-                </p>
+                </p> */}
 
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs text-gray-500 font-inter">
@@ -121,13 +127,15 @@ const AffiliateProducts = () => {
                   </span>
                 </div>
 
-                <Button
-                  className="w-full bg-cafe-600 hover:bg-cafe-700 text-white flex items-center justify-center gap-2 transition-all duration-300"
-                  onClick={() => window.open("#", "_blank")}
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-cafe-600 hover:bg-cafe-700 text-white flex items-center justify-center gap-2 transition-all duration-300 px-4 py-2 rounded-md"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Beli Sekarang
-                </Button>
+                </a>
               </div>
             </Card>
           ))}

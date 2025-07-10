@@ -57,6 +57,8 @@ export default function ProductList({ products, onProductClick }: Props) {
                     key={idx}
                     href={p.link}
                     onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1 text-xs text-neutral-500 hover:underline"
                   >
                     <div

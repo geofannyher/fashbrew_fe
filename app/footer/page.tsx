@@ -33,10 +33,12 @@ export default function CoffeeFooter() {
           {/* Kolom Tentang */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">☕</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800">Fashbrew</h3>
+              <img
+                src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751993789/fashbrew/dreamina-2025-07-08-8782-buatkan_logo_brand_dengan_ketentuan_mini..._q2oyje.png"
+                alt="Fashbrew Logo"
+                className="h-14 w-14 object-contain"
+              />
+              <h3 className="text-xl font-bold text-gray-800">ashbrew</h3>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Di sini aku ngumpulin tempat-tempat ngopi favorit yang pernah aku
@@ -183,13 +185,13 @@ export default function CoffeeFooter() {
 
             <div className="flex space-x-6 text-sm">
               <a
-                href="/privacy"
+                // href="/privacy"
                 className="text-gray-500 hover:text-orange-500 transition-colors duration-200"
               >
                 Kebijakan Privasi
               </a>
               <a
-                href="/terms"
+                // href="/terms"
                 className="text-gray-500 hover:text-orange-500 transition-colors duration-200"
               >
                 Syarat & Ketentuan

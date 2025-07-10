@@ -71,6 +71,8 @@ const HeroSection = ({
           className="absolute inset-0 bg-cover bg-center select-none pointer-events-none"
           style={{
             backgroundImage: `url(${image})`,
+            willChange: "transform",
+            backfaceVisibility: "hidden",
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>

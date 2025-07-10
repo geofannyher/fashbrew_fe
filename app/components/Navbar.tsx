@@ -19,19 +19,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+
           <button
             onClick={() => (window.location.href = "/")}
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer group"
+            className="flex items-center  hover:opacity-80 transition-opacity cursor-pointer group"
           >
-            <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-2 rounded-xl group-hover:shadow-lg transition-shadow">
-              <Coffee className="h-6 w-6 text-white" />
-            </div>
-            <div className="text-left">
-              <h1 className="text-xl font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
-                Fashbrew
-              </h1>
-              <p className="text-xs text-gray-500">Discover great cafes</p>
-            </div>
+            <img
+              src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751993789/fashbrew/dreamina-2025-07-08-8782-buatkan_logo_brand_dengan_ketentuan_mini..._q2oyje.png"
+              alt="Fashbrew Logo"
+              className="h-14 w-14 object-contain"
+            />
+            <p className="text-lg font-medium text-gray-800">ashbrew</p>
           </button>
 
           {/* Desktop Navigation */}
@@ -49,16 +47,17 @@ export default function Navbar() {
               Shop
             </Link>
             <Link
+              href="/"
+              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+            >
+              Find Coffe
+            </Link>
+            <Link
               href="/portofolio"
               className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
               Portofolio
             </Link>
-            {/* Uncomment if needed
-            <button className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
-              Sign In
-            </button>
-            */}
           </div>
 
           {/* Mobile Hamburger Button */}

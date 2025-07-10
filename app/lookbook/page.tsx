@@ -8,7 +8,7 @@ const ootdData = [
   {
     id: "1",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_5_ubxh20.jpg",
     title: "Effortless Weekend Layers",
     description:
       "The perfect blend of comfort and style for those leisurely Saturday mornings. A cozy oversized blazer paired with tailored trousers creates an elevated casual look.",
@@ -19,49 +19,23 @@ const ootdData = [
     },
     products: [
       {
-        name: "Oversized Blazer",
+        name: "Kemeja Lengan Panjang",
+        platforms: [
+          {
+            platform: "tiktok" as const,
+            price: "Rp 206.000",
+            link: "https://vt.tokopedia.com/t/ZSBke9fW9/",
+          },
+        ],
+        position: { top: "35%", left: "60%" },
+      },
+      {
+        name: "Gouw Pants",
         platforms: [
           {
             platform: "shopee" as const,
-            price: "Rp 299.000",
-            link: "https://shopee.co.id/blazer-affiliate",
-          },
-          {
-            platform: "tokopedia" as const,
-            price: "Rp 310.000",
-            link: "https://tokopedia.com/blazer-affiliate",
-          },
-        ],
-        position: { top: "25%", left: "60%" },
-      },
-      {
-        name: "Wide-leg Trousers",
-        platforms: [
-          {
-            platform: "tokopedia" as const,
-            price: "Rp 189.000",
-            link: "https://tokopedia.com/trousers-affiliate",
-          },
-          {
-            platform: "tiktok" as const,
-            price: "Rp 179.000",
-            link: "https://tiktok.com/trousers-affiliate",
-          },
-        ],
-        position: { top: "60%", left: "45%" },
-      },
-      {
-        name: "Leather Loafers",
-        platforms: [
-          {
-            platform: "shopee" as const,
-            price: "Rp 345.000",
-            link: "https://shopee.co.id/loafers-affiliate",
-          },
-          {
-            platform: "tiktok" as const,
-            price: "Rp 349.000",
-            link: "https://tiktok.com/loafers-affiliate",
+            price: "Rp 112.000",
+            link: "https://s.shopee.co.id/z8J9MP6g",
           },
         ],
         position: { top: "85%", left: "50%" },
@@ -71,7 +45,7 @@ const ootdData = [
   {
     id: "2",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616816/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_6_aqxyt0.jpg",
     title: "Cozy Street Vibe",
     description:
       "Layered hoodie and cargo pants for an effortless, edgy city look.",
@@ -82,18 +56,24 @@ const ootdData = [
     },
     products: [
       {
-        name: "Oversized Hoodie",
+        name: "Kit Blazer",
         platforms: [
-          { platform: "shopee" as const, price: "Rp 210.000", link: "#" },
-          { platform: "tiktok" as const, price: "Rp 205.000", link: "#" },
+          {
+            platform: "shopee" as const,
+            price: "Rp 96.000",
+            link: "https://s.shopee.co.id/9pT41M4522",
+          },
         ],
-        position: { top: "20%", left: "55%" },
+        position: { top: "35%", left: "55%" },
       },
       {
-        name: "Black Cargo Pants",
+        name: "Gouw Pants",
         platforms: [
-          { platform: "tokopedia" as const, price: "Rp 250.000", link: "#" },
-          { platform: "shopee" as const, price: "Rp 245.000", link: "#" },
+          {
+            platform: "shopee" as const,
+            price: "Rp 112.000",
+            link: "https://s.shopee.co.id/z8J9MP6g",
+          },
         ],
         position: { top: "70%", left: "48%" },
       },
@@ -102,7 +82,7 @@ const ootdData = [
   {
     id: "3",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616846/fashbrew/OOTD3/outfit_today_3_pu6gxm.jpg",
     title: "Clean Office Look",
     description: "Sleek and minimal for professional elegance.",
     mood: ["office", "weekday"],
@@ -112,16 +92,24 @@ const ootdData = [
     },
     products: [
       {
-        name: "White Button-Up Shirt",
+        name: "White Evie Top",
         platforms: [
-          { platform: "tokopedia" as const, price: "Rp 150.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 155.000",
+            link: "https://vt.tokopedia.com/t/ZSBkRXtrT",
+          },
         ],
-        position: { top: "22%", left: "50%" },
+        position: { top: "35%", left: "45%" },
       },
       {
-        name: "Tailored Trousers",
+        name: "Jeha Kulot",
         platforms: [
-          { platform: "shopee" as const, price: "Rp 200.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 199.000",
+            link: "https://vt.tokopedia.com/t/ZSBkRNgj5/",
+          },
         ],
         position: { top: "68%", left: "45%" },
       },
@@ -130,7 +118,7 @@ const ootdData = [
   {
     id: "4",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616872/fashbrew/OOTD4/Do_whatever_makes_you_happiest_._3_z9pthq.jpg",
     title: "Beach Day Lightness",
     description:
       "Breezy fabrics and pastel tones perfect for seaside getaways.",
@@ -141,25 +129,33 @@ const ootdData = [
     },
     products: [
       {
-        name: "Floral Summer Dress",
+        name: "Vest Turtleneck",
         platforms: [
-          { platform: "shopee" as const, price: "Rp 175.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 70.000",
+            link: "https://vt.tokopedia.com/t/ZSBkRce5F/",
+          },
         ],
-        position: { top: "30%", left: "50%" },
+        position: { top: "60%", left: "50%" },
       },
       {
-        name: "Straw Hat",
+        name: "Kacamata Hitam",
         platforms: [
-          { platform: "tokopedia" as const, price: "Rp 95.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 9.900",
+            link: "https://vt.tokopedia.com/t/ZSBk8e4j8/",
+          },
         ],
-        position: { top: "10%", left: "40%" },
+        position: { top: "42%", left: "46%" },
       },
     ],
   },
   {
     id: "5",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616896/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_1_mzbk3y.jpg",
     title: "Monochrome Power",
     description: "All-black outfit for maximum impact and elegance.",
     mood: ["edgy", "night"],
@@ -169,25 +165,33 @@ const ootdData = [
     },
     products: [
       {
-        name: "Black Blazer Dress",
+        name: "Rok Tule Midi",
         platforms: [
-          { platform: "tiktok" as const, price: "Rp 299.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 189.000",
+            link: "https://vt.tokopedia.com/t/ZSB5Pm5Ga",
+          },
         ],
-        position: { top: "40%", left: "50%" },
+        position: { top: "80%", left: "50%" },
       },
       {
-        name: "Chunky Boots",
+        name: "Lessa Lexia Bag",
         platforms: [
-          { platform: "shopee" as const, price: "Rp 275.000", link: "#" },
+          {
+            platform: "shopee" as const,
+            price: "Rp 89.500",
+            link: "https://vt.tokopedia.com/t/ZSB5514t8/",
+          },
         ],
-        position: { top: "90%", left: "52%" },
+        position: { top: "55%", left: "55%" },
       },
     ],
   },
   {
     id: "6",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616926/fashbrew/OOTD6/enjoy_5_oshr8z.jpg",
     title: "Korean-Inspired Chill",
     description:
       "Loose-fit sweater, skirt combo and sneakers for laid-back cuteness.",
@@ -198,25 +202,33 @@ const ootdData = [
     },
     products: [
       {
-        name: "Striped Knit Sweater",
+        name: "Nancy Top",
         platforms: [
-          { platform: "shopee" as const, price: "Rp 199.000", link: "#" },
+          {
+            platform: "shopee" as const,
+            price: "Rp 45.000",
+            link: "https://s.shopee.co.id/3qBxg8J7GV",
+          },
         ],
-        position: { top: "28%", left: "58%" },
+        position: { top: "60%", left: "40%" },
       },
       {
-        name: "Mini Skirt",
+        name: "Gow Pants",
         platforms: [
-          { platform: "tokopedia" as const, price: "Rp 160.000", link: "#" },
+          {
+            platform: "shopee" as const,
+            price: "Rp 118.000",
+            link: "https://s.shopee.co.id/6ppZFi6M30",
+          },
         ],
-        position: { top: "65%", left: "46%" },
+        position: { top: "85%", left: "60%" },
       },
     ],
   },
   {
     id: "7",
     image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751617264/fashbrew/OOTD7/the_last_slide_is_a_mess_2_ihr1bf.jpg",
     title: "Sporty On-the-Go",
     description: "Athleisure outfit for moving in style.",
     mood: ["sporty", "daily"],
@@ -226,46 +238,15 @@ const ootdData = [
     },
     products: [
       {
-        name: "Athletic Crop Top",
+        name: "Tanktop Leather",
         platforms: [
-          { platform: "tiktok" as const, price: "Rp 145.000", link: "#" },
+          {
+            platform: "tiktok" as const,
+            price: "Rp 32.400",
+            link: "https://vt.tokopedia.com/t/ZSB55qfGu/",
+          },
         ],
-        position: { top: "18%", left: "55%" },
-      },
-      {
-        name: "Running Leggings",
-        platforms: [
-          { platform: "shopee" as const, price: "Rp 220.000", link: "#" },
-        ],
-        position: { top: "75%", left: "48%" },
-      },
-    ],
-  },
-  {
-    id: "8",
-    image:
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
-    title: "Fall Neutrals",
-    description: "Muted tones and cozy layers for autumn vibes.",
-    mood: ["autumn", "neutral"],
-    influencer: {
-      name: "rere amalia",
-      handle: "@_rereamalia_",
-    },
-    products: [
-      {
-        name: "Beige Trench Coat",
-        platforms: [
-          { platform: "tokopedia" as const, price: "Rp 365.000", link: "#" },
-        ],
-        position: { top: "35%", left: "52%" },
-      },
-      {
-        name: "Knit Scarf",
-        platforms: [
-          { platform: "shopee" as const, price: "Rp 90.000", link: "#" },
-        ],
-        position: { top: "20%", left: "45%" },
+        position: { top: "55%", left: "45%" },
       },
     ],
   },

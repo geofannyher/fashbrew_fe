@@ -50,26 +50,34 @@ const InstagramGallery = () => {
     {
       id: 1,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
-      style: "Casual Chic",
-      description: "Perfect untuk ngopi santai",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_5_ubxh20.jpg",
+      style: "Formal Style",
+      description:
+        "Tampilan rapi dan elegan dengan setelan jas, kemeja, dan sepatu pantofel, cocok untuk acara resmi atau profesional.",
       products: [
         {
-          name: "Oversized Sweater",
+          name: "Kemben Tube Top",
           image:
-            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/f760ccf23c1d45a38bfdc591655247ef~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example1",
-            shopee: "https://s.shopee.co.id/8UxQSUGnkv",
+            tiktok: "https://vt.tokopedia.com/t/ZSBkdjKe5/",
           },
         },
         {
-          name: "High Waist Jeans",
+          name: "Kemeja Putih",
           image:
-            "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e3d67e8ff042449e9e7fb2f71f1a55a2~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example2",
-            shopee: "https://shopee.co.id/example2",
+            tiktok: "https://vt.tokopedia.com/t/ZSBke9fW9/",
+          },
+        },
+        {
+          name: "Celana Gouw Pants",
+          image:
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/8b18eb41d0ac477baacef906d31cc124~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+          links: {
+            tiktok: "https://vt.tokopedia.com/t/ZSBkefKT6/",
+            shopee: "https://s.shopee.co.id/z8J9MP6g",
           },
         },
       ],
@@ -77,26 +85,25 @@ const InstagramGallery = () => {
     {
       id: 2,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
-      style: "Date Night",
-      description: "Romantic dan elegant",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616846/fashbrew/OOTD3/outfit_today_1_klzdas.jpg",
+      style: "Casual Outfit",
+      description:
+        "Tampilan santai dengan sentuhan romantis dan elegan, cocok untuk kencan atau acara kasual spesial.",
       products: [
         {
-          name: "Little Black Dress",
+          name: "Korean Top",
           image:
-            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e0c13971d8f7494383ffd85b4cd8ce92~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
           links: {
-            shopee: "https://shopee.co.id/example3",
-            tiktok: "https://shop.tiktok.com/example3",
+            tiktok: "https://vt.tokopedia.com/t/ZSBkRXtrT/",
           },
         },
         {
-          name: "Heels",
+          name: "Kulot Rok Hijau",
           image:
-            "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/7fa139c3731b4113b2c10081fac4dbf2~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example4",
-            shopee: "https://shopee.co.id/example4",
+            tiktok: "https://vt.tokopedia.com/t/ZSBkRNgj5/",
           },
         },
       ],
@@ -104,26 +111,24 @@ const InstagramGallery = () => {
     {
       id: 3,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
-      style: "Vintage Vibes",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616872/fashbrew/OOTD4/Do_whatever_makes_you_happiest_._3_z9pthq.jpg",
+      style: "",
       description: "Retro aesthetic look",
       products: [
         {
-          name: "Vintage Blouse",
+          name: "Baju Hitam",
           image:
-            "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/f66ed30f518142b7a3546ede469c251f~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example5",
-            shopee: "https://shopee.co.id/example5",
+            tiktok: "https://vt.tokopedia.com/t/ZSBkRce5F/",
           },
         },
         {
-          name: "High Waist Skirt",
+          name: "Kacamata",
           image:
-            "https://images.unsplash.com/photo-1583496661160-fb5886a13d4e?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2024/6/30/d2124e6b-aee2-4ab2-80c7-e621af3a7ea7.jpg~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example6",
-            tiktok: "https://shop.tiktok.com/example6",
+            tiktok: "https://vt.tokopedia.com/t/ZSBk8e4j8/",
           },
         },
       ],
@@ -131,26 +136,25 @@ const InstagramGallery = () => {
     {
       id: 4,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616893/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_3_fbqwrz.jpg",
       style: "Boho Style",
       description: "Free spirited dan comfortable",
       products: [
         {
-          name: "Flowy Maxi Dress",
+          name: "Rok Tule Midi",
           image:
-            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/868fb9658fd24c5c9e77605810c6c39e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
           links: {
-            shopee: "https://shopee.co.id/example7",
-            tokopedia: "https://tokopedia.com/example7",
+            tiktok: "https://vt.tokopedia.com/t/ZSB5Pm5Ga/ ",
+            shopee: "https://s.shopee.co.id/4fl4kHNkDA",
           },
         },
         {
-          name: "Layered Necklace",
+          name: "Lessa Lexia Bag",
           image:
-            "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/4743df2b4b9a4c158034339082256a96~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
           links: {
-            tiktok: "https://shop.tiktok.com/example8",
-            shopee: "https://shopee.co.id/example8",
+            tiktok: "https://vt.tokopedia.com/t/ZSB5514t8",
           },
         },
       ],
@@ -158,26 +162,25 @@ const InstagramGallery = () => {
     {
       id: 5,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616927/fashbrew/OOTD6/enjoy_8_invqon.jpg",
       style: "Minimalist",
       description: "Simple tapi tetap stylish",
       products: [
         {
-          name: "Basic White Tee",
+          name: "Nancy Top",
           image:
-            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=200&q=80",
+            "https://down-id.img.susercontent.com/file/2e268e6a27f504139fb6a9b802085bb9.webp",
           links: {
-            tokopedia: "https://tokopedia.com/example9",
-            shopee: "https://shopee.co.id/example9",
+            shopee: "https://s.shopee.co.id/3qBxg8J7GV",
           },
         },
         {
-          name: "Denim Jacket",
+          name: "Gouw Pants",
           image:
-            "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=200&q=80",
+            "https://down-id.img.susercontent.com/file/sg-11134201-23010-p2merdrn7ymv34.webp",
           links: {
-            shopee: "https://shopee.co.id/example10",
-            tiktok: "https://shop.tiktok.com/example10",
+            shopee: "https://s.shopee.co.id/6ppZFi6M30",
+            tiktok: "https://vt.tokopedia.com/t/ZSB554vMT/",
           },
         },
       ],
@@ -185,80 +188,17 @@ const InstagramGallery = () => {
     {
       id: 6,
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751617266/fashbrew/OOTD7/the_last_slide_is_a_mess_1_lrxpwx.jpg",
       style: "Sporty Chic",
       description: "Active lifestyle yang trendy",
       products: [
         {
-          name: "Sports Bra Set",
+          name: "Tanktop Leather Suspender",
           image:
-            "https://images.unsplash.com/photo-1506629905607-cc00f4d3d981?auto=format&fit=crop&w=200&q=80",
+            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/706fbcd061284758b7a0f090fcc510f7~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
           links: {
-            tokopedia: "https://tokopedia.com/example11",
-            shopee: "https://shopee.co.id/example11",
-          },
-        },
-        {
-          name: "Sneakers",
-          image:
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=200&q=80",
-          links: {
-            shopee: "https://shopee.co.id/example12",
-            tiktok: "https://shop.tiktok.com/example12",
-          },
-        },
-      ],
-    },
-    {
-      id: 7,
-      image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
-      style: "Korean Style",
-      description: "K-fashion inspired look",
-      products: [
-        {
-          name: "Oversized Cardigan",
-          image:
-            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=200&q=80",
-          links: {
-            tokopedia: "https://tokopedia.com/example13",
-            shopee: "https://shopee.co.id/example13",
-          },
-        },
-        {
-          name: "Pleated Skirt",
-          image:
-            "https://images.unsplash.com/photo-1583496661160-fb5886a13d4e?auto=format&fit=crop&w=200&q=80",
-          links: {
-            shopee: "https://shopee.co.id/example14",
-            tiktok: "https://shop.tiktok.com/example14",
-          },
-        },
-      ],
-    },
-    {
-      id: 8,
-      image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
-      style: "Elegant Casual",
-      description: "Sophisticated yet relaxed",
-      products: [
-        {
-          name: "Silk Blouse",
-          image:
-            "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=200&q=80",
-          links: {
-            tokopedia: "https://tokopedia.com/example15",
-            shopee: "https://shopee.co.id/example15",
-          },
-        },
-        {
-          name: "Tailored Pants",
-          image:
-            "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=200&q=80",
-          links: {
-            shopee: "https://shopee.co.id/example16",
-            tokopedia: "https://tokopedia.com/example16",
+            tiktok: "https://vt.tokopedia.com/t/ZSB55qfGu/",
+            shopee: "https://s.shopee.co.id/4VReTdHCjY",
           },
         },
       ],

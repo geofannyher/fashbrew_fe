@@ -37,37 +37,51 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "1": {
     id: "1",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/outfit_today_ltfduo.jpg",
-      "https://images.unsplash.com/photo-1521577352947-9bb58764b69b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1550966871-3ed3f4f10784?auto=format&fit=crop&w=1000&q=80",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616729/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_6_supx53.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616728/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_3_cydfh4.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616728/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_2_dtsmj4.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_7_dehqbh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_5_ubxh20.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_4_wpkgwe.jpg",
     ],
-    title: "Effortless Weekend Layers",
+    title: "Take Your Coffee ☕",
     description:
-      "Blazer oversized dan celana tailored untuk tampilan kasual elegan.",
-    influencer: { name: "Emma Chen", handle: "@emmastyle" },
+      "Gaya santai untuk momen ngopi. Simpel, hangat, dan tetap stylish.",
+    influencer: { name: "rere_amalia", handle: "@rere_amalia" },
     products: [
       {
         id: "p1",
-        name: "Oversized Blazer",
-        price: "Rp 299.000",
+        name: "Kemeja Putih Lengan Panjang",
+        price: "Rp 220.000",
         image:
-          "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e3d67e8ff042449e9e7fb2f71f1a55a2~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Blazer oversized berbahan wol dengan potongan relaxed.",
         platforms: [
-          { platform: "shopee", link: "#" },
-          { platform: "tokopedia", link: "#" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBke9fW9/" },
         ],
       },
       {
         id: "p2",
-        name: "Wide-leg Trousers",
-        price: "Rp 189.000",
+        name: "Tube Buttons Tanktop",
+        price: "Rp 129.000",
         image:
-          "https://images.unsplash.com/photo-1506629905851-6d4457aa2fe4?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/a500c2cf35934f259965dcd015943a1b~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Celana high-waist dengan bahan crepe premium.",
         platforms: [
-          { platform: "tokopedia", link: "#" },
-          { platform: "tiktok", link: "#" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkdjKe5/" },
+          { platform: "shopee", link: "https://s.shopee.co.id/2VgZsBar2b" },
+        ],
+      },
+      {
+        id: "p3",
+        name: "Gouw Pants",
+        price: "Rp 118.000",
+        image:
+          "https://down-id.img.susercontent.com/file/sg-11134201-23010-p2merdrn7ymv34.webp",
+        description: "Celana high-waist dengan bahan crepe premium.",
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkefKT6/" },
+          { platform: "shopee", link: "https://s.shopee.co.id/z8J9MP6g" },
         ],
       },
     ],
@@ -75,64 +89,96 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "2": {
     id: "2",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
-      "https://images.unsplash.com/photo-1602810317009-d76527da3d46?auto=format&fit=crop&w=500&q=80",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616815/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_5_wsg890.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616815/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_13_yg5zph.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616814/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_4_f6yp1m.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616817/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_gqrb4c.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616818/fashbrew/OOTD2/hello_mid_april_fashionphotography_fashionista_fashionoftheday_styleinspiration_16_fa8gxz.jpg",
     ],
-    title: "Urban Monochrome",
-    description: "Tampilan abu-abu modern untuk city vibes.",
-    influencer: { name: "Liam Park", handle: "@liamstreet" },
+    title: "Mid-April Mood",
+    description:
+      "Sentuhan chic untuk hari cerah di pertengahan April. Simpel, segar, dan penuh gaya.",
+    influencer: { name: "rere_amalia", handle: "@rere_amalia" },
     products: [
       {
-        id: "p3",
-        name: "Grey Hoodie",
-        price: "Rp 159.000",
+        id: "p4",
+        name: "Tank Top Kulit",
+        price: "Rp 37.000",
         image:
-          "https://images.unsplash.com/photo-1602810317009-d76527da3d46?auto=format&fit=crop&w=500&q=80",
+          "https://down-id.img.susercontent.com/file/id-11134207-7r98y-lwy37210ixy3c5.webp",
         description: "Hoodie abu polos berbahan fleece lembut.",
-        platforms: [{ platform: "shopee", link: "#" }],
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkR2sry/" },
+          { platform: "shopee", link: "https://s.shopee.co.id/9KWnQa6kPk" },
+        ],
       },
       {
-        id: "p4",
-        name: "Black Slim Pants",
-        price: "Rp 219.000",
+        id: "p5",
+        name: "Kit Blazer",
+        price: "Rp 109.000",
         image:
-          "https://images.unsplash.com/photo-1580894894519-ec6abfd8b18f?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/95d71dfefa6549b38752b3b67cb54e60~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Celana hitam slim fit untuk gaya minimalis.",
-        platforms: [{ platform: "tokopedia", link: "#" }],
+        platforms: [
+          { platform: "shopee", link: "https://s.shopee.co.id/9pT41M4522" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkdy3gn" },
+        ],
+      },
+      {
+        id: "p6",
+        name: "Gouw Pants",
+        price: "Rp 118.000",
+        image:
+          "https://down-id.img.susercontent.com/file/sg-11134201-23010-p2merdrn7ymv34.webp",
+        description: "Celana hitam slim fit untuk gaya minimalis.",
+        platforms: [
+          { platform: "shopee", link: "https://s.shopee.co.id/z8J9MP6g" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkdHMSr/" },
+        ],
       },
     ],
   },
   "3": {
     id: "3",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/caption_in_this_song_tsletd.jpg",
-      "https://images.unsplash.com/photo-1614289826380-3018be4e9d6c?auto=format&fit=crop&w=500&q=80",
-      "https://images.unsplash.com/photo-1600185365483-26d625f38526?auto=format&fit=crop&w=500&q=80",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616846/fashbrew/OOTD3/outfit_today_1_klzdas.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616846/fashbrew/OOTD3/outfit_today_3_pu6gxm.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616845/fashbrew/OOTD3/outfit_today_4_oiwfal.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616844/fashbrew/OOTD3/outfit_today_7_hjugza.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616844/fashbrew/OOTD3/outfit_today_6_ifxhsh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616843/fashbrew/OOTD3/outfit_today_5_gw6ge6.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616842/fashbrew/OOTD3/outfit_today_2_oybuij.jpg",
     ],
-    title: "Vintage Parisian",
-    description: "Gaya vintage ala Paris tahun 60-an.",
-    influencer: { name: "Chloe Moret", handle: "@vintageparis" },
+    title: "Outfit Today",
+    description:
+      "Gaya kasual harian yang simpel tapi tetap standout. Siap temani aktivitasmu seharian.",
+    influencer: { name: "rere_amalia", handle: "@rere_amalia" },
     products: [
       {
-        id: "p5",
-        name: "Polkadot Dress",
-        price: "Rp 249.000",
+        id: "p7",
+        name: "Evie Top",
+        price: "Rp 159.000",
         image:
-          "https://images.unsplash.com/photo-1614289826380-3018be4e9d6c?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e0c13971d8f7494383ffd85b4cd8ce92~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Gaun polkadot klasik dengan potongan feminin.",
         platforms: [
-          { platform: "shopee", link: "#" },
-          { platform: "tiktok", link: "#" },
+          {
+            platform: "tiktok",
+            link: "https://vt.tokopedia.com/t/ZSBkRXtrT/",
+          },
         ],
       },
       {
-        id: "p6",
-        name: "Beret Hat",
-        price: "Rp 89.000",
+        id: "p8",
+        name: "Jeha Kulot",
+        price: "Rp 199.000",
         image:
-          "https://images.unsplash.com/photo-1600185365483-26d625f38526?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/7fa139c3731b4113b2c10081fac4dbf2~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Topi baret klasik untuk melengkapi look vintage-mu.",
-        platforms: [{ platform: "tokopedia", link: "#" }],
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkRNgj5/" },
+          { platform: "shopee", link: "https://s.shopee.co.id/6fW8qs2UmS" },
+        ],
       },
     ],
   },
@@ -140,143 +186,141 @@ const ootdDetailData: Record<string, OOTDDetail> = {
   "4": {
     id: "4",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616872/fashbrew/OOTD4/Do_whatever_makes_you_happiest_._3_z9pthq.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616870/fashbrew/OOTD4/Do_whatever_makes_you_happiest_._2_fq35tb.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616869/fashbrew/OOTD4/Do_whatever_makes_you_happiest_._1_icdt5t.jpg",
     ],
-    title: "Sporty Street",
-    description: "Kombinasi athleisure dan streetwear yang santai.",
-    influencer: { name: "Rio Santoso", handle: "@riodripp" },
+    title: "Do What Makes You Happy",
+    description:
+      "Outfit simpel yang mencerminkan mood bebas dan percaya diri. Karena gaya terbaik adalah jadi diri sendiri.",
+    influencer: { name: "rere_amalia", handle: "@rere_amalia" },
     products: [
       {
-        id: "p7",
-        name: "Windbreaker Jacket",
-        price: "Rp 179.000",
+        id: "p8",
+        name: "Kacamata Hitam",
+        price: "Rp 9.900",
         image:
-          "https://images.unsplash.com/photo-1593032457866-17ce1c2d153d?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2024/6/30/d2124e6b-aee2-4ab2-80c7-e621af3a7ea7.jpg~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Jaket windbreaker ringan, tahan angin dan stylish.",
-        platforms: [{ platform: "tiktok", link: "#" }],
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBk8e4j8/" },
+        ],
+      },
+      {
+        id: "p9",
+        name: "Vest Turtleneck",
+        price: "Rp 70.900",
+        image:
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/c1c7ae27a3a04590a1e12dbd9f7a5d81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+        description: "Jaket windbreaker ringan, tahan angin dan stylish.",
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkRce5F/" },
+          { platform: "shopee", link: "https://s.shopee.co.id/20kJLAkb0W" },
+        ],
       },
     ],
   },
   "5": {
     id: "5",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616897/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_dklh7t.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616896/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_1_mzbk3y.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616895/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_2_kyvp66.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616893/fashbrew/OOTD5/Snapshots_of_spontaneity___%EF%B8%8F_3_fbqwrz.jpg",
     ],
     title: "Summer Breeze",
     description: "Pakaian musim panas yang ringan dan menyegarkan.",
     influencer: { name: "Ayu Wulandari", handle: "@ayuwstyle" },
     products: [
       {
-        id: "p8",
-        name: "Linen Shirt",
-        price: "Rp 199.000",
+        id: "p10",
+        name: "Rok Tule Midi",
+        price: "Rp 189.000",
         image:
-          "https://images.unsplash.com/photo-1602810317008-6077bd35c845?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/868fb9658fd24c5c9e77605810c6c39e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Kemeja linen putih longgar untuk udara tropis.",
-        platforms: [{ platform: "shopee", link: "#" }],
+        platforms: [
+          { platform: "shopee", link: "https://s.shopee.co.id/4fl4kHNkDA" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB5Pm5Ga/" },
+        ],
+      },
+      {
+        id: "p11",
+        name: "Lessa Lexia Bag",
+        price: "Rp 89.500",
+        image:
+          "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/4743df2b4b9a4c158034339082256a96~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+        description: "Kemeja linen putih longgar untuk udara tropis.",
+        platforms: [
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB5514t8" },
+        ],
       },
     ],
   },
   "6": {
     id: "6",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_1_cgxt4b.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616927/fashbrew/OOTD6/enjoy_6_ryvqu0.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616927/fashbrew/OOTD6/enjoy_8_invqon.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616926/fashbrew/OOTD6/enjoy_5_oshr8z.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616926/fashbrew/OOTD6/enjoy_9_dyvqtj.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616925/fashbrew/OOTD6/enjoy_7_gloqkb.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616925/fashbrew/OOTD6/enjoy_2_wgdoxf.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616923/fashbrew/OOTD6/enjoy_3_v96kag.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616923/fashbrew/OOTD6/enjoy_1_mf0sem.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616923/fashbrew/OOTD6/enjoy_4_f0ahic.jpg",
     ],
     title: "Bold and Black",
     description: "Semua serba hitam untuk gaya edgy dan tegas.",
     influencer: { name: "Nathan Lie", handle: "@darkbydefault" },
     products: [
       {
-        id: "p9",
-        name: "Black Turtleneck",
-        price: "Rp 159.000",
+        id: "p12",
+        name: "Nancy Top",
+        price: "Rp 45.000",
         image:
-          "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=500&q=80",
+          "https://down-id.img.susercontent.com/file/2e268e6a27f504139fb6a9b802085bb9.webp",
         description: "Turtleneck hitam slim fit yang klasik.",
-        platforms: [{ platform: "tokopedia", link: "#" }],
+        platforms: [
+          { platform: "shopee", link: "https://s.shopee.co.id/3qBxg8J7GV" },
+        ],
+      },
+      {
+        id: "p13",
+        name: "Gouw Pants",
+        price: "Rp 118.000",
+        image:
+          "https://down-id.img.susercontent.com/file/sg-11134201-23010-p2merdrn7ymv34.webp",
+        description: "Turtleneck hitam slim fit yang klasik.",
+        platforms: [
+          { platform: "shopee", link: "https://s.shopee.co.id/6ppZFi6M30" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB554vMT/" },
+        ],
       },
     ],
   },
   "7": {
     id: "7",
     images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751617267/fashbrew/OOTD7/the_last_slide_is_a_mess_nokeii.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751617266/fashbrew/OOTD7/the_last_slide_is_a_mess_1_lrxpwx.jpg",
+      "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751617264/fashbrew/OOTD7/the_last_slide_is_a_mess_2_ihr1bf.jpg",
     ],
     title: "Minimal Tan",
     description: "Warna nude dan earth tone untuk nuansa bersih.",
     influencer: { name: "Dina Zhafira", handle: "@dinanudes" },
     products: [
       {
-        id: "p10",
-        name: "Tan Blouse",
+        id: "p13",
+        name: "Tanktop Leather Suspender",
         price: "Rp 189.000",
         image:
-          "https://images.unsplash.com/photo-1556906781-9dd9d8e5a2c5?auto=format&fit=crop&w=500&q=80",
+          "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/706fbcd061284758b7a0f090fcc510f7~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
         description: "Blus warna tan elegan dengan detail lengan puff.",
         platforms: [
-          { platform: "shopee", link: "#" },
-          { platform: "tiktok", link: "#" },
+          { platform: "shopee", link: "https://s.shopee.co.id/4VReTdHCjY" },
+          { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB55qfGu/" },
         ],
-      },
-    ],
-  },
-  "8": {
-    id: "8",
-    images: [
-      "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_by_lsecjx.jpg",
-    ],
-    title: "Weekend Denim",
-    description: "Casual denim for everyday weekend fun.",
-    influencer: { name: "Kevin Lau", handle: "@kevindress" },
-    products: [
-      {
-        id: "p11",
-        name: "Denim Jacket",
-        price: "Rp 299.000",
-        image:
-          "https://images.unsplash.com/photo-1551739440-62dfc2f7dcb2?auto=format&fit=crop&w=500&q=80",
-        description: "Jaket denim biru klasik dengan aksen washed.",
-        platforms: [{ platform: "tokopedia", link: "#" }],
-      },
-    ],
-  },
-  "9": {
-    id: "9",
-    images: [
-      "https://images.unsplash.com/photo-1521577352947-9bb58764b69b?auto=format&fit=crop&w=1000&q=80",
-    ],
-    title: "Layered Neutrals",
-    description: "Layering ringan dengan palet warna netral.",
-    influencer: { name: "Rara Kamila", handle: "@raralayers" },
-    products: [
-      {
-        id: "p12",
-        name: "Long Cardigan",
-        price: "Rp 229.000",
-        image:
-          "https://images.unsplash.com/photo-1614289828004-b3cf18caa828?auto=format&fit=crop&w=500&q=80",
-        description: "Cardigan panjang warna krem dengan bahan halus.",
-        platforms: [{ platform: "shopee", link: "#" }],
-      },
-    ],
-  },
-  "10": {
-    id: "10",
-    images: [
-      "https://images.unsplash.com/photo-1550966871-3ed3f4f10784?auto=format&fit=crop&w=1000&q=80",
-    ],
-    title: "Office Smart Casual",
-    description: "Tampilan semi-formal untuk ke kantor.",
-    influencer: { name: "Rico Hartanto", handle: "@ricoformal" },
-    products: [
-      {
-        id: "p13",
-        name: "Navy Blazer",
-        price: "Rp 349.000",
-        image:
-          "https://images.unsplash.com/photo-1589571894960-20bbe2828d0c?auto=format&fit=crop&w=500&q=80",
-        description: "Blazer navy formal dengan potongan modern.",
-        platforms: [{ platform: "tokopedia", link: "#" }],
       },
     ],
   },

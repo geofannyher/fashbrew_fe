@@ -77,58 +77,56 @@ export default function RereAmaliaLanding() {
       id: 1,
       type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751279411/fashbrew/Tangkapan_Layar_2025-06-30_pukul_17.24.24_ya9esq.png",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751820425/fashbrew/coba_tebak_mau_kemana_%EF%B8%8F_wisata_wisataindonesia_i3myqa.jpg",
       likes: "2.4k",
-      comments: "89",
+      comments: "510",
       url: "https://www.instagram.com/reel/C6s7UjwSoIN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       id: 2,
       type: "tiktok",
       image:
-        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
-      likes: "15.2k",
-      views: "125k",
-      shares: "234",
-      url: "https://tiktok.com/@user/video/example2",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752028320/fashbrew/Tangkapan_Layar_2025-07-09_pukul_09.33.13_xjxkut.png",
+      likes: "2.2k",
+      views: "52.8k",
+      shares: "110",
+      url: "https://www.tiktok.com/@rere_feliysia/video/7512439161597513016?is_from_webapp=1&sender_device=pc&web_id=7511261970013226512",
     },
     {
       id: 3,
       type: "instagram",
       image:
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop",
-      likes: "1.8k",
-      comments: "67",
-      url: "https://instagram.com/p/example3",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364573/fashbrew/pi_newyear_thank_u_luminorhotel.sidoarjo_qqjfn5.jpg",
+      likes: "683",
+      comments: "20",
+      url: "https://www.instagram.com/p/DERYqRTzSgT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       id: 4,
-      type: "tiktok",
+      type: "instagram",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      likes: "8.7k",
-      views: "89k",
-      shares: "156",
-      url: "https://tiktok.com/@user/video/example4",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752028908/fashbrew/info_mancing_bolo_fyp_trend_trendbedaangin_bedaangin_jdk3d6.jpg",
+      likes: "2.8k",
+      comments: "75",
+      url: "https://www.instagram.com/p/DGzvENTTXmq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
     {
       id: 5,
       type: "instagram",
       image:
-        "https://images.unsplash.com/photo-1488161628813-04466f872be2?w=400&h=400&fit=crop",
-      likes: "3.2k",
-      comments: "145",
-      url: "https://instagram.com/p/example5",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_7_dehqbh.jpg",
+      likes: "668",
+      comments: "20",
+      url: "https://www.instagram.com/p/DDguyN4zM0t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
     {
       id: 6,
-      type: "tiktok",
+      type: "instagram",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      likes: "22.1k",
-      views: "287k",
-      shares: "445",
-      url: "https://tiktok.com/@user/video/example6",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752127116/fashbrew/Tangkapan_Layar_2025-07-10_pukul_12.59.52_jhn3pz.png",
+      likes: "491",
+      comments: "14",
+      url: "https://www.instagram.com/reel/DLzlroKz_Tk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
   ];
 
@@ -242,13 +240,13 @@ export default function RereAmaliaLanding() {
     {
       category: "Fashion",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751277788/fashbrew/enjoy_ztwusb.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
       title: "Summer Collection 2024",
     },
     {
       category: "Food",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751364353/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.05.22_ijadv3.png",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752063/fashbrew/take_your_coffee_%EF%B8%8F_ttmkeh.jpg",
       title: "Local Coffee Review",
     },
     {
@@ -312,31 +310,15 @@ export default function RereAmaliaLanding() {
         title: "Starter Package",
         description:
           "Paket kolaborasi ringan untuk pengenalan brand secara cepat.",
-        features: [
-          "1x Instagram Story",
-          "Mention & Tag Akun Brand",
-          "Postingan dalam 24 jam setelah briefing",
-        ],
+        features: ["1x Feed or Reels", "Story Instagram"],
       },
       {
         title: "Engagement Package",
         description: "Fokus pada interaksi dan jangkauan yang lebih luas.",
         features: [
-          "1x Instagram Story",
-          "1x TikTok Video",
-          "CTA untuk interaksi (poll, Q&A)",
-          "Live reply komentar pertama",
-        ],
-      },
-      {
-        title: "Visual Branding Package",
-        description:
-          "Paket profesional untuk visual branding yang kuat dan estetik.",
-        features: [
-          "1x Instagram Feed Post",
-          "1x TikTok Reels",
-          "Full photo & video rights usage",
-          "Custom caption & hashtag sesuai brand",
+          "Visit Location (Jember Kota)",
+          "1x Feed or Reels",
+          "Story Instagram",
         ],
       },
       {
@@ -344,25 +326,34 @@ export default function RereAmaliaLanding() {
         description:
           "Paket lengkap untuk kampanye maksimal dengan storytelling.",
         features: [
-          "2x IG Story + 1 Highlight",
-          "1x TikTok Video + 1 Live",
-          "1x Instagram Feed Post",
-          "Briefing & konsep kreatif bersama",
-          "Support review & feedback produk",
+          "Visit Location (Area Tapal Kuda)",
+          "1x Reels or Feed",
+          "Story Instagram",
+        ],
+      },
+      {
+        title: "Customize Package",
+        description:
+          "Pilih sendiri kombinasi konten dan layanan sesuai dengan kebutuhan brand Anda.",
+        features: [
+          "Request jumlah dan jenis konten (Feed/Reels/Story)",
+          "Visit Location (opsional, area disesuaikan)",
+          "Diskusi konsep dan storytelling",
+          "Estimasi harga berdasarkan permintaan",
         ],
       },
     ],
   };
 
   const images1 = [
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751820222/fashbrew/Outfit_today_Cardi_rajut_under_100k_%EF%B8%8F_shanumastore_ootd_cardi_cardigan_cardiganmurah_fjeohb.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751820425/fashbrew/coba_tebak_mau_kemana_%EF%B8%8F_wisata_wisataindonesia_i3myqa.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751364573/fashbrew/pi_newyear_thank_u_luminorhotel.sidoarjo_qqjfn5.jpg",
   ];
   const images2 = [
     "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751017202/fashbrew/Terimakasih_aspal_kiri_%EF%B8%8F_jbi.tobbaco_uabiht.jpg",
     "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752061/fashbrew/one_set_maezula_pinvul.jpg",
-    "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1750752313/fashbrew/my_dress_uafra2.jpg",
+    "https://res.cloudinary.com/dvuza2lpc/image/upload/v1750752061/fashbrew/neon_outfit_ootd_ootdfashion_ootdneon_neon_coloroutfit_outfit_jhml0c.jpg",
   ];
 
   const bios = [
@@ -389,23 +380,25 @@ export default function RereAmaliaLanding() {
   const brandLogos = [
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365933/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.33.19_bbtpqx.png",
-      instagram: "#",
+      instagram:
+        "https://www.instagram.com/reel/DLaBDC5zSfj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751365729/fashbrew/Tangkapan_Layar_2025-07-01_pukul_17.30.00_gjabxz.png",
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751385123/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_ropzwu.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027782/fashbrew/Tangkapan_Layar_2025-07-01_pukul_22.52.55_1_aokd6d.png",
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751431866/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027961/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.51.44_e8jwxo_1_zne03t.png",
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432213/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_onqxnf.png",
-      instagram: "#",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027316/fashbrew/Tangkapan_Layar_2025-07-02_pukul_11.57.44_1_f8czs9.png",
+      instagram:
+        "https://www.instagram.com/reel/DLCRySSPCnX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751432694/fashbrew/Tangkapan_Layar_2025-07-02_pukul_12.06.12_v4uzxo.png",
@@ -417,10 +410,11 @@ export default function RereAmaliaLanding() {
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436424/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.08.24_tnj0hs.png",
-      instagram: "#",
+      instagram:
+        "https://www.instagram.com/p/DERYqRTzSgT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436540/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.10.14_zstbpm.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.10.14_1_ocit2e.png",
       instagram: "#",
     },
     {
@@ -428,39 +422,39 @@ export default function RereAmaliaLanding() {
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436751/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.13.47_l0ucbb.png",
-      instagram: "#",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027453/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.13.47_1_qdwlcp.png",
+      instagram:
+        "https://www.instagram.com/reel/C5su07xy2WX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436907/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.16.24_myphi2.png",
-      instagram: "#",
+      instagram:
+        "https://www.instagram.com/reel/DCOUUBbSs05/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751436988/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.17.47_po7eor.png",
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437082/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.18.54_eomouw.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.19.16_1_bkghut.png",
+      instagram:
+        "https://www.instagram.com/reel/C36r4eYyxNF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
+    },
+    {
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.59_1_gjtneh.png",
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437082/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.19.16_htd6lw.png",
-      instagram: "#",
-    },
-    {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437190/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.59_omcomk.png",
-      instagram: "#",
-    },
-    {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437190/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.40_treojz.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.20.40_1_gxsrax.png",
       instagram: "#",
     },
     {
       src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437309/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.23.03_ewadwq.png",
-      instagram: "#",
+      instagram:
+        "https://www.instagram.com/reel/C2ZF1KBSVji/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437391/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.24.12_mu0y5v.png",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.24.12_1_bihvqz.png",
       instagram: "#",
     },
     {
@@ -472,8 +466,9 @@ export default function RereAmaliaLanding() {
       instagram: "#",
     },
     {
-      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751437619/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.28.19_kx3znz.png",
-      instagram: "#",
+      src: "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752027050/fashbrew/Tangkapan_Layar_2025-07-02_pukul_13.28.19_1_nvx0xn.png",
+      instagram:
+        "https://www.instagram.com/reel/DKhKyUkzV33/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
   ];
 

@@ -16,6 +16,7 @@ import {
   Users,
 } from "lucide-react";
 import CoffeeFooter from "../footer/page";
+import { platform } from "os";
 
 interface Product {
   id: number;
@@ -34,6 +35,7 @@ interface Product {
   conversions: number;
   lastUpdated: string;
   featured: boolean;
+  platforms: { platform: string; link: string }[];
 }
 
 export default function ProductCatalog() {
@@ -43,202 +45,267 @@ export default function ProductCatalog() {
   const [sortBy, setSortBy] = useState("featured");
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState(new Set<number>());
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setShowModal(false);
+  };
 
   // Dummy data produk affiliate
   const products: Product[] = [
     {
       id: 1,
-      name: "Wireless Earbuds X10",
+      name: "Kemeja Putih Lengan Panjang",
       description:
         "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
-      price: 499000,
-      originalPrice: 699000,
+      price: 200000,
       rating: 4.5,
       reviewCount: 320,
-      category: "Electronics",
+      category: "Fashion",
       tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1585386959984-a415522ad75e?w=400&h=300&fit=crop",
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e3d67e8ff042449e9e7fb2f71f1a55a2~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
       affiliateLink: "https://example.com/affiliate/earbuds-x10",
       commission: 10,
       clicks: 415,
       conversions: 48,
       lastUpdated: "2025-06-28",
       featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBke9fW9/" },
+      ],
     },
     {
       id: 2,
-      name: "Smart LED Bulb",
-      description: "Lampu pintar yang bisa diatur lewat aplikasi dan suara",
-      price: 99000,
-      originalPrice: 129000,
-      rating: 4.7,
-      reviewCount: 198,
-      category: "Home & Living",
-      tags: ["smart home", "lighting"],
+      name: "Tube Buttons Tanktop",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 129000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1599417075305-6c066b8e0b7e?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/smart-bulb",
-      commission: 8,
-      clicks: 312,
-      conversions: 62,
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/a500c2cf35934f259965dcd015943a1b~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
       lastUpdated: "2025-06-28",
-      featured: false,
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkdjKe5/" },
+        { platform: "shopee", link: "https://s.shopee.co.id/2VgZsBar2b" },
+      ],
     },
     {
       id: 3,
-      name: "Minimalist Analog Watch",
-      description: "Jam tangan bergaya minimalis unisex",
-      price: 299000,
-      originalPrice: 399000,
-      rating: 4.2,
-      reviewCount: 89,
+      name: "Gouw Pants",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 118000,
+      rating: 4.5,
+      reviewCount: 320,
       category: "Fashion",
-      tags: ["watch", "style"],
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/minimalist-watch",
-      commission: 12,
-      clicks: 180,
-      conversions: 24,
-      lastUpdated: "2025-06-27",
-      featured: false,
+        "https://down-id.img.susercontent.com/file/sg-11134201-23010-p2merdrn7ymv34.webp",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkefKT6/" },
+        { platform: "shopee", link: "https://s.shopee.co.id/z8J9MP6g" },
+      ],
     },
     {
       id: 4,
-      name: "Portable Blender",
-      description: "Blender mini USB untuk jus dan smoothies",
-      price: 189000,
-      originalPrice: 249000,
-      rating: 4.4,
-      reviewCount: 210,
-      category: "Home & Living",
-      tags: ["blender", "kitchen", "portable"],
+      name: "Tank Top Kulit",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 37000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1601041371190-5c0087f29dfc?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/portable-blender",
+        "https://down-id.img.susercontent.com/file/id-11134207-7r98y-lwy37210ixy3c5.webp",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
       commission: 10,
-      clicks: 220,
-      conversions: 38,
-      lastUpdated: "2025-06-25",
-      featured: false,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkR2sry/" },
+        { platform: "shopee", link: "https://s.shopee.co.id/9KWnQa6kPk" },
+      ],
     },
     {
       id: 5,
-      name: "Gaming Mouse RGB",
+      name: "Kit Blazer",
       description:
-        "Mouse gaming ergonomis dengan lampu RGB dan DPI hingga 7200",
-      price: 199000,
-      originalPrice: 249000,
-      rating: 4.6,
-      reviewCount: 540,
-      category: "Electronics",
-      tags: ["gaming", "mouse", "RGB"],
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 109000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1593642632559-0c8e6676f5c5?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/gaming-mouse",
-      commission: 15,
-      clicks: 355,
-      conversions: 52,
-      lastUpdated: "2025-06-26",
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/95d71dfefa6549b38752b3b67cb54e60~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
       featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkdy3gn" },
+        { platform: "shopee", link: "https://s.shopee.co.id/9pT41M4522" },
+      ],
     },
     {
       id: 6,
-      name: "Yoga Mat Premium",
+      name: "Evie Top",
       description:
-        "Matras yoga anti slip, tebal dan empuk untuk olahraga di rumah",
-      price: 149000,
-      originalPrice: 179000,
-      rating: 4.3,
-      reviewCount: 112,
-      category: "Sports",
-      tags: ["yoga", "fitness", "mat"],
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 159000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1583454110558-ccb9444a8a0e?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/yoga-mat",
-      commission: 9,
-      clicks: 130,
-      conversions: 22,
-      lastUpdated: "2025-06-24",
-      featured: false,
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/e0c13971d8f7494383ffd85b4cd8ce92~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkRXtrT/" },
+      ],
     },
     {
       id: 7,
-      name: "Face Serum Vitamin C",
-      description: "Serum wajah untuk mencerahkan dan menghaluskan kulit",
-      price: 89000,
-      originalPrice: 109000,
-      rating: 4.8,
-      reviewCount: 620,
-      category: "Beauty",
-      tags: ["skincare", "serum", "vitamin C"],
+      name: "Jeha Kulot",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 199000,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1612392061783-b8f3aefc8e18?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/vitamin-c-serum",
-      commission: 11,
-      clicks: 430,
-      conversions: 74,
-      lastUpdated: "2025-06-26",
+        "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/7fa139c3731b4113b2c10081fac4dbf2~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
       featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkRNgj5/" },
+        { platform: "shopee", link: "https://s.shopee.co.id/6fW8qs2UmS" },
+      ],
     },
     {
       id: 8,
-      name: "RC Toy Car Off-Road",
-      description: "Mobil remote control off-road untuk anak dan dewasa",
-      price: 259000,
-      originalPrice: 299000,
+      name: "Kacamata Hitam",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 9900,
       rating: 4.5,
-      reviewCount: 143,
-      category: "Toys",
-      tags: ["remote control", "toy car"],
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1616627980124-181d49e3656b?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/rc-toy-car",
-      commission: 13,
-      clicks: 160,
-      conversions: 28,
-      lastUpdated: "2025-06-23",
-      featured: false,
+        "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2024/6/30/d2124e6b-aee2-4ab2-80c7-e621af3a7ea7.jpg~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBk8e4j8/" },
+      ],
     },
     {
       id: 9,
-      name: "Magnetic Phone Holder Mobil",
-      description: "Holder HP mobil kuat dengan magnet dan rotasi 360°",
-      price: 69000,
-      originalPrice: 89000,
-      rating: 4.1,
-      reviewCount: 76,
-      category: "Automotive",
-      tags: ["car accessories", "holder", "magnet"],
+      name: "Vest Turtleneck",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 70900,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1619851456320-d2cfbe164a1e?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/magnetic-holder",
-      commission: 7,
-      clicks: 90,
-      conversions: 14,
-      lastUpdated: "2025-06-20",
-      featured: false,
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/c1c7ae27a3a04590a1e12dbd9f7a5d81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSBkRce5F/" },
+        { platform: "shopee", link: "https://s.shopee.co.id/20kJLAkb0W" },
+      ],
     },
     {
       id: 10,
-      name: "Slim Laptop Backpack",
+      name: "Rok Tule Midi",
       description:
-        "Tas ransel laptop slim dengan banyak kompartemen dan bahan waterproof",
-      price: 179000,
-      originalPrice: 229000,
-      rating: 4.4,
-      reviewCount: 197,
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 189000,
+      rating: 4.5,
+      reviewCount: 320,
       category: "Fashion",
-      tags: ["backpack", "laptop", "anti air"],
+      tags: ["audio", "wireless", "gadget"],
       image:
-        "https://images.unsplash.com/photo-1523475496153-3d6ccdb021b2?w=400&h=300&fit=crop",
-      affiliateLink: "https://example.com/affiliate/laptop-backpack",
+        "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/868fb9658fd24c5c9e77605810c6c39e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
       commission: 10,
-      clicks: 210,
-      conversions: 31,
-      lastUpdated: "2025-06-22",
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
       featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB5Pm5Ga/ " },
+      ],
+    },
+    {
+      id: 11,
+      name: "Lessa Lexia Bag",
+      description:
+        "Bluetooth earbuds dengan peredam bising dan baterai tahan 8 jam",
+      price: 89500,
+      rating: 4.5,
+      reviewCount: 320,
+      category: "Fashion",
+      tags: ["audio", "wireless", "gadget"],
+      image:
+        "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/5d3e9f13257f424293b52df63782df97~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my2&from=1826719393",
+      affiliateLink: "https://example.com/affiliate/earbuds-x10",
+      commission: 10,
+      clicks: 415,
+      conversions: 48,
+      lastUpdated: "2025-06-28",
+      featured: true,
+      platforms: [
+        { platform: "tiktok", link: "https://vt.tokopedia.com/t/ZSB5514t8/" },
+      ],
     },
   ];
 
@@ -498,14 +565,14 @@ export default function ProductCatalog() {
               </div>
 
               {/* Featured Badge */}
-              {product.featured && (
+              {/* {product.featured && (
                 <div className="absolute top-3 left-3 z-10">
                   <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
                     <Star className="h-3 w-3 mr-1" />
                     Featured
                   </span>
                 </div>
-              )}
+              )} */}
 
               <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
                 {/* Image */}
@@ -519,7 +586,7 @@ export default function ProductCatalog() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                   {/* Discount Badge */}
-                  {product.originalPrice && (
+                  {/* {product.originalPrice && (
                     <div className="absolute bottom-3 left-3">
                       <span className="bg-red-500 text-white px-3 py-1.5 rounded-full text-sm font-bold shadow-lg">
                         {Math.round(
@@ -530,17 +597,17 @@ export default function ProductCatalog() {
                         % OFF
                       </span>
                     </div>
-                  )}
+                  )} */}
 
                   {/* Rating on Image */}
-                  <div className="absolute bottom-3 right-3">
+                  {/* <div className="absolute bottom-3 right-3">
                     <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center space-x-1">
                       <Star className="h-3 w-3 text-yellow-400 fill-current" />
                       <span className="text-sm font-medium text-gray-900">
                         {product.rating}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Minimal Content */}
@@ -570,15 +637,16 @@ export default function ProductCatalog() {
 
                   {/* Action Button */}
 
-                  <Link
-                    href={product.affiliateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => openModal(product)}
                     className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-2.5 px-4 rounded-xl font-medium hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center space-x-2 group"
                   >
                     <span>Shop Now</span>
-                    <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                    <ExternalLink
+                      size={16}
+                      className="h-4 w-4 group-hover:translate-x-1 transition-transform"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -614,6 +682,137 @@ export default function ProductCatalog() {
       <div className="mt-12">
         <CoffeeFooter />
       </div>
+      {showModal && selectedProduct && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full transform transition-all duration-300 scale-100">
+            {/* Header */}
+            <div className="p-6 border-b border-gray-100">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-gray-900">
+                  Pilih Platform
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <svg
+                    className="w-5 h-5 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-gray-600 mt-2">
+                Pilih platform untuk membeli{" "}
+                <span className="font-medium">{selectedProduct.name}</span>
+              </p>
+            </div>
+
+            {/* Platform Options */}
+            <div className="p-6">
+              <div className="space-y-3">
+                {selectedProduct.platforms.map((platform) => (
+                  <button
+                    key={platform.platform}
+                    className="w-full group relative overflow-hidden bg-gradient-to-r hover:shadow-lg transition-all duration-200 rounded-xl border-2 border-gray-100 hover:border-transparent"
+                    onClick={() => {
+                      // Buka link platform langsung (misalnya TikTok Shop)
+                      window.open(platform.link, "_blank"); // buka di tab baru
+
+                      // Jika ingin buka di tab yang sama, gunakan:
+                      // window.location.href = platform.link;
+                    }}
+                    data-platform={platform.platform}
+                  >
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${
+                        platform.platform === "tiktok"
+                          ? "from-black to-gray-800"
+                          : platform.platform === "shopee"
+                          ? "from-orange-500 to-red-500"
+                          : "from-green-500 to-green-600"
+                      } opacity-0 group-hover:opacity-100 transition-opacity duration-200`}
+                    />
+                    <div className="relative flex items-center space-x-4 p-4 group-hover:text-white transition-colors">
+                      <div className="text-2xl">
+                        {platform.platform === "tiktok"
+                          ? "🎵"
+                          : platform.platform === "shopee"
+                          ? "🛍️"
+                          : "🛒"}
+                      </div>
+                      <div className="flex-1 text-left">
+                        <div className="font-semibold text-lg">
+                          {platform.platform}
+                        </div>
+                        {/* <div className="text-sm opacity-75 group-hover:opacity-90">
+                          {selectedProduct.description}
+                        </div> */}
+                      </div>
+                      <div className="text-gray-400 group-hover:text-white/80">
+                        <svg
+                          className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Product Info */}
+              <div className="mt-6 p-4 bg-gray-50 rounded-xl">
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    className="w-12 h-12 object-cover rounded-lg"
+                  />
+                  <div className="flex-1">
+                    <h3 className="font-medium text-gray-900 text-sm">
+                      {selectedProduct.name}
+                    </h3>
+                    <p className="text-amber-600 font-bold">
+                      {new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                        minimumFractionDigits: 0,
+                      }).format(selectedProduct.price)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="px-6 pb-6">
+              <button
+                className="w-full text-center text-gray-500 hover:text-gray-700 transition-colors py-2 text-sm"
+                onClick={closeModal}
+              >
+                Batal
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
