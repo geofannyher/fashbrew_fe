@@ -25,7 +25,7 @@ export default function Navbar() {
             onClick={() => (window.location.href = "/")}
             className="flex items-center  hover:opacity-80 transition-opacity cursor-pointer group"
           >
-            <Image
+            <img
               src="https://res.cloudinary.com/dvuza2lpc/image/upload/v1751993789/fashbrew/dreamina-2025-07-08-8782-buatkan_logo_brand_dengan_ketentuan_mini..._q2oyje.png"
               alt="Fashbrew Logo"
               className="h-14 w-14 object-contain"
