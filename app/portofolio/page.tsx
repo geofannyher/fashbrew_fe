@@ -114,19 +114,19 @@ export default function RereAmaliaLanding() {
       id: 5,
       type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1751616727/fashbrew/OOTD1/take_your_coffee_%EF%B8%8F_7_dehqbh.jpg",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752249347/fashbrew/Focus_on_yourself._The_rest_will_follow._basket_basketball_basketballlovers_basketballgames_2_fpcirn.jpg",
       likes: "668",
       comments: "20",
-      url: "https://www.instagram.com/p/DDguyN4zM0t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      url: "https://www.instagram.com/reel/DLCRySSPCnX/?igsh=MW05c2QyaWcwbDdxMw==",
     },
     {
       id: 6,
       type: "instagram",
       image:
-        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752127116/fashbrew/Tangkapan_Layar_2025-07-10_pukul_12.59.52_jhn3pz.png",
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1752249466/fashbrew/mau_renang_takut_tenggelam_tenggelam_dalam_senyummu_misalnya_swimmingpool_swimming_vibgxi.jpg",
       likes: "491",
       comments: "14",
-      url: "https://www.instagram.com/reel/DLzlroKz_Tk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
+      url: "https://www.instagram.com/reel/C5su07xy2WX/?utm_source=ig_web_copy_link",
     },
   ];
 
@@ -319,6 +319,7 @@ export default function RereAmaliaLanding() {
           "Visit Location (Jember Kota)",
           "1x Feed or Reels",
           "Story Instagram",
+          "Mirroring Tiktok",
         ],
       },
       {
@@ -329,6 +330,7 @@ export default function RereAmaliaLanding() {
           "Visit Location (Area Tapal Kuda)",
           "1x Reels or Feed",
           "Story Instagram",
+          "Mirroring Tiktok",
         ],
       },
       {
@@ -336,7 +338,7 @@ export default function RereAmaliaLanding() {
         description:
           "Pilih sendiri kombinasi konten dan layanan sesuai dengan kebutuhan brand Anda.",
         features: [
-          "Request jumlah dan jenis konten (Feed/Reels/Story)",
+          "Request jumlah dan jenis konten (Feed/Reels/Story Instagram atau Tiktok)",
           "Visit Location (opsional, area disesuaikan)",
           "Diskusi konsep dan storytelling",
           "Estimasi harga berdasarkan permintaan",
@@ -1557,16 +1559,16 @@ export default function RereAmaliaLanding() {
                   <ContactItem
                     icon={Phone}
                     // title="WhatsApp"
-                    value="+62 812-3456-7890"
+                    value="+6285748578429"
                     // color="from-green-500 to-green-600"
-                    label="WhatsApp"
+                    label="WhatsApp Business Rayya"
                   />
                   <ContactItem
-                    icon={Mail}
+                    icon={Phone}
                     // title="Email"
-                    value="hello@reamalia.com"
+                    value="+6287778674692"
                     // color="from-blue-500 to-blue-600"
-                    label="Email"
+                    label="WhatsApp DJ  Rey"
                   />
                   {/* <ContactItem
                     icon={Instagram}

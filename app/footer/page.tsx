@@ -38,7 +38,7 @@ export default function CoffeeFooter() {
                 alt="Fashbrew Logo"
                 className="h-14 w-14 object-contain"
               />
-              <h3 className="text-xl font-bold text-gray-800">ashbrew</h3>
+              <h3 className="text-xl font-bold text-gray-800">ashbreew</h3>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Di sini aku ngumpulin tempat-tempat ngopi favorit yang pernah aku

@@ -750,7 +750,7 @@ export default function ProductCatalog() {
                           : "🛒"}
                       </div>
                       <div className="flex-1 text-left">
-                        <div className="font-semibold text-lg">
+                        <div className="font-semibold text-lg text-black hover:text-white">
                           {platform.platform}
                         </div>
                         {/* <div className="text-sm opacity-75 group-hover:opacity-90">

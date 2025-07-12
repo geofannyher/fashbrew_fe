@@ -29,7 +29,7 @@ export default function Navbar() {
               alt="Fashbrew Logo"
               className="h-14 w-14 object-contain"
             />
-            <p className="text-lg font-medium text-gray-800">ashbrew</p>
+            <p className="text-lg font-medium text-gray-800">ashbreew</p>
           </button>
 
           {/* Desktop Navigation */}
