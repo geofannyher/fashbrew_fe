@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { Star, Info, ExternalLink, Truck } from "lucide-react";
 import MenuImageModal from "./MenuImageModal";
 import MenuCategoryModal from "./MenuCategoryModal";
+import Image from "next/image";
 
 const SignatureMenu = () => {
   const [selectedMenuImage, setSelectedMenuImage] = useState<string | null>(
@@ -91,13 +92,13 @@ const SignatureMenu = () => {
     },
   ];
 
-  const categories = [
-    { name: "Coffee", emoji: "☕", color: "bg-amber-500" },
-    { name: "Non-Coffee", emoji: "🥤", color: "bg-blue-500" },
-    { name: "Dessert", emoji: "🍰", color: "bg-pink-500" },
-    { name: "Light Meals", emoji: "🥗", color: "bg-green-500" },
-    { name: "Smoothies", emoji: "🥤", color: "bg-purple-500" },
-  ];
+  // const categories = [
+  //   { name: "Coffee", emoji: "☕", color: "bg-amber-500" },
+  //   { name: "Non-Coffee", emoji: "🥤", color: "bg-blue-500" },
+  //   { name: "Dessert", emoji: "🍰", color: "bg-pink-500" },
+  //   { name: "Light Meals", emoji: "🥗", color: "bg-green-500" },
+  //   { name: "Smoothies", emoji: "🥤", color: "bg-purple-500" },
+  // ];
 
   const getCategoryImages = (categoryName: string) => {
     return menuItems
@@ -155,7 +156,7 @@ const SignatureMenu = () => {
               className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="relative">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -195,7 +196,7 @@ const SignatureMenu = () => {
 
                 <div className="bg-cafe-50 rounded-lg p-3 border-l-4 border-cafe-300">
                   <p className="text-sm text-gray-700 font-inter italic">
-                    "{item.influencerQuote}"
+                    {item.influencerQuote}
                   </p>
                   <span className="text-xs text-cafe-600 font-medium">
                     - Review Selebgram

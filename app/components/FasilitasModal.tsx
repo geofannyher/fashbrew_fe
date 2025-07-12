@@ -2,15 +2,10 @@ import React, { useState } from "react";
 import {
   Wifi,
   Car,
-  Utensils,
   Coffee,
-  Users,
   Music,
   Camera,
   Zap,
-  MapPin,
-  Clock,
-  Star,
   X,
   ChevronRight,
   Plug,
@@ -18,7 +13,6 @@ import {
   Snowflake,
   Toilet,
   Music2,
-  FileText,
   Video,
   Cigarette,
   Gamepad2,
@@ -30,7 +24,6 @@ import {
   Moon,
   Lock,
   Box,
-  Clipboard,
 } from "lucide-react";
 
 const CafeFacilitiesModal = ({

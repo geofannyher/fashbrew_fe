@@ -6,6 +6,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductList from "../../lookbook/components/ProductList";
 import ProductModal from "../../lookbook/components/ProductModal";
 import CoffeeFooter from "@/app/footer/page";
+import Image from "next/image";
 
 interface ProductPlatform {
   platform: "shopee" | "tokopedia" | "tiktok";
@@ -357,7 +358,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
     <div className="relative">
       {/* Main Image Container */}
       <div className="aspect-[3/4] bg-neutral-100 rounded-lg overflow-hidden mb-4 relative group">
-        <img
+        <Image
           src={images[currentImageIndex]}
           alt={`${title} - Image ${currentImageIndex + 1}`}
           className="w-full h-full object-cover transition-opacity duration-300"
@@ -402,7 +403,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
                   : "border-transparent opacity-60 hover:opacity-80"
               }`}
             >
-              <img
+              <Image
                 src={image}
                 alt={`${title} thumbnail ${index + 1}`}
                 className="w-full h-full object-cover"

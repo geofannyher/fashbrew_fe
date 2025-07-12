@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Mail, Instagram, Send, MapPin, Music2 } from "lucide-react";
 

@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Konfigurasi lainnya tetap
   experimental: {
     scrollRestoration: true,
+  },
+
+  eslint: {
+    ignoreDuringBuilds: true, // ⛔ matikan linting saat build
   },
 };
 

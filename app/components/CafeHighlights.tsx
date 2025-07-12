@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "./ui/card";
 import { MapPin, Clock, Wifi, Zap, Car, CreditCard } from "lucide-react";
 import CafeFacilitiesModal from "./FasilitasModal";
+import Image from "next/image";
 
 const CafeHighlights = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,18 +21,18 @@ const CafeHighlights = () => {
           {/* Image Gallery */}
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751117008/fashbrew/IMG_6811_hzqgew.jpg"
                 alt="Interior aesthetic"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
-              <img
+              <Image
                 src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751116766/fashbrew/Hilight_Kattapa_ri8l2b.jpg"
                 alt="Coffee and pastries"
                 className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
-            <img
+            <Image
               src="https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751116772/fashbrew/Hilight_Kattapa_2_e3yszj.jpg"
               alt="Outdoor seating"
               className="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"

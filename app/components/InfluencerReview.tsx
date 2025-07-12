@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Play, Instagram, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 interface ReviewSection {
   url_review: string;
@@ -76,7 +77,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
             >
               {/* Video Thumbnail */}
               <div className="relative aspect-video bg-gray-100">
-                <img
+                <Image
                   src={influencer.videoThumbnail}
                   alt={`${influencer.name} review video`}
                   className="w-full h-full object-cover"
@@ -105,7 +106,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <img
+                  <Image
                     src={influencer.avatar}
                     alt={influencer.name}
                     className="w-12 h-12 rounded-full object-cover"
@@ -129,7 +130,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
                 </div>
 
                 <blockquote className="text-gray-700 font-inter leading-relaxed max-w-[600px]">
-                  "{influencer.quote}"
+                  {influencer.quote}
                 </blockquote>
               </div>
             </Card>

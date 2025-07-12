@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 interface MenuGalleryProps {
   isOpen: boolean;
@@ -143,7 +144,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`Menu ${currentIndex + 1}`}
           className="max-w-full max-h-[calc(100vh-200px)] object-contain select-none transition-transform duration-200"
@@ -235,7 +236,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
                     : "border-white/30 hover:border-white/60"
                 }`}
               >
-                <img
+                <Image
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"

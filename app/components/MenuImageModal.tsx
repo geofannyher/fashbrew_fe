@@ -1,6 +1,6 @@
-
 import { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 interface MenuImageModalProps {
   imageUrl: string;
@@ -9,7 +9,7 @@ interface MenuImageModalProps {
 
 /**
  * MenuImageModal Component
- * 
+ *
  * Interactive modal for viewing menu images with zoom and pan gestures.
  * Features:
  * - Zoom in/out with mouse wheel or pinch gestures
@@ -60,7 +60,7 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
     if (isDragging && scale > 1) {
       setPosition({
         x: e.clientX - lastPosition.x,
-        y: e.clientY - lastPosition.y
+        y: e.clientY - lastPosition.y,
       });
     }
   };
@@ -74,7 +74,10 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
     if (e.touches.length === 1 && scale > 1) {
       const touch = e.touches[0];
       setIsDragging(true);
-      setLastPosition({ x: touch.clientX - position.x, y: touch.clientY - position.y });
+      setLastPosition({
+        x: touch.clientX - position.x,
+        y: touch.clientY - position.y,
+      });
     }
   };
 
@@ -84,7 +87,7 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
       const touch = e.touches[0];
       setPosition({
         x: touch.clientX - lastPosition.x,
-        y: touch.clientY - lastPosition.y
+        y: touch.clientY - lastPosition.y,
       });
     }
   };
@@ -100,7 +103,7 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in"
       onClick={handleBackdropClick}
     >
@@ -143,7 +146,7 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
       </div>
 
       {/* Image container */}
-      <div 
+      <div
         ref={containerRef}
         className="relative max-w-full max-h-full overflow-hidden cursor-grab active:cursor-grabbing"
         onWheel={handleWheel}
@@ -154,16 +157,20 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        style={{ cursor: scale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in' }}
+        style={{
+          cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
+        }}
       >
-        <img 
+        <Image
           ref={imageRef}
           src={imageUrl}
           alt="Menu item"
           className="max-w-full max-h-[90vh] object-contain transition-transform duration-200 select-none"
           style={{
-            transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
-            transformOrigin: 'center center'
+            transform: `scale(${scale}) translate(${position.x / scale}px, ${
+              position.y / scale
+            }px)`,
+            transformOrigin: "center center",
           }}
           onDoubleClick={handleDoubleClick}
           draggable={false}
@@ -172,7 +179,9 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
 
       {/* Instructions */}
       <div className="absolute bottom-4 right-4 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-lg text-sm max-w-xs">
-        <p className="mb-1">💡 <strong>Tips:</strong></p>
+        <p className="mb-1">
+          💡 <strong>Tips:</strong>
+        </p>
         <p>• Double click untuk zoom</p>
         <p>• Scroll wheel untuk zoom in/out</p>
         <p>• Drag untuk menggeser gambar</p>

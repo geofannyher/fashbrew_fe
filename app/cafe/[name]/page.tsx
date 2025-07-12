@@ -1,7 +1,6 @@
 "use client";
 // app/cafe/[id]/page.tsx
 import AffiliateProducts from "@/app/components/AffiliateProducts";
-import CafeCategories from "@/app/components/CafeCategories";
 import CafeHighlights from "@/app/components/CafeHighlights";
 import Footer from "@/app/components/Footer";
 import HeroSection from "@/app/components/HeroSection";
@@ -13,7 +12,6 @@ import SEOContent from "@/app/components/SEOContent";
 import SignatureMenu from "@/app/components/SignatureMenu";
 import { notFound, useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
-import axios from "axios";
 
 interface Caffe {
   id: number;

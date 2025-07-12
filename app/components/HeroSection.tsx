@@ -2,17 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "./ui/button";
-import {
-  MapPin,
-  Clock,
-  Star,
-  Wifi,
-  Users,
-  BookOpen,
-  Coffee,
-  Camera,
-  Heart,
-} from "lucide-react";
+import { MapPin, Clock, Star, Wifi, Users, Coffee, Camera } from "lucide-react";
 import MenuGallery from "./MenuGallery";
 
 interface HeroSectionProps {

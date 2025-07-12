@@ -1,6 +1,6 @@
-
 import { useState, useRef } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface CategoryImage {
   url: string;
@@ -16,7 +16,7 @@ interface MenuCategoryModalProps {
 
 /**
  * MenuCategoryModal Component
- * 
+ *
  * Interactive modal for viewing category gallery with zoom and navigation.
  * Features:
  * - Gallery navigation with arrows or swipe gestures
@@ -25,7 +25,11 @@ interface MenuCategoryModalProps {
  * - Mobile-friendly touch support
  * - Image counter and navigation dots
  */
-const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps) => {
+const MenuCategoryModal = ({
+  category,
+  images,
+  onClose,
+}: MenuCategoryModalProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -79,7 +83,7 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
     if (isDragging && scale > 1) {
       setPosition({
         x: e.clientX - lastPosition.x,
-        y: e.clientY - lastPosition.y
+        y: e.clientY - lastPosition.y,
       });
     }
   };
@@ -96,13 +100,13 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
 
   const getCategoryEmoji = (categoryName: string) => {
     const emojiMap: { [key: string]: string } = {
-      'Coffee': '☕',
-      'Non-Coffee': '🥤',
-      'Dessert': '🍰',
-      'Light Meals': '🥗',
-      'Smoothies': '🥤'
+      Coffee: "☕",
+      "Non-Coffee": "🥤",
+      Dessert: "🍰",
+      "Light Meals": "🥗",
+      Smoothies: "🥤",
     };
-    return emojiMap[categoryName] || '🍽️';
+    return emojiMap[categoryName] || "🍽️";
   };
 
   if (!currentImage) {
@@ -110,7 +114,7 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
   }
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in"
       onClick={handleBackdropClick}
     >
@@ -171,23 +175,27 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
       </div>
 
       {/* Image container */}
-      <div 
+      <div
         className="relative max-w-full max-h-full overflow-hidden cursor-grab active:cursor-grabbing"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-        style={{ cursor: scale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in' }}
+        style={{
+          cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
+        }}
       >
-        <img 
+        <Image
           ref={imageRef}
           src={currentImage.url}
           alt={currentImage.title}
           className="max-w-full max-h-[70vh] object-contain transition-transform duration-200 select-none"
           style={{
-            transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
-            transformOrigin: 'center center'
+            transform: `scale(${scale}) translate(${position.x / scale}px, ${
+              position.y / scale
+            }px)`,
+            transformOrigin: "center center",
           }}
           onDoubleClick={handleDoubleClick}
           draggable={false}
@@ -197,8 +205,12 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
       {/* Image info */}
       <div className="absolute bottom-20 left-4 right-4 z-10 text-center">
         <div className="bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg inline-block max-w-md">
-          <h4 className="font-inter font-semibold text-lg mb-1">{currentImage.title}</h4>
-          <p className="font-playfair text-cafe-200 font-medium">{currentImage.price}</p>
+          <h4 className="font-inter font-semibold text-lg mb-1">
+            {currentImage.title}
+          </h4>
+          <p className="font-playfair text-cafe-200 font-medium">
+            {currentImage.price}
+          </p>
         </div>
       </div>
 
@@ -213,7 +225,7 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
                 resetZoom();
               }}
               className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
+                index === currentIndex ? "bg-white" : "bg-white/50"
               }`}
             />
           ))}
@@ -234,7 +246,9 @@ const MenuCategoryModal = ({ category, images, onClose }: MenuCategoryModalProps
 
       {/* Instructions */}
       <div className="absolute bottom-4 left-4 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-lg text-sm max-w-xs">
-        <p className="mb-1">💡 <strong>Tips:</strong></p>
+        <p className="mb-1">
+          💡 <strong>Tips:</strong>
+        </p>
         <p>• Double click untuk zoom</p>
         <p>• Gunakan panah untuk navigasi</p>
         <p>• Scroll wheel untuk zoom in/out</p>
