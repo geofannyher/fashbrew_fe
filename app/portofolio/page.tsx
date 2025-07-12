@@ -678,12 +678,12 @@ export default function RereAmaliaLanding() {
                   WhatsApp
                 </button>
               </a>
-              <a href="mailto:rere@example.com?subject=Endorsement&body=Hallo%20Rere%2C%20mau%20endorse%20dong%20😊">
+              {/* <a href="mailto:rere@example.com?subject=Endorsement&body=Hallo%20Rere%2C%20mau%20endorse%20dong%20😊">
                 <button className="bg-white/80 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full font-semibold text-base sm:text-lg border border-orange-200 hover:bg-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                   <Mail className="h-5 w-5" />
                   Email Rere
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -888,19 +888,19 @@ export default function RereAmaliaLanding() {
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 Instagram
               </h3>
-              <div className="grid grid-cols-3 gap-4 text-center mt-6">
+              <div className="grid grid-cols-1 gap-4 text-center mt-6">
                 <div>
                   <p className="text-3xl font-bold text-gray-900">45K+</p>
                   <p className="text-gray-600 text-sm">Followers</p>
                 </div>
-                <div>
+                {/* <div>
                   <p className="text-3xl font-bold text-gray-900">8.5%</p>
                   <p className="text-gray-600 text-sm">Engagement</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-gray-900">50K+</p>
                   <p className="text-gray-600 text-sm">Avg Reach</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -910,19 +910,19 @@ export default function RereAmaliaLanding() {
                 <Music2 className="w-10 h-10 text-black" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">TikTok</h3>
-              <div className="grid grid-cols-3 gap-4 text-center mt-6">
+              <div className="grid grid-cols-1 gap-4 text-center mt-6">
                 <div>
                   <p className="text-3xl font-bold text-gray-900">63K+</p>
                   <p className="text-gray-600 text-sm">Followers</p>
                 </div>
-                <div>
+                {/* <div>
                   <p className="text-3xl font-bold text-gray-900">6.2%</p>
                   <p className="text-gray-600 text-sm">Engagement</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-gray-900">30K+</p>
                   <p className="text-gray-600 text-sm">Avg Reach</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
