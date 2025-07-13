@@ -77,7 +77,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
             >
               {/* Video Thumbnail */}
               <div className="relative aspect-video bg-gray-100">
-                <Image
+                <img
                   src={influencer.videoThumbnail}
                   alt={`${influencer.name} review video`}
                   className="w-full h-full object-cover"
@@ -106,7 +106,7 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <Image
+                  <img
                     src={influencer.avatar}
                     alt={influencer.name}
                     className="w-12 h-12 rounded-full object-cover"

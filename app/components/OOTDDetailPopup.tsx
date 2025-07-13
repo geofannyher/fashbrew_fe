@@ -72,7 +72,7 @@ const OOTDDetailPopup = ({ outfit, onClose }: OOTDDetailPopupProps) => {
         <div className="flex flex-col md:flex-row h-full">
           {/* Left side - Image */}
           <div className="md:w-1/2 h-64 md:h-full relative">
-            <Image
+            <img
               src={outfit.image}
               alt={outfit.style}
               className="w-full h-full object-cover"
@@ -109,7 +109,7 @@ const OOTDDetailPopup = ({ outfit, onClose }: OOTDDetailPopupProps) => {
                   className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <Image
+                    <img
                       src={product.image}
                       alt={product.name}
                       className="w-16 h-16 rounded-lg object-cover flex-shrink-0"

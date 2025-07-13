@@ -227,7 +227,7 @@ const InstagramGallery = () => {
               className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl"
               onClick={() => setSelectedImage(image.src)}
             >
-              <Image
+              <img
                 src={image.src}
                 alt={image.caption}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -281,7 +281,7 @@ const InstagramGallery = () => {
                       className="relative aspect-[3/4] overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group bg-white"
                       onClick={() => setSelectedOOTD(outfit)}
                     >
-                      <Image
+                      <img
                         src={outfit.image}
                         alt={outfit.style}
                         className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
@@ -353,7 +353,7 @@ const InstagramGallery = () => {
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl max-h-full">
-            <Image
+            <img
               src={selectedImage}
               alt="Enlarged view"
               className="max-w-full max-h-full object-contain rounded-lg"

@@ -144,7 +144,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <Image
+        <img
           src={images[currentIndex]}
           alt={`Menu ${currentIndex + 1}`}
           className="max-w-full max-h-[calc(100vh-200px)] object-contain select-none transition-transform duration-200"
@@ -236,7 +236,7 @@ const MenuGallery = ({ isOpen, onClose, images }: MenuGalleryProps) => {
                     : "border-white/30 hover:border-white/60"
                 }`}
               >
-                <Image
+                <img
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"

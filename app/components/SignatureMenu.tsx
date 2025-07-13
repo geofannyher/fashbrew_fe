@@ -156,7 +156,7 @@ const SignatureMenu = () => {
               className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="relative">
-                <Image
+                <img
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"

@@ -93,7 +93,7 @@ const ParkingInfo = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-lg group">
               {/* Main Image */}
               <div className="relative">
-                <Image
+                <img
                   src={images[currentIndex].url}
                   alt={images[currentIndex].title}
                   className="w-full h-80 object-cover transition-all duration-500 ease-in-out"
@@ -162,7 +162,7 @@ const ParkingInfo = () => {
                       : "border-transparent hover:border-gray-300"
                   }`}
                 >
-                  <Image
+                  <img
                     src={image.url}
                     alt={image.title}
                     className="w-full h-full object-cover"

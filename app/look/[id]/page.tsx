@@ -358,7 +358,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
     <div className="relative">
       {/* Main Image Container */}
       <div className="aspect-[3/4] bg-neutral-100 rounded-lg overflow-hidden mb-4 relative group">
-        <Image
+        <img
           src={images[currentImageIndex]}
           alt={`${title} - Image ${currentImageIndex + 1}`}
           className="w-full h-full object-cover transition-opacity duration-300"
@@ -403,7 +403,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
                   : "border-transparent opacity-60 hover:opacity-80"
               }`}
             >
-              <Image
+              <img
                 src={image}
                 alt={`${title} thumbnail ${index + 1}`}
                 className="w-full h-full object-cover"

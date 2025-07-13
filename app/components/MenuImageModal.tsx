@@ -161,7 +161,7 @@ const MenuImageModal = ({ imageUrl, onClose }: MenuImageModalProps) => {
           cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
         }}
       >
-        <Image
+        <img
           ref={imageRef}
           src={imageUrl}
           alt="Menu item"

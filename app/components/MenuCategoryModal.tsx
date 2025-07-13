@@ -186,7 +186,7 @@ const MenuCategoryModal = ({
           cursor: scale > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
         }}
       >
-        <Image
+        <img
           ref={imageRef}
           src={currentImage.url}
           alt={currentImage.title}
