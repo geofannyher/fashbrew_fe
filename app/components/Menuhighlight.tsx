@@ -22,7 +22,7 @@ const newMenuItems: MenuItem[] = [
     id: "1",
     name: "Matcha Late",
     description: "Espresso dengan susu creamy dan brown sugar syrup",
-    price: "28K",
+    price: "55K",
     image:
       "https://res.cloudinary.com/dvuza2lpc/image/upload/v1753946733/fashbrew/IMG_9317_1_j9qpgd.jpg",
     isNew: true,
