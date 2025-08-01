@@ -1141,7 +1141,7 @@ export default function RereAmaliaLanding() {
                   </ul>
                 </div>
                 <a
-                  href={`https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(
+                  href={`https://wa.me/6285748578429?text=Halo%2C%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(
                     item.title
                   )}`}
                   target="_blank"
