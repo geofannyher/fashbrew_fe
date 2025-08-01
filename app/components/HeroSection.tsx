@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { MapPin, Clock, Star, Wifi, Users, Coffee, Camera } from "lucide-react";
 import MenuGallery from "./MenuGallery";
+import MenuHighlight from "./Menuhighlight";
 
 interface HeroSectionProps {
   image: string;
@@ -16,9 +17,9 @@ interface HeroSectionProps {
 
 // Sample menu images - ganti dengan URL gambar menu kamu yang sebenarnya
 const menuImages = [
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134406/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.09.46_tm2ili.png", // Coffee menu
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134404/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.11_btlkwx.png", // Food menu
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134399/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.19_zikaop.png", // Dessert menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134406/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.09.46_tm2ili.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134404/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.11_btlkwx.png",
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134399/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.19_zikaop.png",
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134406/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.28_mwuhuh.png",
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134410/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.38_etjsnl.png",
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134417/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.10.47_ndmbto.png",
@@ -30,7 +31,7 @@ const menuImages = [
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134423/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.37_q1hgb2.png",
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134398/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.46_hdnsbx.png",
   "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134403/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.11.54_uhqufa.png",
-  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134403/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.12.02_cyjznr.png", // Beverage menu
+  "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_1000/v1751134403/fashbrew/Menu%20Kattapa/Tangkapan_Layar_2025-06-29_pukul_01.12.02_cyjznr.png",
 ];
 
 const HeroSection = ({
@@ -45,7 +46,6 @@ const HeroSection = ({
 
   const handleOpenMenuGallery = () => {
     setIsMenuGalleryOpen(true);
-    // Call the external handler if provided
     onOpenMenuGallery?.();
   };
 
@@ -68,145 +68,148 @@ const HeroSection = ({
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col justify-center min-h-screen">
-          <div className="max-w-3xl animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Star className="w-4 h-4 text-yellow-500 fill-current" />
-              {rekomendation === true ? (
-                <>
-                  <span className="text-sm font-medium text-gray-800">
-                    Favorit
-                  </span>
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
-
-            {/* Main Heading */}
-            <h1 className="font-playfair text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-              {name_caffe}
-            </h1>
-
-            {/* Location */}
-            <div className="flex items-center gap-2 text-white/90 mb-6">
-              <MapPin className="w-5 h-5" />
-              <span className="text-lg font-inter">Jember, Jawa Timur</span>
-            </div>
-
-            {/* Tagline */}
-            <p className="text-xl md:text-2xl text-white/95 font-inter font-light mb-8 max-w-2xl">
-              {tagline}
-            </p>
-
-            {/* Cafe Categories */}
-            <div className="mb-8">
-              <h3 className="text-white/90 text-sm font-medium mb-3 font-inter">
-                Cocok untuk:
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {/* <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30">
-                  <BookOpen className="w-4 h-4 text-blue-300" />
-                  <span className="text-white text-sm font-medium">Nugas</span>
-                </div> */}
-                <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
-                  <Users className="w-4 h-4 text-green-300" />
-                  <span className="text-white text-sm font-medium">
-                    Nongkrong
-                  </span>
+        {/* Content Container */}
+        <div className="relative z-10 container mx-auto px-4 py-20 h-[45rem] md:min-h-screen ">
+          <div className="flex flex-col lg:flex-row gap-8 min-h-screen">
+            {/* Main Content */}
+            <div className="flex flex-col justify-center">
+              <div className="max-w-3xl animate-fade-in md:min-w-[50rem]">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                  <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                  {rekomendation === true ? (
+                    <span className="text-sm font-medium text-gray-800">
+                      Favorit
+                    </span>
+                  ) : null}
                 </div>
-                <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-400/30">
-                  <Camera className="w-4 h-4 text-purple-300" />
-                  <span className="text-white text-sm font-medium">
-                    Foto-foto
-                  </span>
+
+                {/* Main Heading */}
+                <h1 className="font-playfair text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                  {name_caffe}
+                </h1>
+
+                {/* Location */}
+                <div className="flex items-center gap-2 text-white/90 mb-6">
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-lg font-inter">Jember, Jawa Timur</span>
                 </div>
-                {/* <div className="flex items-center gap-2 bg-gradient-to-r from-pink-500/20 to-pink-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-pink-400/30">
-                  <Heart className="w-4 h-4 text-pink-300" />
-                  <span className="text-white text-sm font-medium">Date</span>
-                </div> */}
-                <div className="flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-amber-400/30">
-                  <Coffee className="w-4 h-4 text-amber-300" />
-                  <span className="text-white text-sm font-medium">
-                    Me Time
-                  </span>
+
+                {/* Tagline */}
+                <p className="text-xl md:text-2xl text-white/95 font-inter font-light mb-8 max-w-2xl">
+                  {tagline}
+                </p>
+
+                {/* Cafe Categories */}
+                <div className="mb-8">
+                  <h3 className="text-white/90 text-sm font-medium mb-3 font-inter">
+                    Cocok untuk:
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30">
+                      <Users className="w-4 h-4 text-green-300" />
+                      <span className="text-white text-sm font-medium">
+                        Nongkrong
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-400/30">
+                      <Camera className="w-4 h-4 text-purple-300" />
+                      <span className="text-white text-sm font-medium">
+                        Foto-foto
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm px-4 py-2 rounded-full border border-amber-400/30">
+                      <Coffee className="w-4 h-4 text-amber-300" />
+                      <span className="text-white text-sm font-medium">
+                        Me Time
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quick Info */}
+                <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <Clock className="w-4 h-4 text-white" />
+                    <span className="text-white text-sm">
+                      Buka {time_operational}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <Wifi className="w-4 h-4 text-white" />
+                    <span className="text-white text-sm">Free WiFi</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-white text-sm">💳 QRIS/E-wallet</span>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-cafe-600 hover:bg-cafe-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
+                  >
+                    <a
+                      href="https://www.instagram.com/reel/DMzZ_N9utlX/?utm_source=ig_web_copy_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Lihat Review
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
+                    onClick={handleOpenMenuGallery}
+                  >
+                    📔 Cek Menu
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
+                  >
+                    <a
+                      href="https://maps.app.goo.gl/CNf6bqi7YvM8A3CF7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      📍 Lokasi
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
+                  >
+                    <a
+                      href="https://wa.me/6285179835825?text=Halo%20saya%20mau%20tanya%20terkait%20reservasi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      📩 Reservasi
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
 
-            {/* Quick Info */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <Clock className="w-4 h-4 text-white" />
-                <span className="text-white text-sm">
-                  Buka {time_operational}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <Wifi className="w-4 h-4 text-white" />
-                <span className="text-white text-sm">Free WiFi</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <span className="text-white text-sm">💳 QRIS/E-wallet</span>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-cafe-600 hover:bg-cafe-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105"
-              >
-                <a
-                  href="https://www.instagram.com/reel/DJTpXEFTV25/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Lihat Review
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
-                onClick={handleOpenMenuGallery}
-              >
-                📔 Cek Menu
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
-              >
-                <a
-                  href="https://maps.app.goo.gl/CNf6bqi7YvM8A3CF7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  📍 Lokasi
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium backdrop-blur-sm transition-all duration-300"
-              >
-                <a
-                  href="https://wa.me/6285179835825?text=Halo%20saya%20mau%20tanya%20terkait%20reservasi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  📩 Reservasi
-                </a>
-              </Button>
+            {/* Desktop Sidebar - Menu Highlight (Moved to Left) */}
+            <div className="hidden lg:flex lg:flex-col lg:justify-center lg:w-80 lg:-ml-8">
+              <MenuHighlight className="animate-fade-in" />
             </div>
           </div>
         </div>
 
+        {/* Mobile Menu Highlight */}
+        <div className="relative z-10 lg:hidden">
+          <MenuHighlight />
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce lg:hidden">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
           </div>

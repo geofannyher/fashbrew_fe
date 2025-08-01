@@ -88,7 +88,7 @@ export default function CafeDetail({
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     rekomendation: true,
     url_review:
-      "https://www.instagram.com/reel/DKcMNLvzRIf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA",
+      "https://www.instagram.com/reel/DMzZ_N9utlX/?utm_source=ig_web_copy_link",
     lokasi_lengkap:
       "Jl. Raya Darmo No. 123, Wonokromo, Surabaya, Jawa Timur 60241",
     biaya_parking_mobil: "Rp 5.000/jam",

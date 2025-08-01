@@ -15,6 +15,19 @@ const SignatureMenu = () => {
 
   const menuItems = [
     {
+      name: "Frappe Matcha Caramel",
+      price: "Rp 29.000",
+      image:
+        "https://res.cloudinary.com/dvuza2lpc/image/upload/v1753934930/fashbrew/IMG_9277_xxci6g.jpg",
+      description:
+        "Perpaduan sempurna antara matcha premium dan sentuhan caramel manis, disajikan dalam frappe dingin yang menyegarkan dan creamy.",
+      isSignature: true,
+      rating: 5.0,
+      influencerQuote:
+        "Rasa matcha-nya berasa banget, tapi tetap creamy dan nggak terlalu pahit. Caramel-nya nambah manis yang pas! 🍵✨",
+      category: "Minuman",
+    },
+    {
       name: "Cromboloni Coklat",
       price: "Rp 25.000",
       image:
@@ -32,7 +45,7 @@ const SignatureMenu = () => {
       image:
         "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751524105/fashbrew/Tezza-6782_ejuwjm.jpg",
       description: "Minuman segar perpaduan teh dan leci yang manis alami",
-      isSignature: true,
+      isSignature: false,
       rating: 4.8,
       influencerQuote:
         "Rasanya seger banget! Pas banget buat nemenin ngobrol santai 🍹",

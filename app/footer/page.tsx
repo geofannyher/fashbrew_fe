@@ -174,7 +174,7 @@ export default function CoffeeFooter() {
                 {/* <span className="text-orange-500 animate-pulse">☕</span> */}
                 <span>oleh</span>
                 <a
-                  href="https://www.instagram.com/jumptech.studio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  href="https://www.instagram.com/aisolusimuda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-orange-600 hover:underline"

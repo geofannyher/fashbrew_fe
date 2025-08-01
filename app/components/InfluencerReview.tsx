@@ -34,7 +34,8 @@ const InfluencerReview = ({ url_review }: ReviewSection) => {
       isSpecialCollaboration: false,
       videoThumbnail:
         "https://res.cloudinary.com/dvuza2lpc/image/upload/f_auto,q_auto,w_800/v1751569044/fashbrew/unnamed_wbpmbk.jpg",
-      instagramUrl: "https://www.instagram.com/_rereamalia_",
+      instagramUrl:
+        "https://www.instagram.com/reel/DMzZ_N9utlX/?utm_source=ig_web_copy_link",
       hasEmbeddableVideo: false,
       videoId: "example2",
     },
